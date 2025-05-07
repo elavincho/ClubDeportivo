@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PrevioClubDeportivo
 {
-    public partial class Form2 : Form
+    public partial class frmRegistrarSocio : Form
     {
-        public Form2()
+        public frmRegistrarSocio()
         {
             InitializeComponent();
         }
