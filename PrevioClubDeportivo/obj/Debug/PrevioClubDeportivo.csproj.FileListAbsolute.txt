@@ -1,0 +1,10 @@
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\bin\Debug\PrevioClubDeportivo.exe.config
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\bin\Debug\PrevioClubDeportivo.exe
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\bin\Debug\PrevioClubDeportivo.pdb
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.csproj.AssemblyReference.cache
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.Form1.resources
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.Properties.Resources.resources
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.csproj.GenerateResource.cache
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.csproj.CoreCompileInputs.cache
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.exe
+D:\Tecnicatura IT\7. Desarrollo de Sistemas Orientado a Objetos\Proyecto Integrador - DSOO - Club Deportivo\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.pdb
