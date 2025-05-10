@@ -49,7 +49,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(804, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(821, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -148,7 +148,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.RoyalBlue;
             this.pictureBox3.Location = new System.Drawing.Point(0, 121);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(67, 334);
+            this.pictureBox3.Size = new System.Drawing.Size(67, 370);
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
@@ -168,8 +168,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";

@@ -53,3 +53,4 @@ C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\bin\Debug\System.
 C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioCl.B0543C6B.Up2Date
 C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.frmHome.resources
+C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.frmRegistrarSocio.resources

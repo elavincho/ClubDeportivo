@@ -7,26 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PrevioClubDeportivo.Entidades;
 
 namespace PrevioClubDeportivo
 {
-    public partial class frmHome : Form
+    public partial class frmRegistrarSocio : Form
     {
-        public frmHome()
+        public frmRegistrarSocio()
         {
             InitializeComponent();
-
-            // Puedes usar la información del usuario aquí
-            lblUsuario.Text = $"{SesionUsuario.nombreUsuario}";
-
-            lblRol.Text = $"{SesionUsuario.rol}";
-
-        }
-
-        private void frmRegistrarSocio_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -42,14 +30,14 @@ namespace PrevioClubDeportivo
             Application.Exit();
         }
 
-        private void btnRegistrarSocios_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            // Ocultamos el formulario Home
+            // Ocultar el formulario Registrar Socios
             this.Hide();
 
-            // Abrimos el formulario Registrar Socios
-            frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
-            registrarSocio.Show();
+            // Abrimos el formulario principal
+            frmHome home = new frmHome();
+            home.Show();
         }
     }
 }

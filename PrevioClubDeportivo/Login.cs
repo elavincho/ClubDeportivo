@@ -47,7 +47,7 @@ namespace PrevioClubDeportivo
                     // Ocultar el formulario de login
                     this.Hide();
 
-                    // Aquí podrías abrir el formulario principal
+                    // Abrimos el formulario principal
                     frmHome home = new frmHome();
                     home.Show();
                 }
