@@ -28,7 +28,7 @@ namespace PrevioClubDeportivo.Entidades
                 /* El comando es un elemento que almacena en este caso el nombre
                  * del procedimiento almacenado y la referencia a la conexion */
 
-            MySqlCommand comando = new MySqlCommand("IngresoLogin", sqlCon);
+                MySqlCommand comando = new MySqlCommand("IngresoLogin", sqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 /* Definimos los parametros que tiene el procedure */
@@ -50,7 +50,7 @@ namespace PrevioClubDeportivo.Entidades
                 MessageBox.Show("Error al intertar iniciar sesión: " + ex.Message);
                 throw;
             }
-            /* como proceso final */
+                /* como proceso final */
             finally
             {
                 if (sqlCon.State == ConnectionState.Open)

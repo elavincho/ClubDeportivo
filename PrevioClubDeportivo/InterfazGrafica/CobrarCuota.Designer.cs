@@ -1,6 +1,6 @@
-﻿namespace PrevioClubDeportivo
+﻿namespace PrevioClubDeportivo.InterfazGrafica
 {
-    partial class frmRegistrarSocio
+    partial class frmCobrarCuota
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarSocio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCobrarCuota));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblCobrarCuota = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRegistrarSocios = new System.Windows.Forms.Button();
             this.btnCobrarCuota = new System.Windows.Forms.Button();
@@ -63,16 +63,16 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // lblTitulo
+            // lblCobrarCuota
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.lblTitulo.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTitulo.Location = new System.Drawing.Point(278, 164);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(273, 39);
-            this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "Registrar Socios";
+            this.lblCobrarCuota.AutoSize = true;
+            this.lblCobrarCuota.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.lblCobrarCuota.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblCobrarCuota.Location = new System.Drawing.Point(278, 164);
+            this.lblCobrarCuota.Name = "lblCobrarCuota";
+            this.lblCobrarCuota.Size = new System.Drawing.Size(224, 39);
+            this.lblCobrarCuota.TabIndex = 2;
+            this.lblCobrarCuota.Text = "Cobrar Cuota";
             // 
             // btnHome
             // 
@@ -92,7 +92,7 @@
             // 
             // btnRegistrarSocios
             // 
-            this.btnRegistrarSocios.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnRegistrarSocios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
             this.btnRegistrarSocios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrarSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarSocios.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
@@ -104,10 +104,11 @@
             this.btnRegistrarSocios.Text = "     REGISTRAR SOCIOS";
             this.btnRegistrarSocios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarSocios.UseVisualStyleBackColor = false;
+            this.btnRegistrarSocios.Click += new System.EventHandler(this.btnRegistrarSocios_Click);
             // 
             // btnCobrarCuota
             // 
-            this.btnCobrarCuota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.btnCobrarCuota.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCobrarCuota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCobrarCuota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCobrarCuota.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
@@ -191,12 +192,12 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(245, 50);
             this.btnSalir.TabIndex = 3;
-            this.btnSalir.Text = "     SALIR";
+            this.btnSalir.Text = "     VENCIMIENTOS DEL DÍA";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // frmRegistrarSocio
+            // frmCobrarCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -209,17 +210,17 @@
             this.Controls.Add(this.btnCobrarCuota);
             this.Controls.Add(this.btnRegistrarSocios);
             this.Controls.Add(this.btnHome);
-            this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblCobrarCuota);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1050, 630);
             this.MinimumSize = new System.Drawing.Size(1050, 630);
-            this.Name = "frmRegistrarSocio";
+            this.Name = "frmCobrarCuota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Socio";
+            this.Text = "Cobrar Cuota";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -231,7 +232,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblCobrarCuota;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnRegistrarSocios;
         private System.Windows.Forms.Button btnCobrarCuota;

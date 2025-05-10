@@ -1,0 +1,245 @@
+﻿namespace PrevioClubDeportivo
+{
+    partial class frmRegistrarSocio
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarSocio));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnRegistrarSocios = new System.Windows.Forms.Button();
+            this.btnCobrarCuota = new System.Windows.Forms.Button();
+            this.btnEntregarCarnet = new System.Windows.Forms.Button();
+            this.btnAltaActividad = new System.Windows.Forms.Button();
+            this.btnInscripcionActividad = new System.Windows.Forms.Button();
+            this.btnVencimientosDelDia = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1035, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 143);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(260, 456);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblTitulo.Location = new System.Drawing.Point(278, 164);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(273, 39);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Registrar Socios";
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnHome.Location = new System.Drawing.Point(6, 159);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(245, 50);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "     HOME";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnRegistrarSocios
+            // 
+            this.btnRegistrarSocios.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnRegistrarSocios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarSocios.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarSocios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnRegistrarSocios.Location = new System.Drawing.Point(6, 210);
+            this.btnRegistrarSocios.Name = "btnRegistrarSocios";
+            this.btnRegistrarSocios.Size = new System.Drawing.Size(245, 50);
+            this.btnRegistrarSocios.TabIndex = 3;
+            this.btnRegistrarSocios.Text = "     REGISTRAR SOCIOS";
+            this.btnRegistrarSocios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarSocios.UseVisualStyleBackColor = false;
+            // 
+            // btnCobrarCuota
+            // 
+            this.btnCobrarCuota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.btnCobrarCuota.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarCuota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCobrarCuota.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCobrarCuota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnCobrarCuota.Location = new System.Drawing.Point(6, 261);
+            this.btnCobrarCuota.Name = "btnCobrarCuota";
+            this.btnCobrarCuota.Size = new System.Drawing.Size(245, 50);
+            this.btnCobrarCuota.TabIndex = 3;
+            this.btnCobrarCuota.Text = "     COBRAR CUOTA";
+            this.btnCobrarCuota.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCobrarCuota.UseVisualStyleBackColor = false;
+            this.btnCobrarCuota.Click += new System.EventHandler(this.btnCobrarCuota_Click);
+            // 
+            // btnEntregarCarnet
+            // 
+            this.btnEntregarCarnet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.btnEntregarCarnet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntregarCarnet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntregarCarnet.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnEntregarCarnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnEntregarCarnet.Location = new System.Drawing.Point(6, 312);
+            this.btnEntregarCarnet.Name = "btnEntregarCarnet";
+            this.btnEntregarCarnet.Size = new System.Drawing.Size(245, 50);
+            this.btnEntregarCarnet.TabIndex = 3;
+            this.btnEntregarCarnet.Text = "     ENTREGAR CARNET";
+            this.btnEntregarCarnet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntregarCarnet.UseVisualStyleBackColor = false;
+            // 
+            // btnAltaActividad
+            // 
+            this.btnAltaActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.btnAltaActividad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAltaActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAltaActividad.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAltaActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnAltaActividad.Location = new System.Drawing.Point(6, 363);
+            this.btnAltaActividad.Name = "btnAltaActividad";
+            this.btnAltaActividad.Size = new System.Drawing.Size(245, 50);
+            this.btnAltaActividad.TabIndex = 3;
+            this.btnAltaActividad.Text = "     ALTA ACTIVIDAD";
+            this.btnAltaActividad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAltaActividad.UseVisualStyleBackColor = false;
+            // 
+            // btnInscripcionActividad
+            // 
+            this.btnInscripcionActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.btnInscripcionActividad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInscripcionActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInscripcionActividad.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnInscripcionActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnInscripcionActividad.Location = new System.Drawing.Point(6, 414);
+            this.btnInscripcionActividad.Name = "btnInscripcionActividad";
+            this.btnInscripcionActividad.Size = new System.Drawing.Size(245, 50);
+            this.btnInscripcionActividad.TabIndex = 3;
+            this.btnInscripcionActividad.Text = "     INSCRIPCIÓN ACTIVIDAD";
+            this.btnInscripcionActividad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInscripcionActividad.UseVisualStyleBackColor = false;
+            // 
+            // btnVencimientosDelDia
+            // 
+            this.btnVencimientosDelDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.btnVencimientosDelDia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVencimientosDelDia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVencimientosDelDia.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnVencimientosDelDia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnVencimientosDelDia.Location = new System.Drawing.Point(6, 465);
+            this.btnVencimientosDelDia.Name = "btnVencimientosDelDia";
+            this.btnVencimientosDelDia.Size = new System.Drawing.Size(245, 50);
+            this.btnVencimientosDelDia.TabIndex = 3;
+            this.btnVencimientosDelDia.Text = "     VENCIMIENTOS DEL DÍA";
+            this.btnVencimientosDelDia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVencimientosDelDia.UseVisualStyleBackColor = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Maroon;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(6, 516);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(245, 50);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "     SALIR";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // frmRegistrarSocio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1034, 591);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnVencimientosDelDia);
+            this.Controls.Add(this.btnInscripcionActividad);
+            this.Controls.Add(this.btnAltaActividad);
+            this.Controls.Add(this.btnEntregarCarnet);
+            this.Controls.Add(this.btnCobrarCuota);
+            this.Controls.Add(this.btnRegistrarSocios);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1050, 630);
+            this.MinimumSize = new System.Drawing.Size(1050, 630);
+            this.Name = "frmRegistrarSocio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registrar Socio";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnRegistrarSocios;
+        private System.Windows.Forms.Button btnCobrarCuota;
+        private System.Windows.Forms.Button btnEntregarCarnet;
+        private System.Windows.Forms.Button btnAltaActividad;
+        private System.Windows.Forms.Button btnInscripcionActividad;
+        private System.Windows.Forms.Button btnVencimientosDelDia;
+        private System.Windows.Forms.Button btnSalir;
+    }
+}

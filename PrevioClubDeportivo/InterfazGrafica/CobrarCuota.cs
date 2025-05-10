@@ -7,26 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PrevioClubDeportivo.Entidades;
 
-namespace PrevioClubDeportivo
+namespace PrevioClubDeportivo.InterfazGrafica
 {
-    public partial class frmHome : Form
+    public partial class frmCobrarCuota : Form
     {
-        public frmHome()
+        public frmCobrarCuota()
         {
             InitializeComponent();
-
-            // Puedes usar la información del usuario aquí
-            lblUsuario.Text = $"{SesionUsuario.nombreUsuario}";
-
-            lblRol.Text = $"{SesionUsuario.rol}";
-
-        }
-
-        private void frmRegistrarSocio_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -35,19 +23,29 @@ namespace PrevioClubDeportivo
             Application.Exit();
         }
 
-        // Cuando cerramos el formulario principal, cerramos la aplicación
+        /* Cuando cerramos el formulario principal, cerramos la aplicación */
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
             Application.Exit();
         }
 
-        private void btnRegistrarSocios_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            // Ocultamos el formulario Home
+            /* Ocultar el formulario Cobrar Cuota */
             this.Hide();
 
-            // Abrimos el formulario Registrar Socios
+            /* Abrimos el formulario principal */
+            frmHome home = new frmHome();
+            home.Show();
+        }
+
+        private void btnRegistrarSocios_Click(object sender, EventArgs e)
+        {
+            /* Ocultamos el formulario Cobrar Cuota */
+            this.Hide();
+
+            /* Abrimos el formulario Registrar Socios */
             frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
             registrarSocio.Show();
         }

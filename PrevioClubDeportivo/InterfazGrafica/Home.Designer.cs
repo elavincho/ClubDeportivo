@@ -115,6 +115,7 @@
             this.btnCobrarCuota.Text = "     COBRAR CUOTA";
             this.btnCobrarCuota.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCobrarCuota.UseVisualStyleBackColor = false;
+            this.btnCobrarCuota.Click += new System.EventHandler(this.btnCobrarCuota_Click);
             // 
             // btnEntregarCarnet
             // 
@@ -235,7 +236,7 @@
             this.lblHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHome.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblHome.Location = new System.Drawing.Point(298, 159);
+            this.lblHome.Location = new System.Drawing.Point(278, 164);
             this.lblHome.Name = "lblHome";
             this.lblHome.Size = new System.Drawing.Size(121, 39);
             this.lblHome.TabIndex = 4;
