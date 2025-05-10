@@ -43,10 +43,8 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -72,11 +70,13 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnHome.BackColor = System.Drawing.Color.White;
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(6, 159);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(245, 50);
@@ -92,6 +92,8 @@
             this.btnRegistrarSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarSocios.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarSocios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnRegistrarSocios.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarSocios.Image")));
+            this.btnRegistrarSocios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarSocios.Location = new System.Drawing.Point(6, 210);
             this.btnRegistrarSocios.Name = "btnRegistrarSocios";
             this.btnRegistrarSocios.Size = new System.Drawing.Size(245, 50);
@@ -108,6 +110,8 @@
             this.btnCobrarCuota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCobrarCuota.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCobrarCuota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnCobrarCuota.Image = ((System.Drawing.Image)(resources.GetObject("btnCobrarCuota.Image")));
+            this.btnCobrarCuota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCobrarCuota.Location = new System.Drawing.Point(6, 261);
             this.btnCobrarCuota.Name = "btnCobrarCuota";
             this.btnCobrarCuota.Size = new System.Drawing.Size(245, 50);
@@ -124,6 +128,8 @@
             this.btnEntregarCarnet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntregarCarnet.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntregarCarnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnEntregarCarnet.Image = ((System.Drawing.Image)(resources.GetObject("btnEntregarCarnet.Image")));
+            this.btnEntregarCarnet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntregarCarnet.Location = new System.Drawing.Point(6, 312);
             this.btnEntregarCarnet.Name = "btnEntregarCarnet";
             this.btnEntregarCarnet.Size = new System.Drawing.Size(245, 50);
@@ -139,6 +145,8 @@
             this.btnAltaActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAltaActividad.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAltaActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnAltaActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnAltaActividad.Image")));
+            this.btnAltaActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAltaActividad.Location = new System.Drawing.Point(6, 363);
             this.btnAltaActividad.Name = "btnAltaActividad";
             this.btnAltaActividad.Size = new System.Drawing.Size(245, 50);
@@ -154,6 +162,8 @@
             this.btnInscripcionActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInscripcionActividad.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInscripcionActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnInscripcionActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnInscripcionActividad.Image")));
+            this.btnInscripcionActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInscripcionActividad.Location = new System.Drawing.Point(6, 414);
             this.btnInscripcionActividad.Name = "btnInscripcionActividad";
             this.btnInscripcionActividad.Size = new System.Drawing.Size(245, 50);
@@ -169,6 +179,8 @@
             this.btnVencimientoDelDia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVencimientoDelDia.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVencimientoDelDia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnVencimientoDelDia.Image = ((System.Drawing.Image)(resources.GetObject("btnVencimientoDelDia.Image")));
+            this.btnVencimientoDelDia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVencimientoDelDia.Location = new System.Drawing.Point(6, 465);
             this.btnVencimientoDelDia.Name = "btnVencimientoDelDia";
             this.btnVencimientoDelDia.Size = new System.Drawing.Size(245, 50);
@@ -181,9 +193,12 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Maroon;
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(6, 516);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(245, 50);
@@ -204,7 +219,7 @@
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(262, 55);
             this.lblBienvenido.TabIndex = 4;
-            this.lblBienvenido.Text = "Bienvenido";
+            this.lblBienvenido.Text = "Bienvenida";
             // 
             // lblUsuario
             // 
@@ -242,16 +257,6 @@
             this.lblHome.TabIndex = 4;
             this.lblHome.Text = "HOME";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(363, 136);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(553, 458);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,7 +277,6 @@
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -285,7 +289,6 @@
             this.Load += new System.EventHandler(this.frmRegistrarSocio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,6 +310,5 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblHome;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

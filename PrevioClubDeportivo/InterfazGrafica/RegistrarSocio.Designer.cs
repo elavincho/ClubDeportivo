@@ -81,6 +81,8 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(6, 159);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(245, 50);
@@ -92,11 +94,13 @@
             // 
             // btnRegistrarSocios
             // 
-            this.btnRegistrarSocios.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnRegistrarSocios.BackColor = System.Drawing.Color.White;
             this.btnRegistrarSocios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrarSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarSocios.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnRegistrarSocios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnRegistrarSocios.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarSocios.Image")));
+            this.btnRegistrarSocios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarSocios.Location = new System.Drawing.Point(6, 210);
             this.btnRegistrarSocios.Name = "btnRegistrarSocios";
             this.btnRegistrarSocios.Size = new System.Drawing.Size(245, 50);
@@ -112,6 +116,8 @@
             this.btnCobrarCuota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCobrarCuota.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnCobrarCuota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnCobrarCuota.Image = ((System.Drawing.Image)(resources.GetObject("btnCobrarCuota.Image")));
+            this.btnCobrarCuota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCobrarCuota.Location = new System.Drawing.Point(6, 261);
             this.btnCobrarCuota.Name = "btnCobrarCuota";
             this.btnCobrarCuota.Size = new System.Drawing.Size(245, 50);
@@ -128,6 +134,8 @@
             this.btnEntregarCarnet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntregarCarnet.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnEntregarCarnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnEntregarCarnet.Image = ((System.Drawing.Image)(resources.GetObject("btnEntregarCarnet.Image")));
+            this.btnEntregarCarnet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntregarCarnet.Location = new System.Drawing.Point(6, 312);
             this.btnEntregarCarnet.Name = "btnEntregarCarnet";
             this.btnEntregarCarnet.Size = new System.Drawing.Size(245, 50);
@@ -143,6 +151,8 @@
             this.btnAltaActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAltaActividad.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAltaActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnAltaActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnAltaActividad.Image")));
+            this.btnAltaActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAltaActividad.Location = new System.Drawing.Point(6, 363);
             this.btnAltaActividad.Name = "btnAltaActividad";
             this.btnAltaActividad.Size = new System.Drawing.Size(245, 50);
@@ -158,6 +168,8 @@
             this.btnInscripcionActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInscripcionActividad.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnInscripcionActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnInscripcionActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnInscripcionActividad.Image")));
+            this.btnInscripcionActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInscripcionActividad.Location = new System.Drawing.Point(6, 414);
             this.btnInscripcionActividad.Name = "btnInscripcionActividad";
             this.btnInscripcionActividad.Size = new System.Drawing.Size(245, 50);
@@ -173,6 +185,8 @@
             this.btnVencimientosDelDia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVencimientosDelDia.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVencimientosDelDia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnVencimientosDelDia.Image = ((System.Drawing.Image)(resources.GetObject("btnVencimientosDelDia.Image")));
+            this.btnVencimientosDelDia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVencimientosDelDia.Location = new System.Drawing.Point(6, 465);
             this.btnVencimientosDelDia.Name = "btnVencimientosDelDia";
             this.btnVencimientosDelDia.Size = new System.Drawing.Size(245, 50);
@@ -185,9 +199,12 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Maroon;
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(6, 516);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(245, 50);
@@ -201,6 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnVencimientosDelDia);

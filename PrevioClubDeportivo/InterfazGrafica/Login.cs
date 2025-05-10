@@ -23,7 +23,11 @@ namespace PrevioClubDeportivo
         {
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text))
             {
-                MessageBox.Show("Por favor ingrese usuario y contraseña");
+                MessageBox.Show(
+                    "Por favor ingrese usuario y contraseña",
+                    "Advertencia",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
 
@@ -39,11 +43,6 @@ namespace PrevioClubDeportivo
                     SesionUsuario.nombreUsuario = txtUsuario.Text;
                     SesionUsuario.rol = tablaLogin.Rows[0]["NombreRol"].ToString();
 
-
-                    // Es necesario????????
-                    //string rol = tablaLogin.Rows[0]["NombreRol"].ToString();
-                    //MessageBox.Show($"Ingreso exitoso. Rol: {rol}");
-
                     // Ocultar el formulario de login
                     this.Hide();
 
@@ -53,7 +52,11 @@ namespace PrevioClubDeportivo
                 }
                 else
                 {
-                    MessageBox.Show("Usuario y/o contraseña incorrectos");
+                    MessageBox.Show(
+                        "Usuario y/o contraseña incorrectos",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
