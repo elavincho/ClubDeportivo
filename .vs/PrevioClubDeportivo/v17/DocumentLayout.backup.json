@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\registrarsocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\registrarsocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|c:\\users\\elavi\\desktop\\previoclubdeportivo\\previoclubdeportivo\\interfazgrafica\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\cobrarcuota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\cobrarcuota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|c:\\users\\elavi\\desktop\\previoclubdeportivo\\previoclubdeportivo\\interfazgrafica\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\registrarsocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\registrarsocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\registrarsocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\registrarsocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|c:\\users\\elavi\\desktop\\previoclubdeportivo\\previoclubdeportivo\\interfazgrafica\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\entidades\\sesionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\entidades\\sesionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|c:\\users\\elavi\\desktop\\previoclubdeportivo\\previoclubdeportivo\\interfazgrafica\\cobrarcuota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\cobrarcuota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\previoclubdeportivo\\interfazgrafica\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{42F770B3-8C6D-4439-B383-B14A37075712}|PrevioClubDeportivo\\PrevioClubDeportivo.csproj|solutionrelative:previoclubdeportivo\\interfazgrafica\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,19 +67,56 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\Entidades\\Usuarios.cs",
+              "RelativeDocumentMoniker": "PrevioClubDeportivo\\Entidades\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\Entidades\\Usuarios.cs",
+              "RelativeToolTip": "PrevioClubDeportivo\\Entidades\\Usuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:44:50.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SesionUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\Entidades\\SesionUsuario.cs",
+              "RelativeDocumentMoniker": "PrevioClubDeportivo\\Entidades\\SesionUsuario.cs",
+              "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\Entidades\\SesionUsuario.cs",
+              "RelativeToolTip": "PrevioClubDeportivo\\Entidades\\SesionUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:48:31.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\Datos\\Conexion.cs",
+              "RelativeDocumentMoniker": "PrevioClubDeportivo\\Datos\\Conexion.cs",
+              "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\Datos\\Conexion.cs",
+              "RelativeToolTip": "PrevioClubDeportivo\\Datos\\Conexion.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:28:53.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\Login.cs",
               "RelativeDocumentMoniker": "PrevioClubDeportivo\\InterfazGrafica\\Login.cs",
               "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\Login.cs",
               "RelativeToolTip": "PrevioClubDeportivo\\InterfazGrafica\\Login.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAiwDoAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T03:09:34.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Login.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\Login.cs",
               "RelativeDocumentMoniker": "PrevioClubDeportivo\\InterfazGrafica\\Login.cs",
@@ -87,78 +128,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Home.cs",
               "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\Home.cs",
               "RelativeDocumentMoniker": "PrevioClubDeportivo\\InterfazGrafica\\Home.cs",
               "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\Home.cs",
               "RelativeToolTip": "PrevioClubDeportivo\\InterfazGrafica\\Home.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAwwD8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAD8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T02:51:54.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T02:51:54.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "RegistrarSocio.cs",
               "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\RegistrarSocio.cs",
               "RelativeDocumentMoniker": "PrevioClubDeportivo\\InterfazGrafica\\RegistrarSocio.cs",
               "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\RegistrarSocio.cs",
               "RelativeToolTip": "PrevioClubDeportivo\\InterfazGrafica\\RegistrarSocio.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIA9wCgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAApwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T02:49:55.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T02:49:55.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CobrarCuota.cs",
-              "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\CobrarCuota.cs",
-              "RelativeDocumentMoniker": "PrevioClubDeportivo\\InterfazGrafica\\CobrarCuota.cs",
-              "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\CobrarCuota.cs",
-              "RelativeToolTip": "PrevioClubDeportivo\\InterfazGrafica\\CobrarCuota.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAADgvxkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T02:49:36.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CobrarCuota.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\CobrarCuota.cs",
-              "RelativeDocumentMoniker": "PrevioClubDeportivo\\InterfazGrafica\\CobrarCuota.cs",
-              "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\CobrarCuota.cs [Dise\u00F1o]",
-              "RelativeToolTip": "PrevioClubDeportivo\\InterfazGrafica\\CobrarCuota.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T02:27:57.918Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "RegistrarSocio.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\RegistrarSocio.cs",
               "RelativeDocumentMoniker": "PrevioClubDeportivo\\InterfazGrafica\\RegistrarSocio.cs",
               "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\RegistrarSocio.cs [Dise\u00F1o]",
               "RelativeToolTip": "PrevioClubDeportivo\\InterfazGrafica\\RegistrarSocio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T02:26:27.584Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-05-10T02:26:27.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Home.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\Home.cs",
               "RelativeDocumentMoniker": "PrevioClubDeportivo\\InterfazGrafica\\Home.cs",
               "ToolTip": "C:\\Users\\elavi\\Desktop\\PrevioClubDeportivo\\PrevioClubDeportivo\\InterfazGrafica\\Home.cs [Dise\u00F1o]",
               "RelativeToolTip": "PrevioClubDeportivo\\InterfazGrafica\\Home.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T02:26:24.24Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-05-10T02:26:24.24Z"
             }
           ]
         }

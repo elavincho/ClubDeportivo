@@ -99,19 +99,27 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtContrasena.Location = new System.Drawing.Point(304, 296);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(254, 40);
+            this.txtContrasena.Size = new System.Drawing.Size(254, 35);
             this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.Text = "Ingrese su Contraseña";
+            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtUsuario.Location = new System.Drawing.Point(304, 242);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(254, 40);
+            this.txtUsuario.Size = new System.Drawing.Size(254, 35);
             this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.Text = "Ingrese su Usuario";
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // btnCancelar
             // 
