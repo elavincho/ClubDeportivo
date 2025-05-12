@@ -20,15 +20,37 @@ namespace PrevioClubDeportivo
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            /* Cierra completamente la aplicación */
-            Application.Exit();
+            if (confirmarSalida())
+            {
+                /* Cierra completamente la aplicación */
+                Application.Exit();
+            }
         }
+
+        /* Utilizamos una variable de control para evitar la recursión involuntaria*/
+        private bool estaCerrando = false;
 
         /* Cuando cerramos el formulario principal, cerramos la aplicación */
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            base.OnFormClosing(e);
-            Application.Exit();
+            if (!estaCerrando && e.CloseReason == CloseReason.UserClosing)
+            {
+                /* Primero cancela el cierre automático */
+                e.Cancel = true;
+
+                if (confirmarSalida())
+                {
+                    /* Marca que estamos cerrando */
+                    estaCerrando = true;
+                    /* Cierra la aplicación */
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                /* Permite el cierre normal si no es por usuario */
+                base.OnFormClosing(e);
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -49,6 +71,32 @@ namespace PrevioClubDeportivo
             /* Abrimos el formulario Cobrar Cuota */
             frmCobrarCuota cobrarCuota = new frmCobrarCuota();
             cobrarCuota.Show();
+        }
+
+        /* Función que pregunta si queres salir */
+        private bool confirmarSalida()
+        {
+            DialogResult respuesta = MessageBox.Show(
+                "¿Estás seguro que deseas salir?",
+                "Confirmar salida",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            return (respuesta == DialogResult.Yes);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (confirmarSalida())
+            {
+                /* Regresa al formulario principal */
+                frmHome home = new frmHome();
+                home.Show();
+                /* Ocultamos el formulario Registrar Socio*/
+                this.Hide();
+            }
+            /* Si elige "No", no hace nada (se queda en el formulario actual) */
         }
     }
 }
