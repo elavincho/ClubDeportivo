@@ -99,10 +99,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Entidades\AptFisico.cs" />
     <Compile Include="Entidades\Persona.cs" />
     <Compile Include="Entidades\SesionUsuario.cs" />
     <Compile Include="Entidades\Socio.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
+    <Compile Include="InterfazGrafica\AptoFisico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazGrafica\AptoFisico.Designer.cs">
+      <DependentUpon>AptoFisico.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfazGrafica\CobrarCuota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +136,9 @@
     <Compile Include="InterfazGrafica\RegistrarSocio.Designer.cs">
       <DependentUpon>RegistrarSocio.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="InterfazGrafica\AptoFisico.resx">
+      <DependentUpon>AptoFisico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfazGrafica\CobrarCuota.resx">
       <DependentUpon>CobrarCuota.cs</DependentUpon>
     </EmbeddedResource>

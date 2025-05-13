@@ -60,22 +60,28 @@ namespace PrevioClubDeportivo
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            /* Ocultar el formulario Registrar Socios */
-            this.Hide();
+            if (ConfirmarSalida())
+            {
+                /* Ocultar el formulario Registrar Socios */
+                this.Hide();
 
-            /* Abrimos el formulario principal */
-            frmHome home = new frmHome();
-            home.Show();
+                /* Abrimos el formulario principal */
+                frmHome home = new frmHome();
+                home.Show();
+            }
         }
 
         private void btnCobrarCuota_Click(object sender, EventArgs e)
         {
-            /* Ocultamos el formulario Registrar Socio */
-            this.Hide();
+            if (ConfirmarSalida())
+            {
+                /* Ocultamos el formulario Registrar Socio */
+                this.Hide();
 
-            /* Abrimos el formulario Cobrar Cuota */
-            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
-            cobrarCuota.Show();
+                /* Abrimos el formulario Cobrar Cuota */
+                frmCobrarCuota cobrarCuota = new frmCobrarCuota();
+                cobrarCuota.Show();
+            }
         }
 
         /* Función que pregunta si queres salir */
@@ -127,7 +133,7 @@ namespace PrevioClubDeportivo
         private Socio ObtenerSocioDesdeFormulario()
         {
 
-            // Crear el socio
+            /* Creamos el socio */
             Socio socio = new Socio
             {
                 /* Atributos heredados de Persona */
@@ -173,7 +179,7 @@ namespace PrevioClubDeportivo
             return true;
         }
 
-        /* Todavia no se si se va a usar*/
+        /* Limpiar Formulario */
         private void LimpiarFormulario()
         {
             txtNombre.Clear();
@@ -270,7 +276,6 @@ namespace PrevioClubDeportivo
             lstEstadoPago.Items.Add("VENCIDO");
             lstEstadoPago.SelectedIndex = 0;
 
-
             try
             {
                 int proximoNumero = generadorNumerosSocios.ObtenerProximoNumero();
@@ -284,7 +289,6 @@ namespace PrevioClubDeportivo
 
         public class generadorNumerosSocios
         {
-            
             public static int ObtenerProximoNumero()
             {
                 using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
@@ -311,19 +315,16 @@ namespace PrevioClubDeportivo
                     }
                 }
             }
-
-
         }
 
-       
+        private void btnCargarAptoFisico_Click(object sender, EventArgs e)
+        {
+            /* Ocultamos el formulario Registrar Socio */
+            this.Hide();
 
-
-
-
-
-
-
-
-
+            /* Abrimos el formulario Apto Físico */
+            frmAptoFisico aptoFisico = new frmAptoFisico();
+            aptoFisico.Show();
+        }
     }
 }

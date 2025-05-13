@@ -10,7 +10,7 @@ namespace PrevioClubDeportivo.Entidades
     /* La clase socio hereda atributos de la clase persona*/
     internal class Socio : Persona
     {
-        /* Atributos con get y set*/
+        /* Atributos con Get y Set*/
 
         public int idSocio;
         public int numeroSocio { get; set; }
@@ -19,7 +19,7 @@ namespace PrevioClubDeportivo.Entidades
         public DateTime fechaPago { get; set; }
         public string estadoCuota { get; set; }
 
-        /* Constructor con parametros*/
+        /* Constructor con Parametros */
         public Socio(int idSocio, int numeroSocio, string tipoSocio, DateTime fechaAlta, DateTime fechaPago, string estadoCuota)
         {
             this.idSocio = idSocio;
@@ -30,12 +30,12 @@ namespace PrevioClubDeportivo.Entidades
             this.estadoCuota = estadoCuota;
         }
 
-        /* Constructor vacio*/
+        /* Constructor Vacio */
         public Socio() 
         {
         }
 
-        /* To String*/
+        /* To String */
         public override string ToString()
         {
             return "N° Socio: " + numeroSocio + " Tipo Socio: " + tipoSocio + " Fecha Alta: " + fechaAlta + " Fecha Pago: " + fechaPago + " Estado Cuota: " + estadoCuota;

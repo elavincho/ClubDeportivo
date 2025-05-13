@@ -55,3 +55,4 @@ C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioC
 C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.frmHome.resources
 C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.frmRegistrarSocio.resources
 C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.InterfazGrafica.frmCobrarCuota.resources
+C:\Users\elavi\Desktop\PrevioClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.InterfazGrafica.frmAptoFisico.resources

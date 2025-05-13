@@ -53,3 +53,12 @@ CREATE TABLE Socios (
     CONSTRAINT UQ_Socios_numeroSocio UNIQUE (numeroSocio),
     CONSTRAINT UQ_Socios_idPersona UNIQUE (idPersona)
 );
+
+-- Tabla AptoFisico
+CREATE TABLE AptoFisico (
+    idAptoFisico INT PRIMARY KEY AUTO_INCREMENT,
+    numeroSocio INT NOT NULL,
+    fechaAlta DATE NOT NULL DEFAULT (CURRENT_DATE),
+    vtoAptoFisico DATE NOT NULL,
+    CONSTRAINT UQ_AptoFisico_numeroSocio UNIQUE (numeroSocio)
+);
