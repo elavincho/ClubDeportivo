@@ -31,7 +31,7 @@ namespace PrevioClubDeportivo
         }
 
         /* Función que pregunta si queres salir */
-        private bool confirmarSalida()
+        private bool ConfirmarSalida()
         {
             DialogResult respuesta = MessageBox.Show(
                 "¿Estás seguro que deseas salir?",
@@ -45,7 +45,7 @@ namespace PrevioClubDeportivo
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (confirmarSalida())
+            if (ConfirmarSalida())
             {
                 /* Cierra completamente la aplicación */
                 Application.Exit();
@@ -63,7 +63,7 @@ namespace PrevioClubDeportivo
                 /* Primero cancela el cierre automático */
                 e.Cancel = true;
 
-                if (confirmarSalida())
+                if (ConfirmarSalida())
                 {
                     /* Marca que estamos cerrando */
                     estaCerrando = true;
