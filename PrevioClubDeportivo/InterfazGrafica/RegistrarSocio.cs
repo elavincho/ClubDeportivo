@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using PrevioClubDeportivo.Datos;
+using PrevioClubDeportivo.Entidades;
 using PrevioClubDeportivo.InterfazGrafica;
+using static PrevioClubDeportivo.frmRegistrarSocio;
 
 namespace PrevioClubDeportivo
 {
@@ -20,7 +25,7 @@ namespace PrevioClubDeportivo
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (confirmarSalida())
+            if (ConfirmarSalida())
             {
                 /* Cierra completamente la aplicación */
                 Application.Exit();
@@ -38,7 +43,7 @@ namespace PrevioClubDeportivo
                 /* Primero cancela el cierre automático */
                 e.Cancel = true;
 
-                if (confirmarSalida())
+                if (ConfirmarSalida())
                 {
                     /* Marca que estamos cerrando */
                     estaCerrando = true;
@@ -74,7 +79,7 @@ namespace PrevioClubDeportivo
         }
 
         /* Función que pregunta si queres salir */
-        private bool confirmarSalida()
+        private bool ConfirmarSalida()
         {
             DialogResult respuesta = MessageBox.Show(
                 "¿Estás seguro que deseas salir?",
@@ -88,7 +93,7 @@ namespace PrevioClubDeportivo
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (confirmarSalida())
+            if (ConfirmarSalida())
             {
                 /* Regresa al formulario principal */
                 frmHome home = new frmHome();
@@ -98,5 +103,227 @@ namespace PrevioClubDeportivo
             }
             /* Si elige "No", no hace nada (se queda en el formulario actual) */
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                try
+                {
+                    Socio nuevoSocio = ObtenerSocioDesdeFormulario();
+                    GuardarSocio(nuevoSocio);
+                    MessageBox.Show("Socio registrado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarFormulario();
+                    int proximoNumero = generadorNumerosSocios.ObtenerProximoNumero();
+                    txtNroSocio.Text = proximoNumero.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al guardar el socio: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private Socio ObtenerSocioDesdeFormulario()
+        {
+
+            // Crear el socio
+            Socio socio = new Socio
+            {
+                /* Atributos heredados de Persona */
+                nombre = txtNombre.Text.Trim(),
+                apellido = txtApellido.Text.Trim(),
+                tipoDocumento = lstTipoDoc.SelectedItem?.ToString() ?? "DNI",
+                nroDocumento = txtNroDocumento.Text.Trim(),
+                fechaNacimiento = dtpFecNac.Value,
+                direccion = txtDireccion.Text.Trim(),
+                email = txtEmail.Text.Trim(),
+                telefono = txtTelefono.Text.Trim(),
+
+                /* Atributos de Socio*/
+                numeroSocio = int.Parse(txtNroSocio.Text),
+                tipoSocio = lstTipoSocio.SelectedItem?.ToString() ?? "INACTIVO",
+                fechaAlta = dtpFechaAlta.Value,
+                fechaPago = dtpFechaPago.Value,
+                estadoCuota = lstEstadoPago.SelectedItem?.ToString() ?? "IMPAGO"
+            };
+
+            return socio;
+        }
+
+
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+        string.IsNullOrWhiteSpace(txtApellido.Text) ||
+        string.IsNullOrWhiteSpace(txtNroDocumento.Text) ||
+        lstTipoDoc.SelectedIndex == -1 ||
+        lstTipoSocio.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor complete todos los campos obligatorios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!int.TryParse(txtNroSocio.Text, out _))
+            {
+                MessageBox.Show("El número de socio debe ser un valor numérico.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        /* Todavia no se si se va a usar*/
+        private void LimpiarFormulario()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtNroDocumento.Clear();
+            dtpFecNac.Value = DateTime.Now;
+            txtDireccion.Clear();
+            txtEmail.Clear();
+            txtTelefono.Clear();
+            txtNroSocio.Clear();
+            lstTipoSocio.SelectedIndex = 0;
+            dtpFechaAlta.Value = DateTime.Now;
+            dtpFechaPago.Value = DateTime.Now;
+            lstEstadoPago.SelectedIndex = 0;
+        }
+
+
+        private void GuardarSocio(Socio socio)
+        {
+            using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+            {
+                connection.Open();
+                MySqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    // Primero insertamos la persona
+                    string queryPersona = @"INSERT INTO Personas 
+                          (nombre, apellido, tipoDocumento, nroDocumento, fechaNacimiento, direccion, email, telefono) 
+                          VALUES 
+                          (@nombre, @apellido, @tipoDocumento, @nroDocumento, @fechaNacimiento, @direccion, @email, @telefono);
+                          SELECT LAST_INSERT_ID();";
+
+                    MySqlCommand cmdPersona = new MySqlCommand(queryPersona, connection, transaction);
+                    cmdPersona.Parameters.AddWithValue("@nombre", socio.nombre);
+                    cmdPersona.Parameters.AddWithValue("@apellido", socio.apellido);
+                    cmdPersona.Parameters.AddWithValue("@tipoDocumento", socio.tipoDocumento);
+                    cmdPersona.Parameters.AddWithValue("@nroDocumento", socio.nroDocumento);
+                    cmdPersona.Parameters.AddWithValue("@fechaNacimiento", socio.fechaNacimiento);
+                    cmdPersona.Parameters.AddWithValue("@direccion", socio.direccion ?? (object)DBNull.Value);
+                    cmdPersona.Parameters.AddWithValue("@email", socio.email ?? (object)DBNull.Value);
+                    cmdPersona.Parameters.AddWithValue("@telefono", socio.telefono ?? (object)DBNull.Value);
+
+                    int idPersona = Convert.ToInt32(cmdPersona.ExecuteScalar());
+
+                    // Insertamos el socio
+                    string querySocio = @"INSERT INTO Socios 
+                        (idPersona, numeroSocio, tipoSocio, fechaAlta, fechaPago, estadoCuota) 
+                        VALUES 
+                        (@idPersona, @numeroSocio, @tipoSocio, @fechaAlta, @fechaPago, @estadoCuota)";
+
+                    MySqlCommand cmdSocio = new MySqlCommand(querySocio, connection, transaction);
+                    cmdSocio.Parameters.AddWithValue("@idPersona", idPersona);
+                    cmdSocio.Parameters.AddWithValue("@numeroSocio", socio.numeroSocio);
+                    cmdSocio.Parameters.AddWithValue("@tipoSocio", socio.tipoSocio);
+                    cmdSocio.Parameters.AddWithValue("@fechaAlta", socio.fechaAlta);
+                    cmdSocio.Parameters.AddWithValue("@fechaPago", socio.fechaPago);
+                    cmdSocio.Parameters.AddWithValue("@estadoCuota", socio.estadoCuota);
+
+                    cmdSocio.ExecuteNonQuery();
+
+                    transaction.Commit();
+
+                    //MessageBox.Show($"Socio registrado con número: {socio.numeroSocio}");
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show($"Error al guardar el socio: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
+                }
+            }
+        }
+
+        private void frmRegistrarSocio_Load(object sender, EventArgs e)
+        {
+            /* Configuración del ListBox*/
+
+            /* Configurar lstTipoDoc */
+            lstTipoDoc.Items.Add("DNI");
+            lstTipoDoc.Items.Add("PASAPORTE");
+            lstTipoDoc.Items.Add("CEDULA");
+            lstTipoDoc.SelectedIndex = 0;
+
+            /* Configurar lstTipoSocio */
+            lstTipoSocio.Items.Add("INACTIVO");
+            lstTipoSocio.Items.Add("ACTIVO");
+            lstTipoSocio.Items.Add("ADHERENTE");
+            lstTipoSocio.SelectedIndex = 0;
+
+            /* Configurar lstEstadoPago */
+            lstEstadoPago.Items.Add("IMPAGO");
+            lstEstadoPago.Items.Add("AL DIA");
+            lstEstadoPago.Items.Add("VENCIDO");
+            lstEstadoPago.SelectedIndex = 0;
+
+
+            try
+            {
+                int proximoNumero = generadorNumerosSocios.ObtenerProximoNumero();
+                txtNroSocio.Text = proximoNumero.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al generar EL número: {ex.Message}");
+            }
+        }
+
+        public class generadorNumerosSocios
+        {
+            
+            public static int ObtenerProximoNumero()
+            {
+                using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+                {
+                    connection.Open();
+
+                    // Bloqueo de tabla para evitar concurrencia (opcional para entornos multi-usuario)
+                    string queryLock = "LOCK TABLES Socios READ";
+                    new MySqlCommand(queryLock, connection).ExecuteNonQuery();
+
+                    try
+                    {
+                        string query = "SELECT COALESCE(MAX(numeroSocio), 0) FROM Socios";
+                        MySqlCommand cmd = new MySqlCommand(query, connection);
+                        int ultimoNumero = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        return ultimoNumero + 1;
+                    }
+                    finally
+                    {
+                        // Liberar el bloqueo
+                        string queryUnlock = "UNLOCK TABLES";
+                        new MySqlCommand(queryUnlock, connection).ExecuteNonQuery();
+                    }
+                }
+            }
+
+
+        }
+
+       
+
+
+
+
+
+
+
+
+
     }
 }

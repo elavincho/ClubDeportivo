@@ -51,7 +51,7 @@ namespace PrevioClubDeportivo.Datos
             catch (Exception ex)
             {
                 cadena = null;
-                MessageBox.Show($"Error de Conexión: {ex.Message}");
+                MessageBox.Show($"Error de conexión: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
             return cadena;
