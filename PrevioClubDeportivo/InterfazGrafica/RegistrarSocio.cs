@@ -111,6 +111,12 @@ namespace PrevioClubDeportivo
                 try
                 {
                     Socio nuevoSocio = ObtenerSocioDesdeFormulario();
+                    if (!VerificarAptoFisicoExistente(nuevoSocio.numeroSocio))
+                    {
+                        MessageBox.Show("No existe un apto físico registrado para este número de socio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     GuardarSocio(nuevoSocio);
                     MessageBox.Show("Socio registrado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarFormulario();
@@ -324,6 +330,31 @@ namespace PrevioClubDeportivo
             /* Abrimos el formulario Apto Físico */
             frmAptoFisico aptoFisico = new frmAptoFisico();
             aptoFisico.Show();
+        }
+
+        private bool VerificarAptoFisicoExistente(int numeroSocio)
+        {
+            try
+            {
+                using (var connection = Conexion.getInstancia().CrearConexion())
+                {
+                    connection.Open();
+
+                    const string query = "SELECT 1 FROM AptoFisico WHERE numeroSocio = @numeroSocio LIMIT 1";
+
+                    using (var cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@numeroSocio", numeroSocio);
+                        return cmd.ExecuteScalar() != null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al verificar apto físico: {ex.Message}",
+                              "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
     }
 }

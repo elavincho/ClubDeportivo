@@ -139,43 +139,39 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     AptFisico nuevoAptoFisico = ObtenerAptoFisicoDesdeFormulario();
                     GuardarAptoFisico(nuevoAptoFisico);
                     MessageBox.Show("Apto Físico guardado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     /* Ocultar el formulario Apto Físico */
                     this.Hide();
+
                     /* Abrimos el formulario Registrar Socio */
-                    frmAptoFisico aptoFisico = new frmAptoFisico();
-                    aptoFisico.Show();
+                    frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
+                    registrarSocio.Show();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al guardar el Apto Físico: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Existe un Apto Físico con este número de socio: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            if (ConfirmarSalida())
-            {
-                /* Ocultar el formulario Apto Físico */
-                this.Hide();
+            /* Ocultar el formulario Apto Físico */
+            this.Hide();
 
-                /* Abrimos el formulario principal */
-                frmHome home = new frmHome();
-                home.Show();
-            }
+            /* Abrimos el formulario principal */
+            frmHome home = new frmHome();
+            home.Show();
         }
 
         private void btnCobrarCuota_Click(object sender, EventArgs e)
         {
-            if (ConfirmarSalida())
-            {
-                /* Ocultamos el formulario Registrar Socio */
-                this.Hide();
+            /* Ocultamos el formulario Registrar Socio */
+            this.Hide();
 
-                /* Abrimos el formulario Cobrar Cuota */
-                frmCobrarCuota cobrarCuota = new frmCobrarCuota();
-                cobrarCuota.Show();
-            }
+            /* Abrimos el formulario Cobrar Cuota */
+            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
+            cobrarCuota.Show();
         }
 
 
@@ -235,12 +231,12 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
                     transaction.Commit();
 
-                    //MessageBox.Show($"Socio registrado con número: {socio.numeroSocio}");
+                    //MessageBox.Show($"Apto físico registrado con número de socio: {socio.numeroSocio}");
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    MessageBox.Show($"Error al guardar el Apto Físico: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show($"Error al guardar el Apto Físico: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw;
                 }
             }
