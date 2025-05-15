@@ -450,7 +450,7 @@
             // dtpFecNac
             // 
             this.dtpFecNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecNac.Location = new System.Drawing.Point(395, 437);
             this.dtpFecNac.Name = "dtpFecNac";
             this.dtpFecNac.Size = new System.Drawing.Size(224, 24);
@@ -498,7 +498,7 @@
             // dtpFechaAlta
             // 
             this.dtpFechaAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaAlta.Location = new System.Drawing.Point(848, 165);
             this.dtpFechaAlta.Name = "dtpFechaAlta";
             this.dtpFechaAlta.Size = new System.Drawing.Size(154, 24);
@@ -518,7 +518,7 @@
             // dtpFechaPago
             // 
             this.dtpFechaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaPago.Location = new System.Drawing.Point(848, 284);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(154, 24);

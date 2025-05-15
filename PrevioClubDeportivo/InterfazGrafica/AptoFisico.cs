@@ -51,10 +51,13 @@ namespace PrevioClubDeportivo.InterfazGrafica
         {
             /* Configuración del ListBox*/
 
-            /* Configurar lstTipoDoc */
+            /* Configuración lstTipoDoc */
             lstEsApto.Items.Add("NO");
             lstEsApto.Items.Add("SI");
             lstEsApto.SelectedIndex = 0;
+
+            /* Personalizamos el formato de la fecha*/
+            dtpVencimiento.CustomFormat = "dd/MM/yyyy";
 
 
             try

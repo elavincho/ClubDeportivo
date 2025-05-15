@@ -277,7 +277,7 @@
             // 
             this.dtpVencimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.dtpVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpVencimiento.Location = new System.Drawing.Point(639, 384);
             this.dtpVencimiento.MinDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.dtpVencimiento.Name = "dtpVencimiento";

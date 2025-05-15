@@ -60,28 +60,22 @@ namespace PrevioClubDeportivo
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            if (ConfirmarSalida())
-            {
                 /* Ocultar el formulario Registrar Socios */
                 this.Hide();
 
                 /* Abrimos el formulario principal */
                 frmHome home = new frmHome();
                 home.Show();
-            }
         }
 
         private void btnCobrarCuota_Click(object sender, EventArgs e)
         {
-            if (ConfirmarSalida())
-            {
-                /* Ocultamos el formulario Registrar Socio */
-                this.Hide();
+            /* Ocultamos el formulario Registrar Socio */
+            this.Hide();
 
-                /* Abrimos el formulario Cobrar Cuota */
-                frmCobrarCuota cobrarCuota = new frmCobrarCuota();
-                cobrarCuota.Show();
-            }
+            /* Abrimos el formulario Cobrar Cuota */
+            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
+            cobrarCuota.Show();
         }
 
         /* Función que pregunta si queres salir */
@@ -125,7 +119,7 @@ namespace PrevioClubDeportivo
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al guardar el socio: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"El Socio ya se encuentra registrado: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -275,6 +269,11 @@ namespace PrevioClubDeportivo
             lstEstadoPago.Items.Add("AL DIA");
             lstEstadoPago.Items.Add("VENCIDO");
             lstEstadoPago.SelectedIndex = 0;
+
+            /* Personalizamos el formato de la fecha*/
+            dtpFechaAlta.CustomFormat = "dd/MM/yyyy";
+            dtpFechaPago.CustomFormat = "dd/MM/yyyy";
+            dtpFecNac.CustomFormat = "dd/MM/yyyy";
 
             try
             {
