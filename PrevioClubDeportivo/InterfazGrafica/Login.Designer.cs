@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picBanner = new System.Windows.Forms.PictureBox();
+            this.picFondoCentral = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContrasena = new System.Windows.Forms.Label();
@@ -38,31 +38,31 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.picFondo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFondoCentral)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picBanner
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(821, 126);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBanner.Image = ((System.Drawing.Image)(resources.GetObject("picBanner.Image")));
+            this.picBanner.Location = new System.Drawing.Point(-2, -2);
+            this.picBanner.Name = "picBanner";
+            this.picBanner.Size = new System.Drawing.Size(821, 126);
+            this.picBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBanner.TabIndex = 0;
+            this.picBanner.TabStop = false;
             // 
-            // pictureBox2
+            // picFondoCentral
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(210, 121);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(423, 328);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.picFondoCentral.Image = ((System.Drawing.Image)(resources.GetObject("picFondoCentral.Image")));
+            this.picFondoCentral.Location = new System.Drawing.Point(210, 121);
+            this.picFondoCentral.Name = "picFondoCentral";
+            this.picFondoCentral.Size = new System.Drawing.Size(423, 328);
+            this.picFondoCentral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFondoCentral.TabIndex = 1;
+            this.picFondoCentral.TabStop = false;
             // 
             // lblTitulo
             // 
@@ -151,14 +151,14 @@
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // pictureBox3
+            // picFondo
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 121);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(67, 370);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
+            this.picFondo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.picFondo.Location = new System.Drawing.Point(0, 121);
+            this.picFondo.Name = "picFondo";
+            this.picFondo.Size = new System.Drawing.Size(67, 370);
+            this.picFondo.TabIndex = 6;
+            this.picFondo.TabStop = false;
             // 
             // FrmLogin
             // 
@@ -174,9 +174,9 @@
             this.Controls.Add(this.lblContrasena);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.picBanner);
+            this.Controls.Add(this.picFondoCentral);
+            this.Controls.Add(this.picFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(816, 489);
@@ -185,9 +185,9 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFondoCentral)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFondo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,8 +195,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picBanner;
+        private System.Windows.Forms.PictureBox picFondoCentral;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblContrasena;
@@ -204,7 +204,7 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picFondo;
     }
 }
 

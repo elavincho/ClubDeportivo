@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picBanner = new System.Windows.Forms.PictureBox();
+            this.picFondoBoton = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRegistrarSocios = new System.Windows.Forms.Button();
             this.btnCobrarCuota = new System.Windows.Forms.Button();
@@ -43,30 +43,30 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picBanner
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(1035, 144);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(1035, 144);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1035, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBanner.Image = ((System.Drawing.Image)(resources.GetObject("picBanner.Image")));
+            this.picBanner.Location = new System.Drawing.Point(-1, 0);
+            this.picBanner.MaximumSize = new System.Drawing.Size(1035, 144);
+            this.picBanner.MinimumSize = new System.Drawing.Size(1035, 144);
+            this.picBanner.Name = "picBanner";
+            this.picBanner.Size = new System.Drawing.Size(1035, 144);
+            this.picBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBanner.TabIndex = 0;
+            this.picBanner.TabStop = false;
             // 
-            // pictureBox2
+            // picFondoBoton
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 136);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(260, 456);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.picFondoBoton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.picFondoBoton.Location = new System.Drawing.Point(-1, 136);
+            this.picFondoBoton.Name = "picFondoBoton";
+            this.picFondoBoton.Size = new System.Drawing.Size(260, 456);
+            this.picFondoBoton.TabIndex = 1;
+            this.picFondoBoton.TabStop = false;
             // 
             // btnHome
             // 
@@ -275,8 +275,8 @@
             this.Controls.Add(this.btnCobrarCuota);
             this.Controls.Add(this.btnRegistrarSocios);
             this.Controls.Add(this.btnHome);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.picBanner);
+            this.Controls.Add(this.picFondoBoton);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -287,8 +287,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.frmRegistrarSocio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,8 +296,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picBanner;
+        private System.Windows.Forms.PictureBox picFondoBoton;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnRegistrarSocios;
         private System.Windows.Forms.Button btnCobrarCuota;
