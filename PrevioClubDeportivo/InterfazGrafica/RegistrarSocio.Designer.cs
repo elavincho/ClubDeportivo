@@ -270,10 +270,12 @@
             // 
             // txtNroSocio
             // 
+            this.txtNroSocio.BackColor = System.Drawing.Color.White;
             this.txtNroSocio.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNroSocio.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtNroSocio.Location = new System.Drawing.Point(848, 195);
             this.txtNroSocio.Name = "txtNroSocio";
+            this.txtNroSocio.ReadOnly = true;
             this.txtNroSocio.Size = new System.Drawing.Size(154, 25);
             this.txtNroSocio.TabIndex = 6;
             this.txtNroSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

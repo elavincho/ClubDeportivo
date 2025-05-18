@@ -43,8 +43,10 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
+            this.picImagenCentral = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagenCentral)).BeginInit();
             this.SuspendLayout();
             // 
             // picBanner
@@ -215,7 +217,7 @@
             this.lblBienvenido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblBienvenido.Location = new System.Drawing.Point(514, 261);
+            this.lblBienvenido.Location = new System.Drawing.Point(289, 159);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(262, 55);
             this.lblBienvenido.TabIndex = 4;
@@ -227,7 +229,7 @@
             this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblUsuario.Location = new System.Drawing.Point(514, 401);
+            this.lblUsuario.Location = new System.Drawing.Point(795, 159);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(37, 55);
             this.lblUsuario.TabIndex = 4;
@@ -239,7 +241,7 @@
             this.lblRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblRol.Location = new System.Drawing.Point(760, 159);
+            this.lblRol.Location = new System.Drawing.Point(292, 527);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(27, 39);
             this.lblRol.TabIndex = 4;
@@ -251,11 +253,21 @@
             this.lblHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHome.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblHome.Location = new System.Drawing.Point(278, 164);
+            this.lblHome.Location = new System.Drawing.Point(891, 527);
             this.lblHome.Name = "lblHome";
             this.lblHome.Size = new System.Drawing.Size(121, 39);
             this.lblHome.TabIndex = 4;
             this.lblHome.Text = "HOME";
+            // 
+            // picImagenCentral
+            // 
+            this.picImagenCentral.Image = ((System.Drawing.Image)(resources.GetObject("picImagenCentral.Image")));
+            this.picImagenCentral.Location = new System.Drawing.Point(279, 210);
+            this.picImagenCentral.Name = "picImagenCentral";
+            this.picImagenCentral.Size = new System.Drawing.Size(723, 314);
+            this.picImagenCentral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImagenCentral.TabIndex = 5;
+            this.picImagenCentral.TabStop = false;
             // 
             // frmHome
             // 
@@ -263,6 +275,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
+            this.Controls.Add(this.picImagenCentral);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.lblHome);
@@ -289,6 +302,7 @@
             this.Load += new System.EventHandler(this.frmRegistrarSocio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagenCentral)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +324,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblHome;
+        private System.Windows.Forms.PictureBox picImagenCentral;
     }
 }

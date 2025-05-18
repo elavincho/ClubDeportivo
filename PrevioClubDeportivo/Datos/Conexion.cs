@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -12,7 +8,7 @@ using MySql.Data.MySqlClient;
 namespace PrevioClubDeportivo.Datos
 {
     /* La clase debe ser pública */
-    public class Conexion 
+    public class Conexion
     {
         /* Declaramos las variables */
         private string baseDatos;
@@ -23,9 +19,9 @@ namespace PrevioClubDeportivo.Datos
         private static Conexion con = null;
 
         /* Asignamos valores a las variables de la conexion */
-        private Conexion() 
+        private Conexion()
         {
-            this.baseDatos = "Previoproyecto";
+            this.baseDatos = "Proyecto";
             this.servidor = "localhost";
             this.puerto = "3306";
             this.usuario = "root";

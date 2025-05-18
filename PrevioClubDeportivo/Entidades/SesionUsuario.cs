@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PrevioClubDeportivo.Entidades
+﻿namespace PrevioClubDeportivo.Entidades
 {
     internal class SesionUsuario
     {

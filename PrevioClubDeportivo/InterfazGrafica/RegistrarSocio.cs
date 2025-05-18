@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using PrevioClubDeportivo.Datos;
 using PrevioClubDeportivo.Entidades;
 using PrevioClubDeportivo.InterfazGrafica;
-using static PrevioClubDeportivo.frmRegistrarSocio;
 
 namespace PrevioClubDeportivo
 {
@@ -60,12 +51,12 @@ namespace PrevioClubDeportivo
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-                /* Ocultar el formulario Registrar Socios */
-                this.Hide();
+            /* Ocultar el formulario Registrar Socios */
+            this.Hide();
 
-                /* Abrimos el formulario principal */
-                frmHome home = new frmHome();
-                home.Show();
+            /* Abrimos el formulario principal */
+            frmHome home = new frmHome();
+            home.Show();
         }
 
         private void btnCobrarCuota_Click(object sender, EventArgs e)
@@ -325,7 +316,7 @@ namespace PrevioClubDeportivo
         private void btnCargarAptoFisico_Click(object sender, EventArgs e)
         {
             /* Ocultamos el formulario Registrar Socio */
-            this.Hide();
+            //this.Hide();
 
             /* Abrimos el formulario Apto Físico */
             frmAptoFisico aptoFisico = new frmAptoFisico();

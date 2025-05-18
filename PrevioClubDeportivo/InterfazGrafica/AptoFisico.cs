@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using PrevioClubDeportivo.Datos;
 using PrevioClubDeportivo.Entidades;
-using static PrevioClubDeportivo.frmRegistrarSocio;
 
 namespace PrevioClubDeportivo.InterfazGrafica
 {
@@ -36,8 +28,8 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 {
                     /* Marca que estamos cerrando */
                     estaCerrando = true;
-                    /* Cierra la aplicación */
-                    Application.Exit();
+                    /* Ocultamos el formulario Apto Físico*/
+                    this.Hide();
                 }
             }
             else
@@ -52,13 +44,17 @@ namespace PrevioClubDeportivo.InterfazGrafica
             /* Configuración del ListBox*/
 
             /* Configuración lstTipoDoc */
+            lstEsApto.Items.Add("SELECCIONE");
             lstEsApto.Items.Add("NO");
             lstEsApto.Items.Add("SI");
             lstEsApto.SelectedIndex = 0;
 
+
             /* Personalizamos el formato de la fecha*/
             dtpVencimiento.CustomFormat = "dd/MM/yyyy";
 
+            /* Configurar fecha de vencimiento a 1 año desde hoy */
+            dtpVencimiento.Value = DateTime.Today.AddYears(1);
 
             try
             {
@@ -121,9 +117,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
         {
             if (ConfirmarSalida())
             {
-                /* Regresa al formulario Registrar Socio */
-                frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
-                registrarSocio.Show();
                 /* Ocultamos el formulario Apto Físico*/
                 this.Hide();
             }
@@ -142,10 +135,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
                     /* Ocultar el formulario Apto Físico */
                     this.Hide();
-
-                    /* Abrimos el formulario Registrar Socio */
-                    frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
-                    registrarSocio.Show();
                 }
                 catch (Exception ex)
                 {
@@ -181,7 +170,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
             AptFisico aptoFisico = new AptFisico();
 
             aptoFisico.numeroSocio = int.Parse(txtNroSocio.Text);
-            aptoFisico.esApto = lstEsApto.SelectedItem?.ToString() ?? "NO";
+            aptoFisico.esApto = lstEsApto.SelectedItem?.ToString();
             aptoFisico.vtoAptoFisico = dtpVencimiento.Value;
 
             return aptoFisico;
@@ -189,21 +178,16 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
         private bool ValidarCampos()
         {
-            if (string.IsNullOrWhiteSpace(txtNroSocio.Text) ||
-        lstEsApto.SelectedIndex == -1)
+            if (lstEsApto.SelectedIndex == 0 && lstEsApto.Items.Contains("SELECCIONE"))
             {
-                MessageBox.Show("Por favor complete todos los campos obligatorios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            if (!int.TryParse(txtNroSocio.Text, out _))
-            {
-                MessageBox.Show("El número de socio debe ser un valor numérico.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor seleccione SI o NO para el campo 'Es Apto'.", "Validación",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             return true;
         }
+
 
 
         private void GuardarAptoFisico(AptFisico aptFisico)
@@ -217,13 +201,14 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 {
                     // Insertamos el Apto Físico
                     string queryAptoFisico = @"INSERT INTO AptoFisico 
-                        (idAptoFisico, numeroSocio, vtoAptoFisico) 
+                        (idAptoFisico, numeroSocio, esApto, vtoAptoFisico) 
                         VALUES 
-                        (@idAptoFisico, @numeroSocio, @vtoAptoFisico)";
+                        (@idAptoFisico, @numeroSocio, @esApto, @vtoAptoFisico)";
 
                     MySqlCommand cmdAptoFisico = new MySqlCommand(queryAptoFisico, connection, transaction);
                     cmdAptoFisico.Parameters.AddWithValue("@idAptoFisico", aptFisico.idAptoFisico);
                     cmdAptoFisico.Parameters.AddWithValue("@numeroSocio", aptFisico.numeroSocio);
+                    cmdAptoFisico.Parameters.AddWithValue("@esApto", aptFisico.esApto);
                     cmdAptoFisico.Parameters.AddWithValue("@vtoAptoFisico", aptFisico.vtoAptoFisico);
 
 
@@ -237,7 +222,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 {
                     transaction.Rollback();
                     //MessageBox.Show($"Error al guardar el Apto Físico: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    throw;
+                    throw ex;
                 }
             }
         }

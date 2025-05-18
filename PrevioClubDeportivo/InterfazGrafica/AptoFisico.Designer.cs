@@ -194,7 +194,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Maroon;
+            this.btnSalir.BackColor = System.Drawing.Color.Pink;
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
@@ -233,9 +233,11 @@
             // 
             // txtNroSocio
             // 
+            this.txtNroSocio.BackColor = System.Drawing.Color.White;
             this.txtNroSocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNroSocio.Location = new System.Drawing.Point(833, 210);
             this.txtNroSocio.Name = "txtNroSocio";
+            this.txtNroSocio.ReadOnly = true;
             this.txtNroSocio.Size = new System.Drawing.Size(167, 35);
             this.txtNroSocio.TabIndex = 5;
             this.txtNroSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -316,6 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
@@ -338,6 +341,7 @@
             this.Controls.Add(this.picBanner);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1050, 630);
             this.MinimumSize = new System.Drawing.Size(1050, 630);
             this.Name = "frmAptoFisico";

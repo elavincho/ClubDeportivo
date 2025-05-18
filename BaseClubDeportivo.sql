@@ -1,28 +1,29 @@
-drop database if exists Previoproyecto;
-create database Previoproyecto;
-use Previoproyecto;
 
-create table roles(
-RolUsuario int,
-NombreRol varchar(30),
-constraint primary key(RolUsuario)
+DROP DATABASE IF EXISTS Proyecto;
+CREATE DATABASE Proyecto;
+USE Proyecto;
+
+CREATE TABLE roles(
+RolUsuario INT,
+NombreRol VARCHAR(30),
+CONSTRAINT PRIMARY KEY(RolUsuario)
 );
 
-insert into roles values
-(120,'Administrador'),
+INSERT INTO roles VALUES
+(120,'ADMIN'),
 (121,'Empleado');
 
-create table usuarios(
-CodigoUsuario int auto_increment,
-NombreUsuario varchar (20),
-PasswordUsuario varchar (15),
-RolUsuario int,
-Activo boolean default true,
-constraint pk_usuario primary key (CodigoUsuario),
-constraint fk_usuario foreign key(RolUsuario) references roles(RolUsuario)
+CREATE TABLE usuarios(
+CodigoUsuario INT AUTO_INCREMENT,
+NombreUsuario VARCHAR (20),
+PasswordUsuario VARCHAR (15),
+RolUsuario INT,
+Activo BOOLEAN DEFAULT TRUE,
+CONSTRAINT pk_usuario PRIMARY KEY (CodigoUsuario),
+CONSTRAINT fk_usuario FOREIGN KEY(RolUsuario) REFERENCES roles(RolUsuario)
 );
 
-insert into usuarios(CodigoUsuario,NombreUsuario,PasswordUsuario,RolUsuario) values
+INSERT INTO usuarios(CodigoUsuario,NombreUsuario,PasswordUsuario,RolUsuario) VALUES
 (1,'Ema2025','123456',120);
 
 
@@ -58,7 +59,7 @@ CREATE TABLE Socios (
 CREATE TABLE AptoFisico (
     idAptoFisico INT PRIMARY KEY AUTO_INCREMENT,
     numeroSocio INT NOT NULL,
-    fechaAlta DATE NOT NULL DEFAULT (CURRENT_DATE),
+    esApto VARCHAR(20) NOT NULL,
     vtoAptoFisico DATE NOT NULL,
     CONSTRAINT UQ_AptoFisico_numeroSocio UNIQUE (numeroSocio)
 );

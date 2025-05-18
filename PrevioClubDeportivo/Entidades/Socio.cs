@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PrevioClubDeportivo.Entidades
 {
@@ -31,7 +26,7 @@ namespace PrevioClubDeportivo.Entidades
         }
 
         /* Constructor Vacio */
-        public Socio() 
+        public Socio()
         {
         }
 

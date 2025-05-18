@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /* Referencia a MySQL */
@@ -32,7 +28,7 @@ namespace PrevioClubDeportivo.Entidades
                 comando.CommandType = CommandType.StoredProcedure;
 
                 /* Definimos los parametros que tiene el procedure */
-                
+
                 comando.Parameters.Add("Usuario",
                MySqlDbType.VarChar).Value = L_Usuario;
                 comando.Parameters.Add("Pass", MySqlDbType.VarChar).Value = P_Usuario;
@@ -41,16 +37,16 @@ namespace PrevioClubDeportivo.Entidades
                 sqlCon.Open();
                 resultado = comando.ExecuteReader(); /* almacenamos el resulatdo en la variable */
                 tabla.Load(resultado); /* cargamos la tabla con el resultado */
-            
+
                 return tabla;
                 /*  de esta forma esta asociado el metodo con el procedure que esta almacenado en MySQL */
-                     }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al intertar iniciar sesión: " + ex.Message);
                 throw;
             }
-                /* como proceso final */
+            /* como proceso final */
             finally
             {
                 if (sqlCon.State == ConnectionState.Open)

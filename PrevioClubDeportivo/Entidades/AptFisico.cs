@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrevioClubDeportivo.Entidades
 {
     internal class AptFisico
     {
-        
+
 
         /* Atributos con Get y Set */
 
-        public int idAptoFisico {  get; set; }
+        public int idAptoFisico { get; set; }
         public int numeroSocio { get; set; }
-        public string esApto {  get; set; }
+        public string esApto { get; set; }
         public DateTime vtoAptoFisico { get; set; }
 
         /* Constructor Vacio */
