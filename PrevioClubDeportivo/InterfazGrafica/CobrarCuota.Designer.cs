@@ -40,6 +40,8 @@
             this.btnInscripcionActividad = new System.Windows.Forms.Button();
             this.btnVencimientosDelDia = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             this.SuspendLayout();
@@ -214,12 +216,33 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblFecha.Location = new System.Drawing.Point(790, 184);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(69, 20);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "FECHA";
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(878, 183);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(134, 20);
+            this.dtpFecha.TabIndex = 5;
+            // 
             // frmCobrarCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnVencimientosDelDia);
             this.Controls.Add(this.btnInscripcionActividad);
@@ -259,5 +282,7 @@
         private System.Windows.Forms.Button btnInscripcionActividad;
         private System.Windows.Forms.Button btnVencimientosDelDia;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

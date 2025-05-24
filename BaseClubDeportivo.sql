@@ -1,4 +1,3 @@
-
 DROP DATABASE IF EXISTS Proyecto;
 CREATE DATABASE Proyecto;
 USE Proyecto;
@@ -20,7 +19,7 @@ PasswordUsuario VARCHAR (15),
 RolUsuario INT,
 Activo BOOLEAN DEFAULT TRUE,
 CONSTRAINT pk_usuario PRIMARY KEY (CodigoUsuario),
-CONSTRAINT fk_usuario FOREIGN KEY(RolUsuario) REFERENCES roles(RolUsuario)
+CONSTRAINT fk_usuario FOREIGN KEY(RolUsuario) references roles(RolUsuario)
 );
 
 INSERT INTO usuarios(CodigoUsuario,NombreUsuario,PasswordUsuario,RolUsuario) VALUES
