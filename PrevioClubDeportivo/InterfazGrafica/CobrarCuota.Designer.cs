@@ -42,6 +42,23 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblNroComprobante = new System.Windows.Forms.Label();
+            this.txtNroComprobante = new System.Windows.Forms.TextBox();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.lblVencimiento = new System.Windows.Forms.Label();
+            this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.lblImporte = new System.Windows.Forms.Label();
+            this.txtImporte = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNroSocio = new System.Windows.Forms.Label();
+            this.txtNroSocio = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCobrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             this.SuspendLayout();
@@ -221,7 +238,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblFecha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblFecha.Location = new System.Drawing.Point(790, 184);
+            this.lblFecha.Location = new System.Drawing.Point(846, 159);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(69, 20);
             this.lblFecha.TabIndex = 4;
@@ -229,11 +246,188 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(878, 183);
+            this.dtpFecha.Location = new System.Drawing.Point(850, 182);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(134, 20);
+            this.dtpFecha.Size = new System.Drawing.Size(162, 24);
             this.dtpFecha.TabIndex = 5;
+            // 
+            // lblNroComprobante
+            // 
+            this.lblNroComprobante.AutoSize = true;
+            this.lblNroComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNroComprobante.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblNroComprobante.Location = new System.Drawing.Point(846, 225);
+            this.lblNroComprobante.Name = "lblNroComprobante";
+            this.lblNroComprobante.Size = new System.Drawing.Size(166, 20);
+            this.lblNroComprobante.TabIndex = 4;
+            this.lblNroComprobante.Text = "N° COMPROBANTE";
+            // 
+            // txtNroComprobante
+            // 
+            this.txtNroComprobante.Font = new System.Drawing.Font("Gadugi", 9.75F);
+            this.txtNroComprobante.Location = new System.Drawing.Point(850, 248);
+            this.txtNroComprobante.Name = "txtNroComprobante";
+            this.txtNroComprobante.Size = new System.Drawing.Size(162, 25);
+            this.txtNroComprobante.TabIndex = 6;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTipo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTipo.Location = new System.Drawing.Point(733, 345);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(49, 20);
+            this.lblTipo.TabIndex = 4;
+            this.lblTipo.Text = "TIPO";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(800, 345);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(90, 20);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "MENSUAL";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(943, 345);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(69, 20);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "DIARIA";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblApellido.Location = new System.Drawing.Point(686, 393);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(96, 20);
+            this.lblApellido.TabIndex = 4;
+            this.lblApellido.Text = "APELLIDO";
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Font = new System.Drawing.Font("Gadugi", 9.75F);
+            this.txtApellido.Location = new System.Drawing.Point(788, 388);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(224, 25);
+            this.txtApellido.TabIndex = 6;
+            // 
+            // lblVencimiento
+            // 
+            this.lblVencimiento.AutoSize = true;
+            this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblVencimiento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblVencimiento.Location = new System.Drawing.Point(652, 444);
+            this.lblVencimiento.Name = "lblVencimiento";
+            this.lblVencimiento.Size = new System.Drawing.Size(130, 20);
+            this.lblVencimiento.TabIndex = 4;
+            this.lblVencimiento.Text = "VENCIMIENTO";
+            // 
+            // dtpVencimiento
+            // 
+            this.dtpVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVencimiento.Location = new System.Drawing.Point(788, 440);
+            this.dtpVencimiento.Name = "dtpVencimiento";
+            this.dtpVencimiento.Size = new System.Drawing.Size(224, 24);
+            this.dtpVencimiento.TabIndex = 5;
+            // 
+            // lblImporte
+            // 
+            this.lblImporte.AutoSize = true;
+            this.lblImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImporte.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblImporte.Location = new System.Drawing.Point(298, 444);
+            this.lblImporte.Name = "lblImporte";
+            this.lblImporte.Size = new System.Drawing.Size(88, 20);
+            this.lblImporte.TabIndex = 4;
+            this.lblImporte.Text = "IMPORTE";
+            // 
+            // txtImporte
+            // 
+            this.txtImporte.Font = new System.Drawing.Font("Gadugi", 9.75F);
+            this.txtImporte.Location = new System.Drawing.Point(392, 439);
+            this.txtImporte.Name = "txtImporte";
+            this.txtImporte.Size = new System.Drawing.Size(224, 25);
+            this.txtImporte.TabIndex = 6;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblNombre.Location = new System.Drawing.Point(301, 393);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(85, 20);
+            this.lblNombre.TabIndex = 4;
+            this.lblNombre.Text = "NOMBRE";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Gadugi", 9.75F);
+            this.txtNombre.Location = new System.Drawing.Point(392, 388);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(224, 25);
+            this.txtNombre.TabIndex = 6;
+            // 
+            // lblNroSocio
+            // 
+            this.lblNroSocio.AutoSize = true;
+            this.lblNroSocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNroSocio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblNroSocio.Location = new System.Drawing.Point(298, 342);
+            this.lblNroSocio.Name = "lblNroSocio";
+            this.lblNroSocio.Size = new System.Drawing.Size(88, 20);
+            this.lblNroSocio.TabIndex = 4;
+            this.lblNroSocio.Text = "N° SOCIO";
+            // 
+            // txtNroSocio
+            // 
+            this.txtNroSocio.Font = new System.Drawing.Font("Gadugi", 9.75F);
+            this.txtNroSocio.Location = new System.Drawing.Point(392, 337);
+            this.txtNroSocio.Name = "txtNroSocio";
+            this.txtNroSocio.Size = new System.Drawing.Size(224, 25);
+            this.txtNroSocio.TabIndex = 6;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(392, 516);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(138, 36);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnCobrar
+            // 
+            this.btnCobrar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCobrar.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnCobrar.ForeColor = System.Drawing.Color.White;
+            this.btnCobrar.Location = new System.Drawing.Point(815, 516);
+            this.btnCobrar.Name = "btnCobrar";
+            this.btnCobrar.Size = new System.Drawing.Size(138, 36);
+            this.btnCobrar.TabIndex = 8;
+            this.btnCobrar.Text = "COBRAR";
+            this.btnCobrar.UseVisualStyleBackColor = false;
             // 
             // frmCobrarCuota
             // 
@@ -241,7 +435,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
+            this.Controls.Add(this.btnCobrar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtImporte);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNroSocio);
+            this.Controls.Add(this.txtNroComprobante);
+            this.Controls.Add(this.dtpVencimiento);
             this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblImporte);
+            this.Controls.Add(this.lblVencimiento);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.lblTipo);
+            this.Controls.Add(this.lblNroSocio);
+            this.Controls.Add(this.lblNroComprobante);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnVencimientosDelDia);
@@ -284,5 +495,22 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label lblNroComprobante;
+        private System.Windows.Forms.TextBox txtNroComprobante;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Label lblVencimiento;
+        private System.Windows.Forms.DateTimePicker dtpVencimiento;
+        private System.Windows.Forms.Label lblImporte;
+        private System.Windows.Forms.TextBox txtImporte;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNroSocio;
+        private System.Windows.Forms.TextBox txtNroSocio;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCobrar;
     }
 }
