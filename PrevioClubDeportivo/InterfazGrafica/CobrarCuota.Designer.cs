@@ -59,6 +59,8 @@
             this.txtNroSocio = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCobrar = new System.Windows.Forms.Button();
+            this.lblActividad = new System.Windows.Forms.Label();
+            this.lstActividad = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             this.SuspendLayout();
@@ -277,7 +279,7 @@
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblTipo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTipo.Location = new System.Drawing.Point(733, 345);
+            this.lblTipo.Location = new System.Drawing.Point(732, 300);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(49, 20);
             this.lblTipo.TabIndex = 4;
@@ -287,7 +289,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(800, 345);
+            this.radioButton1.Location = new System.Drawing.Point(799, 300);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(90, 20);
             this.radioButton1.TabIndex = 7;
@@ -299,7 +301,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(943, 345);
+            this.radioButton2.Location = new System.Drawing.Point(942, 300);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(69, 20);
             this.radioButton2.TabIndex = 7;
@@ -312,7 +314,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblApellido.Location = new System.Drawing.Point(686, 393);
+            this.lblApellido.Location = new System.Drawing.Point(685, 393);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(96, 20);
             this.lblApellido.TabIndex = 4;
@@ -429,12 +431,35 @@
             this.btnCobrar.Text = "COBRAR";
             this.btnCobrar.UseVisualStyleBackColor = false;
             // 
+            // lblActividad
+            // 
+            this.lblActividad.AutoSize = true;
+            this.lblActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblActividad.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblActividad.Location = new System.Drawing.Point(676, 345);
+            this.lblActividad.Name = "lblActividad";
+            this.lblActividad.Size = new System.Drawing.Size(105, 20);
+            this.lblActividad.TabIndex = 4;
+            this.lblActividad.Text = "ACTIVIDAD";
+            // 
+            // lstActividad
+            // 
+            this.lstActividad.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.lstActividad.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lstActividad.FormattingEnabled = true;
+            this.lstActividad.ItemHeight = 19;
+            this.lstActividad.Location = new System.Drawing.Point(788, 342);
+            this.lstActividad.Name = "lstActividad";
+            this.lstActividad.Size = new System.Drawing.Size(224, 23);
+            this.lstActividad.TabIndex = 9;
+            // 
             // frmCobrarCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
+            this.Controls.Add(this.lstActividad);
             this.Controls.Add(this.btnCobrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.radioButton2);
@@ -450,6 +475,7 @@
             this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.lblVencimiento);
             this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.lblActividad);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblNroSocio);
             this.Controls.Add(this.lblNroComprobante);
@@ -512,5 +538,7 @@
         private System.Windows.Forms.TextBox txtNroSocio;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnCobrar;
+        private System.Windows.Forms.Label lblActividad;
+        private System.Windows.Forms.ListBox lstActividad;
     }
 }
