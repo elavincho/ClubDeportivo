@@ -347,5 +347,25 @@ namespace PrevioClubDeportivo
                 return false;
             }
         }
+
+        private void btnEntregarCarnet_Click(object sender, EventArgs e)
+        {
+            /* Ocultamos el formulario Registrar Socio */
+            this.Hide();
+
+            /* Abrimos el formulario Carnet */
+            frmCarnet carnet = new frmCarnet();
+            carnet.Show();
+        }
+
+        private void btnVencimientosDelDia_Click(object sender, EventArgs e)
+        {
+            /* Ocultamos el formulario Registrar Socio */
+            this.Hide();
+
+            /* Abrimos el formulario Vencimientos del día */
+            frmVencimientosDelDia vencimientos = new frmVencimientosDelDia();
+            vencimientos.Show();
+        }
     }
 }

@@ -10,11 +10,39 @@ using System.Windows.Forms;
 
 namespace PrevioClubDeportivo.InterfazGrafica
 {
-    public partial class frmComprobantePago : Form
+    public partial class frmCarnet : Form
     {
-        public frmComprobantePago()
+        public frmCarnet()
         {
             InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (ConfirmarSalida())
+            {
+                /* Regresa al formulario principal */
+                frmHome home = new frmHome();
+                home.Show();
+                /* Ocultamos el formulario Entregar Carnet*/
+                this.Hide();
+
+
+            }
+            /* Si elige "No", no hace nada (se queda en el formulario actual) */
+        }
+
+        /* Función que pregunta si queres salir */
+        private bool ConfirmarSalida()
+        {
+            DialogResult respuesta = MessageBox.Show(
+                "¿Estás seguro que deseas salir?",
+                "Confirmar salida",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            return (respuesta == DialogResult.Yes);
         }
 
         /* Utilizamos una variable de control para evitar la recursión involuntaria*/
@@ -32,8 +60,11 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 {
                     /* Marca que estamos cerrando */
                     estaCerrando = true;
-                    /* Ocultamos el formulario Apto Físico*/
+                    /* Ocultamos el formulario Carnet*/
                     this.Hide();
+                    /* Regresa al formulario principal */
+                    frmHome home = new frmHome();
+                    home.Show();
                 }
             }
             else
@@ -43,26 +74,9 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            if (ConfirmarSalida())
-            {
-                /* Ocultamos el formulario Comprobante de Pago*/
-                this.Hide();
-            }
-            /* Si elige "No", no hace nada (se queda en el formulario actual) */
-        }
 
-        private bool ConfirmarSalida()
-        {
-            DialogResult respuesta = MessageBox.Show(
-                "¿Estás seguro que deseas salir?",
-                "Confirmar salida",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
 
-            return (respuesta == DialogResult.Yes);
-        }
+
+
     }
 }

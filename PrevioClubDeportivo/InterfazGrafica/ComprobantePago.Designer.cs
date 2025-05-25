@@ -284,6 +284,7 @@
             this.btnCerrar.TabIndex = 23;
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmComprobantePago
             // 
@@ -319,6 +320,7 @@
             this.MaximumSize = new System.Drawing.Size(1050, 630);
             this.MinimumSize = new System.Drawing.Size(1050, 630);
             this.Name = "frmComprobantePago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprobante de Pago";
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLateral)).EndInit();

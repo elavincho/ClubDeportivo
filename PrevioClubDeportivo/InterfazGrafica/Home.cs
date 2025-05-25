@@ -90,5 +90,25 @@ namespace PrevioClubDeportivo
             frmCobrarCuota cobrarCuota = new frmCobrarCuota();
             cobrarCuota.Show();
         }
+
+        private void btnEntregarCarnet_Click(object sender, EventArgs e)
+        {
+            /* Ocultamos el formulario Home */
+            this.Hide();
+
+            /* Abrimos el formulario Carnet */
+            frmCarnet carnet = new frmCarnet();
+            carnet.Show();
+        }
+
+        private void btnVencimientoDelDia_Click(object sender, EventArgs e)
+        {
+            /* Ocultamos el formulario Home */
+            this.Hide();
+
+            /* Abrimos el formulario Vencimientos del día */
+            frmVencimientosDelDia vencimientos = new frmVencimientosDelDia();
+            vencimientos.Show();
+        }
     }
 }

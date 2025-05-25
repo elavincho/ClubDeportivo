@@ -139,6 +139,7 @@
             this.btnEntregarCarnet.Text = "     ENTREGAR CARNET";
             this.btnEntregarCarnet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntregarCarnet.UseVisualStyleBackColor = false;
+            this.btnEntregarCarnet.Click += new System.EventHandler(this.btnEntregarCarnet_Click);
             // 
             // btnAltaActividad
             // 
@@ -190,6 +191,7 @@
             this.btnVencimientoDelDia.Text = "     VENCIMIENTOS DEL DÍA";
             this.btnVencimientoDelDia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVencimientoDelDia.UseVisualStyleBackColor = false;
+            this.btnVencimientoDelDia.Click += new System.EventHandler(this.btnVencimientoDelDia_Click);
             // 
             // btnSalir
             // 

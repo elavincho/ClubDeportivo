@@ -151,3 +151,6 @@ C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo\PrevioClubDeportivo\obj\Debug\P
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioCl.B0543C6B.Up2Date
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.exe
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.pdb
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.InterfazGrafica.frmCarnet.resources
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.InterfazGrafica.frmComprobantePago.resources
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.InterfazGrafica.frmVencimientosDelDia.resources

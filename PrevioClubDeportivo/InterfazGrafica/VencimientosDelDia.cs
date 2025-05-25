@@ -1,13 +1,61 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PrevioClubDeportivo.InterfazGrafica
 {
-    public partial class frmCobrarCuota : Form
+    public partial class frmVencimientosDelDia : Form
     {
-        public frmCobrarCuota()
+        public frmVencimientosDelDia()
         {
             InitializeComponent();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            /* Ocultar el formulario Vencimientos del día */
+            this.Hide();
+
+            /* Abrimos el formulario principal */
+            frmHome home = new frmHome();
+            home.Show();
+        }
+
+        private void btnRegistrarSocios_Click(object sender, EventArgs e)
+        {
+            /* Ocultar el formulario Vencimientos del día */
+            this.Hide();
+
+            /* Abrimos el formulario Registrar Socios */
+            frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
+            registrarSocio.Show();
+        }
+
+        private void btnCobrarCuota_Click(object sender, EventArgs e)
+        {
+            /* Ocultar el formulario Vencimientos del día */
+            this.Hide();
+
+            /* Abrimos el formulario Cobrar Cuota */
+            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
+            cobrarCuota.Show();
+        }
+
+        private void btnEntregarCarnet_Click(object sender, EventArgs e)
+        {
+            /* Ocultar el formulario Vencimientos del día */
+            this.Hide();
+
+            /* Abrimos el formulario Entregar Carnet */
+            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
+            frmCarnet carnet = new frmCarnet();
+            carnet.Show();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -58,54 +106,9 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Cobrar Cuota */
-            this.Hide();
 
-            /* Abrimos el formulario principal */
-            frmHome home = new frmHome();
-            home.Show();
-        }
 
-        private void btnRegistrarSocios_Click(object sender, EventArgs e)
-        {
-            /* Ocultamos el formulario Cobrar Cuota */
-            this.Hide();
 
-            /* Abrimos el formulario Registrar Socios */
-            frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
-            registrarSocio.Show();
-        }
 
-        private void btnEntregarCarnet_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Cobrar Cuota */
-            this.Hide();
-
-            /* Abrimos el formulario Entregar Carnet */
-            frmCarnet carnet = new frmCarnet();
-            carnet.Show();
-        }
-
-        private void btnVencimientosDelDia_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Cobrar Cuota */
-            this.Hide();
-
-            /* Abrimos el formulario Vencimientos del día */
-            frmVencimientosDelDia vencimientos = new frmVencimientosDelDia();
-            vencimientos.Show();
-        }
-
-        private void btnCobrar_Click(object sender, EventArgs e)
-        {
-
-            /* ************************* PROVISORIO ********************************  */
-            /* Abrimos el formulario Comprobante de pago */
-            frmComprobantePago comprobante = new frmComprobantePago();
-            comprobante.Show();
-
-        }
     }
 }
