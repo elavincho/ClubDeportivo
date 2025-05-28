@@ -73,10 +73,5 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 base.OnFormClosing(e);
             }
         }
-
-
-
-
-
     }
 }
