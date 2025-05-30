@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using PrevioClubDeportivo.Entidades;
 
@@ -48,7 +49,7 @@ namespace PrevioClubDeportivo
                 else
                 {
                     MessageBox.Show(
-                        "Usuario y/o contraseña incorrectos",
+                        "Usuario y/o Contraseña incorrectos",
                         "Error",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);

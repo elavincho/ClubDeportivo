@@ -154,6 +154,9 @@ namespace PrevioClubDeportivo
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
         string.IsNullOrWhiteSpace(txtApellido.Text) ||
         string.IsNullOrWhiteSpace(txtNroDocumento.Text) ||
+        string.IsNullOrWhiteSpace(txtDireccion.Text) ||
+        string.IsNullOrWhiteSpace(txtEmail.Text) ||
+        string.IsNullOrWhiteSpace(txtTelefono.Text) ||
         lstTipoDoc.SelectedIndex == -1 ||
         lstTipoSocio.SelectedIndex == -1)
             {
