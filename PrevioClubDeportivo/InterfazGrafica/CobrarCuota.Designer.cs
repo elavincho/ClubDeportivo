@@ -61,6 +61,7 @@
             this.btnCobrar = new System.Windows.Forms.Button();
             this.lblActividad = new System.Windows.Forms.Label();
             this.lstActividad = new System.Windows.Forms.ListBox();
+            this.lblMedioPago = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             this.SuspendLayout();
@@ -456,12 +457,22 @@
             this.lstActividad.Size = new System.Drawing.Size(224, 23);
             this.lstActividad.TabIndex = 9;
             // 
+            // lblMedioPago
+            // 
+            this.lblMedioPago.AutoSize = true;
+            this.lblMedioPago.Location = new System.Drawing.Point(309, 243);
+            this.lblMedioPago.Name = "lblMedioPago";
+            this.lblMedioPago.Size = new System.Drawing.Size(117, 13);
+            this.lblMedioPago.TabIndex = 10;
+            this.lblMedioPago.Text = "Agregar medio de pago";
+            // 
             // frmCobrarCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
+            this.Controls.Add(this.lblMedioPago);
             this.Controls.Add(this.lstActividad);
             this.Controls.Add(this.btnCobrar);
             this.Controls.Add(this.btnCancelar);
@@ -543,5 +554,6 @@
         private System.Windows.Forms.Button btnCobrar;
         private System.Windows.Forms.Label lblActividad;
         private System.Windows.Forms.ListBox lstActividad;
+        private System.Windows.Forms.Label lblMedioPago;
     }
 }
