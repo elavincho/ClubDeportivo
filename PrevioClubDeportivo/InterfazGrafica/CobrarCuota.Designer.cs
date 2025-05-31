@@ -62,6 +62,8 @@
             this.lblActividad = new System.Windows.Forms.Label();
             this.lstActividad = new System.Windows.Forms.ListBox();
             this.lblMedioPago = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             this.SuspendLayout();
@@ -466,12 +468,32 @@
             this.lblMedioPago.TabIndex = 10;
             this.lblMedioPago.Text = "Agregar medio de pago";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(453, 243);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Agregar medio de pago";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(385, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Agregar medio de pago";
+            // 
             // frmCobrarCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMedioPago);
             this.Controls.Add(this.lstActividad);
             this.Controls.Add(this.btnCobrar);
@@ -555,5 +577,7 @@
         private System.Windows.Forms.Label lblActividad;
         private System.Windows.Forms.ListBox lstActividad;
         private System.Windows.Forms.Label lblMedioPago;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

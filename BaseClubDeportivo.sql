@@ -62,3 +62,17 @@ CREATE TABLE AptoFisico (
     vtoAptoFisico DATE NOT NULL,
     CONSTRAINT UQ_AptoFisico_numeroSocio UNIQUE (numeroSocio)
 );
+
+-- Tabla Pagos
+CREATE TABLE Pagos (
+    nro_comprobante INT PRIMARY KEY AUTO_INCREMENT,
+    numeroSocio INT,
+    tipo VARCHAR(20),
+    actividad VARCHAR(50),
+    importe DECIMAL(10,2),
+    metodo_pago VARCHAR(20),
+    cuotas INT,
+    fecha DATE,
+    vencimiento DATE,
+    FOREIGN KEY (numeroSocio) REFERENCES socios(numeroSocio)
+);
