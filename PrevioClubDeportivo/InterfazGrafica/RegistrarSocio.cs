@@ -14,15 +14,6 @@ namespace PrevioClubDeportivo
             InitializeComponent();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            if (ConfirmarSalida())
-            {
-                /* Cierra completamente la aplicación */
-                Application.Exit();
-            }
-        }
-
         /* Utilizamos una variable de control para evitar la recursión involuntaria*/
         private bool estaCerrando = false;
 
@@ -47,26 +38,6 @@ namespace PrevioClubDeportivo
                 /* Permite el cierre normal si no es por usuario */
                 base.OnFormClosing(e);
             }
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Registrar Socios */
-            this.Hide();
-
-            /* Abrimos el formulario principal */
-            frmHome home = new frmHome();
-            home.Show();
-        }
-
-        private void btnCobrarCuota_Click(object sender, EventArgs e)
-        {
-            /* Ocultamos el formulario Registrar Socio */
-            this.Hide();
-
-            /* Abrimos el formulario Cobrar Cuota */
-            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
-            cobrarCuota.Show();
         }
 
         /* Función que pregunta si queres salir */

@@ -36,8 +36,6 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lblNroComprobante = new System.Windows.Forms.Label();
             this.txtNroComprobante = new System.Windows.Forms.TextBox();
-            this.rbMensual = new System.Windows.Forms.RadioButton();
-            this.rbDiaria = new System.Windows.Forms.RadioButton();
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.lblVencimiento = new System.Windows.Forms.Label();
@@ -53,11 +51,14 @@
             this.lstActividad = new System.Windows.Forms.ListBox();
             this.rbEfectivo = new System.Windows.Forms.RadioButton();
             this.gbTipo = new System.Windows.Forms.GroupBox();
+            this.rbDiaria = new System.Windows.Forms.RadioButton();
+            this.rbMensual = new System.Windows.Forms.RadioButton();
             this.gbMetodoPago = new System.Windows.Forms.GroupBox();
-            this.rbMetodoPago = new System.Windows.Forms.RadioButton();
+            this.rbTarjeta = new System.Windows.Forms.RadioButton();
             this.gbCuotas = new System.Windows.Forms.GroupBox();
             this.lstCuotas = new System.Windows.Forms.ListBox();
             this.gbImporte = new System.Windows.Forms.GroupBox();
+            this.rbQR = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             this.gbTipo.SuspendLayout();
@@ -110,7 +111,7 @@
             // dtpFecha
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha.Location = new System.Drawing.Point(667, 182);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(162, 24);
@@ -135,30 +136,6 @@
             this.txtNroComprobante.ReadOnly = true;
             this.txtNroComprobante.Size = new System.Drawing.Size(162, 25);
             this.txtNroComprobante.TabIndex = 6;
-            // 
-            // rbMensual
-            // 
-            this.rbMensual.AutoSize = true;
-            this.rbMensual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMensual.Location = new System.Drawing.Point(506, 295);
-            this.rbMensual.Name = "rbMensual";
-            this.rbMensual.Size = new System.Drawing.Size(90, 20);
-            this.rbMensual.TabIndex = 7;
-            this.rbMensual.TabStop = true;
-            this.rbMensual.Text = "MENSUAL";
-            this.rbMensual.UseVisualStyleBackColor = true;
-            // 
-            // rbDiaria
-            // 
-            this.rbDiaria.AutoSize = true;
-            this.rbDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDiaria.Location = new System.Drawing.Point(16, 104);
-            this.rbDiaria.Name = "rbDiaria";
-            this.rbDiaria.Size = new System.Drawing.Size(69, 20);
-            this.rbDiaria.TabIndex = 7;
-            this.rbDiaria.TabStop = true;
-            this.rbDiaria.Text = "DIARIA";
-            this.rbDiaria.UseVisualStyleBackColor = true;
             // 
             // lblApellido
             // 
@@ -194,7 +171,7 @@
             // dtpVencimiento
             // 
             this.dtpVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpVencimiento.Location = new System.Drawing.Point(815, 444);
             this.dtpVencimiento.Name = "dtpVencimiento";
             this.dtpVencimiento.Size = new System.Drawing.Size(162, 24);
@@ -247,6 +224,7 @@
             this.txtNroSocio.Name = "txtNroSocio";
             this.txtNroSocio.Size = new System.Drawing.Size(224, 25);
             this.txtNroSocio.TabIndex = 6;
+            this.txtNroSocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroSocio_KeyPress);
             // 
             // btnCancelar
             // 
@@ -309,10 +287,12 @@
             this.rbEfectivo.TabStop = true;
             this.rbEfectivo.Text = "EFECTIVO";
             this.rbEfectivo.UseVisualStyleBackColor = true;
+            this.rbEfectivo.CheckedChanged += new System.EventHandler(this.rbEfectivo_CheckedChanged);
             // 
             // gbTipo
             // 
             this.gbTipo.Controls.Add(this.rbDiaria);
+            this.gbTipo.Controls.Add(this.rbMensual);
             this.gbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gbTipo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gbTipo.Location = new System.Drawing.Point(490, 248);
@@ -322,9 +302,36 @@
             this.gbTipo.TabStop = false;
             this.gbTipo.Text = "TIPO";
             // 
+            // rbDiaria
+            // 
+            this.rbDiaria.AutoSize = true;
+            this.rbDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.rbDiaria.Location = new System.Drawing.Point(6, 104);
+            this.rbDiaria.Name = "rbDiaria";
+            this.rbDiaria.Size = new System.Drawing.Size(69, 20);
+            this.rbDiaria.TabIndex = 0;
+            this.rbDiaria.TabStop = true;
+            this.rbDiaria.Text = "DIARIA";
+            this.rbDiaria.UseVisualStyleBackColor = true;
+            this.rbDiaria.CheckedChanged += new System.EventHandler(this.rbDiaria_CheckedChanged);
+            // 
+            // rbMensual
+            // 
+            this.rbMensual.AutoSize = true;
+            this.rbMensual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.rbMensual.Location = new System.Drawing.Point(6, 46);
+            this.rbMensual.Name = "rbMensual";
+            this.rbMensual.Size = new System.Drawing.Size(90, 20);
+            this.rbMensual.TabIndex = 0;
+            this.rbMensual.TabStop = true;
+            this.rbMensual.Text = "MENSUAL";
+            this.rbMensual.UseVisualStyleBackColor = true;
+            this.rbMensual.CheckedChanged += new System.EventHandler(this.rbMensual_CheckedChanged);
+            // 
             // gbMetodoPago
             // 
-            this.gbMetodoPago.Controls.Add(this.rbMetodoPago);
+            this.gbMetodoPago.Controls.Add(this.rbQR);
+            this.gbMetodoPago.Controls.Add(this.rbTarjeta);
             this.gbMetodoPago.Controls.Add(this.rbEfectivo);
             this.gbMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gbMetodoPago.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -335,17 +342,18 @@
             this.gbMetodoPago.TabStop = false;
             this.gbMetodoPago.Text = "METODO PAGO";
             // 
-            // rbMetodoPago
+            // rbTarjeta
             // 
-            this.rbMetodoPago.AutoSize = true;
-            this.rbMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMetodoPago.Location = new System.Drawing.Point(11, 104);
-            this.rbMetodoPago.Name = "rbMetodoPago";
-            this.rbMetodoPago.Size = new System.Drawing.Size(87, 20);
-            this.rbMetodoPago.TabIndex = 12;
-            this.rbMetodoPago.TabStop = true;
-            this.rbMetodoPago.Text = "TARJETA";
-            this.rbMetodoPago.UseVisualStyleBackColor = true;
+            this.rbTarjeta.AutoSize = true;
+            this.rbTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbTarjeta.Location = new System.Drawing.Point(11, 88);
+            this.rbTarjeta.Name = "rbTarjeta";
+            this.rbTarjeta.Size = new System.Drawing.Size(87, 20);
+            this.rbTarjeta.TabIndex = 12;
+            this.rbTarjeta.TabStop = true;
+            this.rbTarjeta.Text = "TARJETA";
+            this.rbTarjeta.UseVisualStyleBackColor = true;
+            this.rbTarjeta.CheckedChanged += new System.EventHandler(this.rbTarjeta_CheckedChanged);
             // 
             // gbCuotas
             // 
@@ -382,6 +390,19 @@
             this.gbImporte.TabStop = false;
             this.gbImporte.Text = "IMPORTE";
             // 
+            // rbQR
+            // 
+            this.rbQR.AutoSize = true;
+            this.rbQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbQR.Location = new System.Drawing.Point(11, 126);
+            this.rbQR.Name = "rbQR";
+            this.rbQR.Size = new System.Drawing.Size(45, 20);
+            this.rbQR.TabIndex = 13;
+            this.rbQR.TabStop = true;
+            this.rbQR.Text = "QR";
+            this.rbQR.UseVisualStyleBackColor = true;
+            this.rbQR.CheckedChanged += new System.EventHandler(this.rbQR_CheckedChanged);
+            // 
             // frmCobrarCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,7 +415,6 @@
             this.Controls.Add(this.lstActividad);
             this.Controls.Add(this.btnCobrar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.rbMensual);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNroSocio);
@@ -420,6 +440,7 @@
             this.Name = "frmCobrarCuota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cobrar Cuota";
+            this.Load += new System.EventHandler(this.frmCobrarCuota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).EndInit();
             this.gbTipo.ResumeLayout(false);
@@ -443,8 +464,6 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblNroComprobante;
         private System.Windows.Forms.TextBox txtNroComprobante;
-        private System.Windows.Forms.RadioButton rbMensual;
-        private System.Windows.Forms.RadioButton rbDiaria;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label lblVencimiento;
@@ -461,9 +480,12 @@
         private System.Windows.Forms.RadioButton rbEfectivo;
         private System.Windows.Forms.GroupBox gbTipo;
         private System.Windows.Forms.GroupBox gbMetodoPago;
-        private System.Windows.Forms.RadioButton rbMetodoPago;
+        private System.Windows.Forms.RadioButton rbTarjeta;
         private System.Windows.Forms.GroupBox gbCuotas;
         private System.Windows.Forms.ListBox lstCuotas;
         private System.Windows.Forms.GroupBox gbImporte;
+        private System.Windows.Forms.RadioButton rbDiaria;
+        private System.Windows.Forms.RadioButton rbMensual;
+        private System.Windows.Forms.RadioButton rbQR;
     }
 }
