@@ -10,15 +10,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             InitializeComponent();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            if (ConfirmarSalida())
-            {
-                /* Cierra completamente la aplicación */
-                Application.Exit();
-            }
-        }
-
         /* Función que pregunta si queres salir */
         private bool ConfirmarSalida()
         {
@@ -58,46 +49,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Cobrar Cuota */
-            this.Hide();
-
-            /* Abrimos el formulario principal */
-            frmHome home = new frmHome();
-            home.Show();
-        }
-
-        private void btnRegistrarSocios_Click(object sender, EventArgs e)
-        {
-            /* Ocultamos el formulario Cobrar Cuota */
-            this.Hide();
-
-            /* Abrimos el formulario Registrar Socios */
-            frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
-            registrarSocio.Show();
-        }
-
-        private void btnEntregarCarnet_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Cobrar Cuota */
-            this.Hide();
-
-            /* Abrimos el formulario Entregar Carnet */
-            frmCarnet carnet = new frmCarnet();
-            carnet.Show();
-        }
-
-        private void btnVencimientosDelDia_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Cobrar Cuota */
-            this.Hide();
-
-            /* Abrimos el formulario Vencimientos del día */
-            frmVencimientosDelDia vencimientos = new frmVencimientosDelDia();
-            vencimientos.Show();
-        }
-
         private void btnCobrar_Click(object sender, EventArgs e)
         {
 
@@ -106,6 +57,19 @@ namespace PrevioClubDeportivo.InterfazGrafica
             frmComprobantePago comprobante = new frmComprobantePago();
             comprobante.Show();
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (ConfirmarSalida())
+            {
+                /* Regresa al formulario principal */
+                frmHome home = new frmHome();
+                home.Show();
+                /* Ocultamos el formulario Registrar Socio*/
+                this.Hide();
+            }
+            /* Si elige "No", no hace nada (se queda en el formulario actual) */
         }
     }
 }
