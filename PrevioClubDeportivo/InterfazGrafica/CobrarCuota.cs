@@ -1,12 +1,17 @@
 ﻿using MySql.Data.MySqlClient;
 using PrevioClubDeportivo.Datos;
+using PrevioClubDeportivo.Entidades;
 using System;
+using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PrevioClubDeportivo.InterfazGrafica
 {
     public partial class frmCobrarCuota : Form
     {
+        private decimal importe;
+
         public frmCobrarCuota()
         {
             InitializeComponent();
@@ -54,11 +59,324 @@ namespace PrevioClubDeportivo.InterfazGrafica
         private void btnCobrar_Click(object sender, EventArgs e)
         {
 
-            /* ************************* PROVISORIO ********************************  */
-            /* Abrimos el formulario Comprobante de pago */
-            frmComprobantePago comprobante = new frmComprobantePago();
-            comprobante.Show();
+            if (ValidarCampos())
+            {
+                try
+                {
+                    CobrarCuota cuota = ObtenerDatosDesdeFormulario();
+                    cuota.fechaPago = DateTime.Now; // Asegurar fecha actual
 
+                    if (ValidarPagoExistente(cuota))
+                    {
+                        return; // Ya mostró mensaje de error en ValidarPagoExistente
+                    }
+
+                    GuardarCuota(cuota);
+                    LimpiarFormulario();
+                    txtNroComprobante.Text = generadorNumeroComprobante.ObtenerProximoNumero().ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            // 1. Primero obtener el próximo número de comprobante
+            int numeroComprobante = generadorNumeroComprobante.ObtenerProximoNumero();
+
+           
+            // Mostrar el comprobante con el número de comprobante
+            frmComprobantePago comprobante = new frmComprobantePago(numeroComprobante);
+            comprobante.ShowDialog();
+        }
+
+
+        private bool ValidarPagoExistente(CobrarCuota cuota)
+        {
+            // Validación básica de parámetros
+            if (cuota == null || cuota.numeroSocio <= 0)
+            {
+                MessageBox.Show("Datos del socio no válidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+
+            if (string.IsNullOrEmpty(cuota.tipo) || (cuota.tipo != "MENSUAL" && cuota.tipo != "DIARIA"))
+            {
+                MessageBox.Show("Tipo de pago no válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+
+            try
+            {
+                using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+                {
+                    connection.Open();
+
+                    string query;
+                    MySqlCommand cmd;
+                    bool existePago = false;
+                    string tipoConflicto = string.Empty;
+
+                    if (cuota.tipo == "MENSUAL")
+                    {
+                        // Verificar primero pagos mensuales
+                        query = @"SELECT tipo FROM Pagos 
+                        WHERE numeroSocio = @numeroSocio 
+                        AND tipo = 'MENSUAL'
+                        AND YEAR(fechaPago) = YEAR(@fechaPago)
+                        AND MONTH(fechaPago) = MONTH(@fechaPago)
+                        LIMIT 1";
+
+                        cmd = new MySqlCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
+                        cmd.Parameters.AddWithValue("@fechaPago", cuota.fechaPago);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                existePago = true;
+                                tipoConflicto = reader["tipo"].ToString();
+                            }
+                        }
+
+                        // Si no hay mensual, verificar diarios
+                        if (!existePago)
+                        {
+                            query = @"SELECT tipo FROM Pagos 
+                            WHERE numeroSocio = @numeroSocio 
+                            AND tipo = 'DIARIA'
+                            AND YEAR(fechaPago) = YEAR(@fechaPago)
+                            AND MONTH(fechaPago) = MONTH(@fechaPago)
+                            LIMIT 1";
+
+                            cmd = new MySqlCommand(query, connection);
+                            cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
+                            cmd.Parameters.AddWithValue("@fechaPago", cuota.fechaPago);
+
+                            using (var reader = cmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    existePago = true;
+                                    tipoConflicto = reader["tipo"].ToString();
+                                }
+                            }
+                        }
+                    }
+                    else // Pago Diario
+                    {
+                        if (string.IsNullOrEmpty(cuota.actividad))
+                        {
+                            MessageBox.Show("Debe seleccionar una actividad para pagos diarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return true;
+                        }
+
+                        // Verificar primero pagos diarios para la misma actividad
+                        query = @"SELECT tipo FROM Pagos 
+                        WHERE numeroSocio = @numeroSocio 
+                        AND tipo = 'DIARIA'
+                        AND actividad = @actividad
+                        AND DATE(fechaPago) = DATE(@fechaPago)
+                        LIMIT 1";
+
+                        cmd = new MySqlCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
+                        cmd.Parameters.AddWithValue("@fechaPago", cuota.fechaPago);
+                        cmd.Parameters.AddWithValue("@actividad", cuota.actividad);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                existePago = true;
+                                tipoConflicto = reader["tipo"].ToString();
+                            }
+                        }
+
+                        // Si no hay diario, verificar mensual
+                        if (!existePago)
+                        {
+                            query = @"SELECT tipo FROM Pagos 
+                            WHERE numeroSocio = @numeroSocio 
+                            AND tipo = 'MENSUAL'
+                            AND YEAR(fechaPago) = YEAR(@fechaPago)
+                            AND MONTH(fechaPago) = MONTH(@fechaPago)
+                            LIMIT 1";
+
+                            cmd = new MySqlCommand(query, connection);
+                            cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
+                            cmd.Parameters.AddWithValue("@fechaPago", cuota.fechaPago);
+
+                            using (var reader = cmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    existePago = true;
+                                    tipoConflicto = reader["tipo"].ToString();
+                                }
+                            }
+                        }
+                    }
+
+                    if (existePago)
+                    {
+                        string mensaje;
+                        if (tipoConflicto == "MENSUAL")
+                        {
+                            mensaje = "El socio tiene un pago MENSUAL registrado.";
+                        }
+                        else if (tipoConflicto == "DIARIA" && cuota.tipo == "DIARIA")
+                        {
+                            mensaje = "El socio tiene un pago DIARIO registrado.";
+                        }
+                        else if (tipoConflicto == "DIARIA" && cuota.tipo == "MENSUAL")
+                        {
+                            mensaje = "El socio tiene un pago DIARIO registrado.";
+                        }
+                        else
+                        {
+                            mensaje = "Ya existe un pago registrado que conflictúa con este registro.";
+                        }
+
+                        MessageBox.Show(mensaje, "Pago duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return true;
+                    }
+
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al validar pago existente: {ex.Message}\n\nDetalles técnicos:\n{ex.StackTrace}",
+                              "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+        }
+
+       
+        private CobrarCuota ObtenerDatosDesdeFormulario()
+        {
+
+            // Obtener el RadioButton seleccionado del GroupBox
+            RadioButton rbSeleccionadoMetodo = gbMetodoPago.Controls.OfType<RadioButton>()
+                                              .FirstOrDefault(rb => rb.Checked);
+
+            // Obtener el RadioButton seleccionado para el tipo (asumiendo que se llama gbTipoCuota)
+            RadioButton rbSeleccionadoTipo = gbTipo.Controls.OfType<RadioButton>()
+                                          .FirstOrDefault(rb => rb.Checked);
+
+            /* Instanciamos la Cuota */
+            CobrarCuota cuota = new CobrarCuota
+            {
+                // Si no se selecciona ningún RadioButton, devuelve una cadena vacía (o un valor por defecto)
+                metodoPago = rbSeleccionadoMetodo?.Text ?? "",
+                tipo = rbSeleccionadoTipo?.Text ?? "",
+
+                nroComprobante = int.Parse(txtNroComprobante.Text),
+                numeroSocio = int.Parse(txtNroSocio.Text),
+                actividad = lstActividad.SelectedItem?.ToString(),
+                vencimiento = dtpVencimiento.Value,
+                cuotas = lstCuotas.SelectedItem?.ToString() ?? "1"
+            };
+
+            return cuota;
+        }
+
+
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNroSocio.Text) ||
+        string.IsNullOrWhiteSpace(txtApellido.Text) ||
+        string.IsNullOrWhiteSpace(txtNombre.Text) ||
+        !decimal.TryParse(txtImporte.Text, out importe) ||
+        lstCuotas.SelectedIndex == -1 || lstCuotas.SelectedItem == null ||
+        !rbEfectivo.Checked && !rbQR.Checked && !rbTarjeta.Checked ||
+        lstActividad.SelectedIndex == -1 || lstActividad.SelectedItem == null ||
+        !rbMensual.Checked && !rbDiaria.Checked)
+            {
+                MessageBox.Show("Por favor complete todos los campos obligatorios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        /* Limpiar Formulario */
+        private void LimpiarFormulario()
+        {
+            txtNroSocio.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+
+        }
+
+        private void GuardarCuota(CobrarCuota cuota)
+        {
+            using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+            {
+                connection.Open();
+                MySqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    // Asignar fecha de pago actual si no está asignada
+                    cuota.fechaPago = DateTime.Now;
+
+                    string insertPagoQuery = @"INSERT INTO Pagos 
+                (nroComprobante, numeroSocio, tipo, actividad, importe, metodoPago, cuotas, fechaPago, vencimiento) 
+                VALUES (@nroComprobante, @numeroSocio, @tipo, @actividad, @importe, @metodoPago, @cuotas, @fechaPago, @vencimiento);
+                SELECT LAST_INSERT_ID();";
+
+                    // Obtener el próximo número de comprobante
+                    int proximoNumero = generadorNumeroComprobante.ObtenerProximoNumero();
+
+                    using (MySqlCommand cmd = new MySqlCommand(insertPagoQuery, connection, transaction))
+                    {
+                        cmd.Parameters.AddWithValue("@nroComprobante", proximoNumero);
+                        cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
+                        cmd.Parameters.AddWithValue("@tipo", cuota.tipo);
+                        cmd.Parameters.AddWithValue("@actividad", cuota.actividad ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@importe", importe);
+                        cmd.Parameters.AddWithValue("@metodoPago", cuota.metodoPago);
+                        cmd.Parameters.AddWithValue("@cuotas", int.Parse(cuota.cuotas));
+                        cmd.Parameters.AddWithValue("@fechaPago", cuota.fechaPago);
+                        cmd.Parameters.AddWithValue("@vencimiento", cuota.vencimiento);
+
+                        int nroComprobante = Convert.ToInt32(cmd.ExecuteScalar());
+                        txtNroComprobante.Text = nroComprobante.ToString();
+                    }
+
+                    // Actualizar la tabla Socios
+                    string updateSocioQuery = @"UPDATE Socios 
+                SET tipoSocio = @tipoSocio, 
+                    fechaPago = @fechaPago, 
+                    estadoCuota = @estadoCuota 
+                WHERE numeroSocio = @numeroSocio";
+
+                    using (MySqlCommand updateCmd = new MySqlCommand(updateSocioQuery, connection, transaction))
+                    {
+                        updateCmd.Parameters.AddWithValue("@tipoSocio", rbMensual.Checked ? "Activo" : "Adherente");
+                        updateCmd.Parameters.AddWithValue("@fechaPago", cuota.fechaPago);
+                        updateCmd.Parameters.AddWithValue("@estadoCuota", "Al día");
+                        updateCmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
+                        updateCmd.ExecuteNonQuery();
+                    }
+
+                    // Confirmar la transacción si todo salió bien
+                    transaction.Commit();
+                    
+                    MessageBox.Show("Pago registrado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show($"Error al registrar el pago: {ex.Message}");
+                    throw;
+                }
+                
+            }
+
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

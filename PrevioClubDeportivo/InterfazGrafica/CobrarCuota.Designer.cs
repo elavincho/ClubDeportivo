@@ -54,11 +54,11 @@
             this.rbDiaria = new System.Windows.Forms.RadioButton();
             this.rbMensual = new System.Windows.Forms.RadioButton();
             this.gbMetodoPago = new System.Windows.Forms.GroupBox();
+            this.rbQR = new System.Windows.Forms.RadioButton();
             this.rbTarjeta = new System.Windows.Forms.RadioButton();
             this.gbCuotas = new System.Windows.Forms.GroupBox();
             this.lstCuotas = new System.Windows.Forms.ListBox();
             this.gbImporte = new System.Windows.Forms.GroupBox();
-            this.rbQR = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             this.gbTipo.SuspendLayout();
@@ -232,11 +232,11 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(392, 516);
+            this.btnCancelar.Location = new System.Drawing.Point(293, 512);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(138, 36);
             this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "VOLVER";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -246,7 +246,7 @@
             this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCobrar.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnCobrar.ForeColor = System.Drawing.Color.White;
-            this.btnCobrar.Location = new System.Drawing.Point(815, 516);
+            this.btnCobrar.Location = new System.Drawing.Point(716, 512);
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Size = new System.Drawing.Size(138, 36);
             this.btnCobrar.TabIndex = 8;
@@ -306,7 +306,7 @@
             // 
             this.rbDiaria.AutoSize = true;
             this.rbDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rbDiaria.Location = new System.Drawing.Point(6, 104);
+            this.rbDiaria.Location = new System.Drawing.Point(10, 103);
             this.rbDiaria.Name = "rbDiaria";
             this.rbDiaria.Size = new System.Drawing.Size(69, 20);
             this.rbDiaria.TabIndex = 0;
@@ -319,7 +319,7 @@
             // 
             this.rbMensual.AutoSize = true;
             this.rbMensual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rbMensual.Location = new System.Drawing.Point(6, 46);
+            this.rbMensual.Location = new System.Drawing.Point(10, 46);
             this.rbMensual.Name = "rbMensual";
             this.rbMensual.Size = new System.Drawing.Size(90, 20);
             this.rbMensual.TabIndex = 0;
@@ -341,6 +341,19 @@
             this.gbMetodoPago.TabIndex = 13;
             this.gbMetodoPago.TabStop = false;
             this.gbMetodoPago.Text = "METODO PAGO";
+            // 
+            // rbQR
+            // 
+            this.rbQR.AutoSize = true;
+            this.rbQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbQR.Location = new System.Drawing.Point(11, 126);
+            this.rbQR.Name = "rbQR";
+            this.rbQR.Size = new System.Drawing.Size(45, 20);
+            this.rbQR.TabIndex = 13;
+            this.rbQR.TabStop = true;
+            this.rbQR.Text = "QR";
+            this.rbQR.UseVisualStyleBackColor = true;
+            this.rbQR.CheckedChanged += new System.EventHandler(this.rbQR_CheckedChanged);
             // 
             // rbTarjeta
             // 
@@ -389,19 +402,6 @@
             this.gbImporte.TabIndex = 16;
             this.gbImporte.TabStop = false;
             this.gbImporte.Text = "IMPORTE";
-            // 
-            // rbQR
-            // 
-            this.rbQR.AutoSize = true;
-            this.rbQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbQR.Location = new System.Drawing.Point(11, 126);
-            this.rbQR.Name = "rbQR";
-            this.rbQR.Size = new System.Drawing.Size(45, 20);
-            this.rbQR.TabIndex = 13;
-            this.rbQR.TabStop = true;
-            this.rbQR.Text = "QR";
-            this.rbQR.UseVisualStyleBackColor = true;
-            this.rbQR.CheckedChanged += new System.EventHandler(this.rbQR_CheckedChanged);
             // 
             // frmCobrarCuota
             // 

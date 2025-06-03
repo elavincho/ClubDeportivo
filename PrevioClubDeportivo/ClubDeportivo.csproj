@@ -100,6 +100,7 @@
   <ItemGroup>
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Entidades\AptFisico.cs" />
+    <Compile Include="Entidades\CobrarCuota.cs" />
     <Compile Include="Entidades\Persona.cs" />
     <Compile Include="Entidades\SesionUsuario.cs" />
     <Compile Include="Entidades\Socio.cs" />
