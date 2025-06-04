@@ -75,12 +75,70 @@ namespace PrevioClubDeportivo.InterfazGrafica
         {
            
                 MessageBox.Show($"Imprimir comprobante");
-            // Lógica para imprimir el comprobante
-            //printDocument1.Print();
+            // Imprimir el comprobante
+            ImprimirFormularioCompleto();
         }
-            
-        
 
+        private void ImprimirFormularioCompleto()
+        {
+            // Guardar el estado original de los controles
+            Dictionary<Control, bool> controlesOriginales = new Dictionary<Control, bool>();
+
+            try
+            {
+                // Ocultar los controles que no quieres imprimir
+                List<Control> controlesAOcultar = this.Controls
+                    .OfType<Button>()
+                    .Where(b => b.Name == "btnImprimir" || b.Name == "btnCerrar")
+                    .Cast<Control>()
+                    .ToList();
+
+                foreach (Control control in controlesAOcultar)
+                {
+                    controlesOriginales[control] = control.Visible;
+                    control.Visible = false;
+                }
+
+                PrintDocument pd = new PrintDocument();
+                pd.PrintPage += (sender, e) =>
+                {
+                    Bitmap bmp = new Bitmap(this.Width, this.Height);
+                    this.DrawToBitmap(bmp, this.ClientRectangle);
+
+                    // Ajustar la imagen al área imprimible
+                    RectangleF destRect = e.MarginBounds;
+                    float ratio = Math.Min(
+                        destRect.Width / bmp.Width,
+                        destRect.Height / bmp.Height);
+
+                    RectangleF srcRect = new RectangleF(0, 0, bmp.Width, bmp.Height);
+                    destRect = new RectangleF(
+                        destRect.X,
+                        destRect.Y,
+                        bmp.Width * ratio,
+                        bmp.Height * ratio);
+
+                    e.Graphics.DrawImage(bmp, destRect, srcRect, GraphicsUnit.Pixel);
+                };
+
+                PrintPreviewDialog preview = new PrintPreviewDialog();
+                preview.Document = pd;
+                preview.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al imprimir: {ex.Message}", "Error",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Restaurar la visibilidad original de los controles
+                foreach (var kvp in controlesOriginales)
+                {
+                    kvp.Key.Visible = kvp.Value;
+                }
+            }
+        }
 
         private void CargarDatosComprobante(int numeroComprobante)
         {
@@ -90,10 +148,17 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 {
                     connection.Open();
 
-                    string query = @"SELECT p.*, s.nombre, s.apellido 
-                               FROM Pagos p
-                               JOIN Socios s ON p.numeroSocio = s.numeroSocio
-                               WHERE p.nroComprobante = @nroComprobante";
+                    // Consulta modificada para incluir datos de Personas
+                    string query = @"SELECT 
+                            p.nroComprobante, p.fechaPago, s.tipoSocio, p.actividad, 
+                            p.metodoPago, p.importe, p.cuotas, p.vencimiento,
+                            s.numeroSocio,
+                            per.nombre, per.apellido, per.tipoDocumento, per.nroDocumento,
+                            per.fechaNacimiento, per.direccion, per.email, per.telefono
+                        FROM Pagos p
+                        JOIN Socios s ON p.numeroSocio = s.numeroSocio
+                        JOIN Personas per ON s.idPersona = per.idPersona
+                        WHERE p.nroComprobante = @nroComprobante";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
@@ -103,18 +168,24 @@ namespace PrevioClubDeportivo.InterfazGrafica
                         {
                             if (reader.Read())
                             {
+                                
                                 // Asignar datos a los controles
                                 txtNroComprobante.Text = reader["nroComprobante"].ToString();
                                 dtpFecha.Text = Convert.ToDateTime(reader["fechaPago"]).ToString("dd/MM/yyyy");
                                 txtNombre.Text = reader["nombre"].ToString();
                                 txtApellido.Text = reader["apellido"].ToString();
                                 txtNroSocio.Text = reader["numeroSocio"].ToString();
-                                txtTipo.Text = reader["tipo"].ToString();
+                                txtTipo.Text = reader["tipoSocio"].ToString();
                                 txtActividad.Text = reader["actividad"].ToString();
                                 txtMetodoPago.Text = reader["metodoPago"].ToString();
                                 txtImporte.Text = Convert.ToDecimal(reader["importe"]).ToString("C");
                                 txtCuotas.Text = reader["cuotas"].ToString();
                                 dtpVencimiento.Text = Convert.ToDateTime(reader["vencimiento"]).ToString("dd/MM/yyyy");
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontró el comprobante especificado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                this.Close();
                             }
                         }
                     }
@@ -123,12 +194,13 @@ namespace PrevioClubDeportivo.InterfazGrafica
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al cargar comprobante: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
-       
 
-      
+
+
     }
 
 

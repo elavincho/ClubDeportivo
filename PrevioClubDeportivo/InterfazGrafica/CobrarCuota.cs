@@ -74,19 +74,25 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     GuardarCuota(cuota);
                     LimpiarFormulario();
                     txtNroComprobante.Text = generadorNumeroComprobante.ObtenerProximoNumero().ToString();
+
+                    
+
+                    // 1. Primero obtener el próximo número de comprobante
+                    int numeroComprobante = generadorNumeroComprobante.ObtenerProximoNumero() - 1;
+
+
+                    // Mostrar el comprobante con el número de comprobante
+                    this.Hide(); // Ocultar el formulario actual
+                    frmComprobantePago comprobante = new frmComprobantePago(numeroComprobante);
+                    comprobante.ShowDialog();
+                    this.Show(); // Volver a mostrar cuando se cierre el comprobante
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            // 1. Primero obtener el próximo número de comprobante
-            int numeroComprobante = generadorNumeroComprobante.ObtenerProximoNumero();
-
-           
-            // Mostrar el comprobante con el número de comprobante
-            frmComprobantePago comprobante = new frmComprobantePago(numeroComprobante);
-            comprobante.ShowDialog();
+            
         }
 
 
@@ -310,7 +316,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
         }
 
-        private void GuardarCuota(CobrarCuota cuota)
+        private int GuardarCuota(CobrarCuota cuota)
         {
             using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
             {
@@ -366,6 +372,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     transaction.Commit();
                     
                     MessageBox.Show("Pago registrado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return proximoNumero; // Esto debe devolver el número de comprobante
                 }
                 catch (Exception ex)
                 {
@@ -375,8 +382,8 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 }
                 
             }
-
             
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
