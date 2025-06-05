@@ -71,7 +71,7 @@
             // picBanner
             // 
             this.picBanner.Image = ((System.Drawing.Image)(resources.GetObject("picBanner.Image")));
-            this.picBanner.Location = new System.Drawing.Point(0, -2);
+            this.picBanner.Location = new System.Drawing.Point(0, 0);
             this.picBanner.Name = "picBanner";
             this.picBanner.Size = new System.Drawing.Size(893, 114);
             this.picBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +169,7 @@
             // txtNroSocio
             // 
             this.txtNroSocio.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.txtNroSocio.Location = new System.Drawing.Point(134, 320);
+            this.txtNroSocio.Location = new System.Drawing.Point(6, 46);
             this.txtNroSocio.Name = "txtNroSocio";
             this.txtNroSocio.ReadOnly = true;
             this.txtNroSocio.Size = new System.Drawing.Size(109, 25);
@@ -276,6 +276,7 @@
             // 
             this.groupBox2.Controls.Add(this.lblTipo);
             this.groupBox2.Controls.Add(this.txtTipo);
+            this.groupBox2.Controls.Add(this.txtNroSocio);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox2.Location = new System.Drawing.Point(128, 274);
@@ -390,7 +391,6 @@
             this.Controls.Add(this.gbNombre);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.txtNroSocio);
             this.Controls.Add(this.txtNroComprobante);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblNroComprobante);
@@ -404,9 +404,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(890, 570);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(890, 570);
             this.Name = "frmComprobantePago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprobante de Pago";

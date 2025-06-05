@@ -54,7 +54,7 @@
             this.picBanner.Image = ((System.Drawing.Image)(resources.GetObject("picBanner.Image")));
             this.picBanner.Location = new System.Drawing.Point(-2, -2);
             this.picBanner.Name = "picBanner";
-            this.picBanner.Size = new System.Drawing.Size(802, 127);
+            this.picBanner.Size = new System.Drawing.Size(820, 127);
             this.picBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBanner.TabIndex = 1;
             this.picBanner.TabStop = false;
@@ -64,6 +64,7 @@
             this.txtTipo.Font = new System.Drawing.Font("Gadugi", 9.75F);
             this.txtTipo.Location = new System.Drawing.Point(552, 191);
             this.txtTipo.Name = "txtTipo";
+            this.txtTipo.ReadOnly = true;
             this.txtTipo.Size = new System.Drawing.Size(224, 25);
             this.txtTipo.TabIndex = 24;
             // 
@@ -74,6 +75,7 @@
             this.txtNroSocio.Name = "txtNroSocio";
             this.txtNroSocio.Size = new System.Drawing.Size(224, 25);
             this.txtNroSocio.TabIndex = 25;
+            this.txtNroSocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroSocio_KeyPress);
             // 
             // lblTipo
             // 
@@ -100,8 +102,9 @@
             // txtActividad
             // 
             this.txtActividad.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.txtActividad.Location = new System.Drawing.Point(156, 327);
+            this.txtActividad.Location = new System.Drawing.Point(156, 352);
             this.txtActividad.Name = "txtActividad";
+            this.txtActividad.ReadOnly = true;
             this.txtActividad.Size = new System.Drawing.Size(224, 25);
             this.txtActividad.TabIndex = 27;
             // 
@@ -110,7 +113,7 @@
             this.lblActividad.AutoSize = true;
             this.lblActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblActividad.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblActividad.Location = new System.Drawing.Point(45, 332);
+            this.lblActividad.Location = new System.Drawing.Point(45, 357);
             this.lblActividad.Name = "lblActividad";
             this.lblActividad.Size = new System.Drawing.Size(105, 20);
             this.lblActividad.TabIndex = 26;
@@ -119,16 +122,18 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.txtNombre.Location = new System.Drawing.Point(156, 279);
+            this.txtNombre.Location = new System.Drawing.Point(156, 304);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(224, 25);
             this.txtNombre.TabIndex = 30;
             // 
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.txtApellido.Location = new System.Drawing.Point(552, 279);
+            this.txtApellido.Location = new System.Drawing.Point(552, 304);
             this.txtApellido.Name = "txtApellido";
+            this.txtApellido.ReadOnly = true;
             this.txtApellido.Size = new System.Drawing.Size(224, 25);
             this.txtApellido.TabIndex = 31;
             // 
@@ -137,7 +142,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblNombre.Location = new System.Drawing.Point(65, 284);
+            this.lblNombre.Location = new System.Drawing.Point(65, 309);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(85, 20);
             this.lblNombre.TabIndex = 28;
@@ -148,7 +153,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblApellido.Location = new System.Drawing.Point(449, 284);
+            this.lblApellido.Location = new System.Drawing.Point(449, 309);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(96, 20);
             this.lblApellido.TabIndex = 29;
@@ -156,9 +161,10 @@
             // 
             // dtpVencimiento
             // 
+            this.dtpVencimiento.Enabled = false;
             this.dtpVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpVencimiento.Location = new System.Drawing.Point(552, 328);
+            this.dtpVencimiento.Location = new System.Drawing.Point(552, 353);
             this.dtpVencimiento.Name = "dtpVencimiento";
             this.dtpVencimiento.Size = new System.Drawing.Size(224, 24);
             this.dtpVencimiento.TabIndex = 33;
@@ -168,7 +174,7 @@
             this.lblVencimiento.AutoSize = true;
             this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblVencimiento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblVencimiento.Location = new System.Drawing.Point(416, 332);
+            this.lblVencimiento.Location = new System.Drawing.Point(416, 357);
             this.lblVencimiento.Name = "lblVencimiento";
             this.lblVencimiento.Size = new System.Drawing.Size(130, 20);
             this.lblVencimiento.TabIndex = 32;
@@ -190,12 +196,13 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(552, 388);
+            this.btnImprimir.Location = new System.Drawing.Point(552, 413);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(138, 36);
             this.btnImprimir.TabIndex = 35;
             this.btnImprimir.Text = "IMPRIMIR";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnCerrar
             // 
@@ -203,7 +210,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(129, 388);
+            this.btnCerrar.Location = new System.Drawing.Point(129, 413);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(138, 36);
             this.btnCerrar.TabIndex = 36;
@@ -233,9 +240,11 @@
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblNroSocio);
             this.Controls.Add(this.picBanner);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "frmCarnet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
