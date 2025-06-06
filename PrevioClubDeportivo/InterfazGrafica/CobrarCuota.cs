@@ -439,7 +439,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
             dtpFecha.Format = DateTimePickerFormat.Custom;
             dtpVencimiento.CustomFormat = "dd/MM/yy";
             dtpVencimiento.Format = DateTimePickerFormat.Custom;
-
+            
 
             try
             {
@@ -594,6 +594,18 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 lstCuotas.Items.AddRange(new string[] { "1", "3", "6" });
                 lstCuotas.SelectedIndex = 0;
             }
+        }
+
+        public void CargarDatosSocio(int numeroSocio)
+        {
+            // Implementa la carga de datos del socio
+            txtNroSocio.Text = numeroSocio.ToString();
+        }
+
+        private void frmCobrarCuota_Shown(object sender, EventArgs e)
+        {
+            /* Colocamos el Foco en el número de socio*/
+            txtNroSocio.Focus();
         }
     }
 }

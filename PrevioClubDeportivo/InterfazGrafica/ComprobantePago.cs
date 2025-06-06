@@ -73,8 +73,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-           
-                MessageBox.Show($"Imprimir comprobante");
             // Imprimir el comprobante
             ImprimirFormularioCompleto();
         }

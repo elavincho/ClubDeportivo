@@ -150,24 +150,49 @@ namespace PrevioClubDeportivo.InterfazGrafica
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                if (!string.IsNullOrEmpty(txtNroSocio.Text))
+
+                if (string.IsNullOrEmpty(txtNroSocio.Text))
                 {
+                    MessageBox.Show("Por favor, ingrese un número de socio.", "Advertencia",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    LimpiarCamposSocio();
+                    return;
+                }
 
-                    using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+                if (!int.TryParse(txtNroSocio.Text, out int numeroSocio))
+                {
+                    MessageBox.Show("El número de socio debe ser válido.", "Error",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LimpiarCamposSocio();
+                    return;
+                }
+
+                using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+                {
+                    try
                     {
+                        connection.Open();
 
-                        try
+                        // Consulta para obtener el estado del socio
+                        string queryEstado = "SELECT estadoCuota FROM Socios WHERE numeroSocio = @numeroSocio";
+
+                        MySqlCommand cmdEstado = new MySqlCommand(queryEstado, connection);
+                        cmdEstado.Parameters.AddWithValue("@numeroSocio", numeroSocio);
+
+                        object resultado = cmdEstado.ExecuteScalar();
+
+                        if (resultado == null)
                         {
-                            if (!int.TryParse(txtNroSocio.Text, out int numeroSocio))
-                            {
-                                MessageBox.Show("El número de socio debe ser un valor numérico válido.");
-                                txtNombre.Text = "";
-                                txtApellido.Text = "";
-                                return;
-                            }
+                            MessageBox.Show("Socio no encontrado.", "Error",
+                                          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            LimpiarCamposSocio();
+                            return;
+                        }
 
-                            connection.Open();
-                            string query = @"SELECT per.nombre, per.apellido, s.numeroSocio, s.tipoSocio, p.actividad, p.vencimiento
+                        // Si el socio está activo, cargar el resto de la información
+                        string queryDatos = @"SELECT 
+                                    per.nombre, per.apellido, s.numeroSocio, 
+                                    s.tipoSocio, p.actividad, p.vencimiento
                                 FROM Socios s
                                 JOIN Personas per ON s.idPersona = per.idPersona
                                 LEFT JOIN Pagos p ON s.numeroSocio = p.numeroSocio
@@ -175,46 +200,76 @@ namespace PrevioClubDeportivo.InterfazGrafica
                                 ORDER BY p.fechaPago DESC
                                 LIMIT 1";
 
+                        MySqlCommand cmdDatos = new MySqlCommand(queryDatos, connection);
+                        cmdDatos.Parameters.AddWithValue("@numeroSocio", numeroSocio);
 
-                            MySqlCommand cmd = new MySqlCommand(query, connection);
-                            cmd.Parameters.AddWithValue("@numeroSocio", numeroSocio);
-                            MySqlDataReader reader = cmd.ExecuteReader();
+                        using (MySqlDataReader reader = cmdDatos.ExecuteReader())
+                        {
+                            LimpiarCamposSocio();
 
                             if (reader.Read())
                             {
+                                // Verificar si el socio está inactivo primero
+                                if (reader["tipoSocio"].ToString() == "INACTIVO")
+                                {
+
+                                    DialogResult result = MessageBox.Show(
+                                        "El socio está INACTIVO. Debe pagar la cuota antes de imprimir el carnet.\n\n¿Desea proceder al pago ahora?",
+                                        "Socio Inactivo",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Warning);
+
+                                    if (result == DialogResult.Yes)
+                                    {
+                                        // Abrir formulario de pago
+                                        AbrirFormularioPago(numeroSocio);
+                                    }
+                                    return; // No continuar con el proceso actual
+                                }
+
                                 txtNombre.Text = reader["nombre"].ToString();
                                 txtApellido.Text = reader["apellido"].ToString();
-                                txtNroSocio.Text = reader["numeroSocio"].ToString();
                                 txtTipo.Text = reader["tipoSocio"].ToString();
-                                txtActividad.Text = reader["actividad"].ToString();
-                                dtpVencimiento.Text = Convert.ToDateTime(reader["vencimiento"]).ToString("dd/MM/yyyy");
+                                txtActividad.Text = reader.IsDBNull(reader.GetOrdinal("actividad")) ?
+                                string.Empty : reader["actividad"].ToString();
+                                dtpVencimiento.Text = reader.IsDBNull(reader.GetOrdinal("vencimiento")) ?
+                                DateTime.Now.ToString("dd/MM/yyyy") :
+                                Convert.ToDateTime(reader["vencimiento"]).ToString("dd/MM/yyyy");
                             }
-                            else
-                            {
-                                txtNombre.Text = "";
-                                txtApellido.Text = "";
-                                MessageBox.Show("Socio no encontrado.");
-                            }
-                            reader.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                        finally
-                        {
-                            if (connection.State == System.Data.ConnectionState.Open)
-                                connection.Close();
                         }
                     }
-                }
-                else
-                {
-                    txtNombre.Text = "";
-                    txtApellido.Text = "";
-                    MessageBox.Show("Por favor, ingrese un número de socio.");
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al consultar socio: {ex.Message}", "Error",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        LimpiarCamposSocio();
+                    }
                 }
             }
+        }
+
+        private void LimpiarCamposSocio()
+        {
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtTipo.Text = "";
+            txtActividad.Text = "";
+            dtpVencimiento.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+
+        private void AbrirFormularioPago(int numeroSocio)
+        {
+            // Instanciamos el formulario de pago y pasamos el número de socio
+            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
+            cobrarCuota.CargarDatosSocio(numeroSocio); // Método que debes crear para precargar datos
+            cobrarCuota.ShowDialog();
+        }
+
+        private void frmCarnet_Load(object sender, EventArgs e)
+        {
+            
+            dtpVencimiento.CustomFormat = "dd/MM/yyyy";
         }
     }
 }

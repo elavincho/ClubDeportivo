@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarnet));
             this.picBanner = new System.Windows.Forms.PictureBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
-            this.txtNroSocio = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblNroSocio = new System.Windows.Forms.Label();
             this.txtActividad = new System.Windows.Forms.TextBox();
@@ -45,8 +44,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.picBordeUno = new System.Windows.Forms.PictureBox();
+            this.picBordeDos = new System.Windows.Forms.PictureBox();
+            this.picBordeTres = new System.Windows.Forms.PictureBox();
+            this.txtNroSocio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordeUno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordeDos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordeTres)).BeginInit();
             this.SuspendLayout();
             // 
             // picBanner
@@ -61,21 +67,13 @@
             // 
             // txtTipo
             // 
+            this.txtTipo.Enabled = false;
             this.txtTipo.Font = new System.Drawing.Font("Gadugi", 9.75F);
             this.txtTipo.Location = new System.Drawing.Point(552, 191);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.ReadOnly = true;
             this.txtTipo.Size = new System.Drawing.Size(224, 25);
             this.txtTipo.TabIndex = 24;
-            // 
-            // txtNroSocio
-            // 
-            this.txtNroSocio.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.txtNroSocio.Location = new System.Drawing.Point(552, 147);
-            this.txtNroSocio.Name = "txtNroSocio";
-            this.txtNroSocio.Size = new System.Drawing.Size(224, 25);
-            this.txtNroSocio.TabIndex = 25;
-            this.txtNroSocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroSocio_KeyPress);
             // 
             // lblTipo
             // 
@@ -163,7 +161,7 @@
             // 
             this.dtpVencimiento.Enabled = false;
             this.dtpVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpVencimiento.Location = new System.Drawing.Point(552, 353);
             this.dtpVencimiento.Name = "dtpVencimiento";
             this.dtpVencimiento.Size = new System.Drawing.Size(224, 24);
@@ -218,12 +216,49 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // picBordeUno
+            // 
+            this.picBordeUno.BackColor = System.Drawing.Color.RoyalBlue;
+            this.picBordeUno.Location = new System.Drawing.Point(0, 124);
+            this.picBordeUno.Name = "picBordeUno";
+            this.picBordeUno.Size = new System.Drawing.Size(20, 370);
+            this.picBordeUno.TabIndex = 37;
+            this.picBordeUno.TabStop = false;
+            // 
+            // picBordeDos
+            // 
+            this.picBordeDos.BackColor = System.Drawing.Color.RoyalBlue;
+            this.picBordeDos.Location = new System.Drawing.Point(796, 123);
+            this.picBordeDos.Name = "picBordeDos";
+            this.picBordeDos.Size = new System.Drawing.Size(20, 367);
+            this.picBordeDos.TabIndex = 38;
+            this.picBordeDos.TabStop = false;
+            // 
+            // picBordeTres
+            // 
+            this.picBordeTres.BackColor = System.Drawing.Color.RoyalBlue;
+            this.picBordeTres.Location = new System.Drawing.Point(12, 469);
+            this.picBordeTres.Name = "picBordeTres";
+            this.picBordeTres.Size = new System.Drawing.Size(792, 20);
+            this.picBordeTres.TabIndex = 39;
+            this.picBordeTres.TabStop = false;
+            // 
+            // txtNroSocio
+            // 
+            this.txtNroSocio.Font = new System.Drawing.Font("Gadugi", 9.75F);
+            this.txtNroSocio.Location = new System.Drawing.Point(552, 147);
+            this.txtNroSocio.Name = "txtNroSocio";
+            this.txtNroSocio.Size = new System.Drawing.Size(224, 25);
+            this.txtNroSocio.TabIndex = 25;
+            this.txtNroSocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroSocio_KeyPress);
+            // 
             // frmCarnet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(816, 489);
+            this.Controls.Add(this.picBordeTres);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.pictureBox1);
@@ -240,6 +275,8 @@
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblNroSocio);
             this.Controls.Add(this.picBanner);
+            this.Controls.Add(this.picBordeDos);
+            this.Controls.Add(this.picBordeUno);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -249,8 +286,12 @@
             this.Name = "frmCarnet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entregar Carnet";
+            this.Load += new System.EventHandler(this.frmCarnet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordeUno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordeDos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordeTres)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +301,6 @@
 
         private System.Windows.Forms.PictureBox picBanner;
         private System.Windows.Forms.TextBox txtTipo;
-        private System.Windows.Forms.TextBox txtNroSocio;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblNroSocio;
         private System.Windows.Forms.TextBox txtActividad;
@@ -274,5 +314,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.PictureBox picBordeUno;
+        private System.Windows.Forms.PictureBox picBordeDos;
+        private System.Windows.Forms.PictureBox picBordeTres;
+        private System.Windows.Forms.TextBox txtNroSocio;
     }
 }

@@ -171,6 +171,7 @@
             // 
             // dtpVencimiento
             // 
+            this.dtpVencimiento.Enabled = false;
             this.dtpVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpVencimiento.Location = new System.Drawing.Point(815, 444);
@@ -442,6 +443,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cobrar Cuota";
             this.Load += new System.EventHandler(this.frmCobrarCuota_Load);
+            this.Shown += new System.EventHandler(this.frmCobrarCuota_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).EndInit();
             this.gbTipo.ResumeLayout(false);

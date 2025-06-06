@@ -447,6 +447,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Socio";
             this.Load += new System.EventHandler(this.frmRegistrarSocio_Load);
+            this.Shown += new System.EventHandler(this.frmRegistrarSocio_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).EndInit();
             this.ResumeLayout(false);

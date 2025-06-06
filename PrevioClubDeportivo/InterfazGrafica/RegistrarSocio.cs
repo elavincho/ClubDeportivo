@@ -322,5 +322,10 @@ namespace PrevioClubDeportivo
             }
         }
 
+        private void frmRegistrarSocio_Shown(object sender, EventArgs e)
+        {
+            /* Colocamos el foco en el nombre*/
+            txtNombre.Focus();
+        }
     }
 }
