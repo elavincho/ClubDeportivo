@@ -34,7 +34,7 @@ namespace PrevioClubDeportivo.Entidades
         /* To String */
         public override string ToString()
         {
-            return "N° Socio: " + numeroSocio + " Es Apto: " + esApto + " Vencimiento Apto Físico: " + vtoAptoFisico;
+            return "N° Socio: " + numeroSocio + " Es Apto: " + esApto + " Nombre del Médico: " + nombreMedico + " N° Matricula: " + matricula +" Vencimiento Apto Físico: " + vtoAptoFisico;
         }
     }
 }
