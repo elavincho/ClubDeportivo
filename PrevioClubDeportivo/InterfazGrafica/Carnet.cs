@@ -29,8 +29,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 home.Show();
                 /* Ocultamos el formulario Entregar Carnet*/
                 this.Hide();
-
-
             }
             /* Si elige "No", no hace nada (se queda en el formulario actual) */
         }
@@ -44,7 +42,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
             );
-
             return (respuesta == DialogResult.Yes);
         }
 
@@ -79,9 +76,32 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            // Imprimimos el carnet
-            ImprimirFormularioCompleto();
-
+            if (string.IsNullOrEmpty(txtNroSocio.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un número de socio.", "Advertencia",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LimpiarCamposSocio();
+                return;
+            }
+            else if (!int.TryParse(txtNroSocio.Text, out int numeroSocio))
+            {
+                MessageBox.Show("El número de socio debe ser válido.", "Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LimpiarCamposSocio();
+                return;
+            }
+            else if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("Debe ingresar los campos obligatorios.", "Advertencia",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LimpiarCamposSocio();
+                return;
+            }
+            else
+            {
+                // Imprimimos el carnet
+                ImprimirFormularioCompleto();
+            }
         }
 
         private void ImprimirFormularioCompleto()
@@ -212,7 +232,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                                 // Verificar si el socio está inactivo primero
                                 if (reader["tipoSocio"].ToString() == "INACTIVO")
                                 {
-
                                     DialogResult result = MessageBox.Show(
                                         "El socio está INACTIVO. Debe pagar la cuota antes de imprimir el carnet.\n\n¿Desea proceder al pago ahora?",
                                         "Socio Inactivo",

@@ -75,8 +75,18 @@ namespace PrevioClubDeportivo
                     Socio nuevoSocio = ObtenerSocioDesdeFormulario();
                     if (!VerificarAptoFisicoExistente(nuevoSocio.numeroSocio))
                     {
-                        MessageBox.Show("No existe un apto físico registrado para este número de socio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        DialogResult result = MessageBox.Show(
+                                        "No existe un apto físico registrado para este número de socio.\n\n¿Desea cargar el Apto Físico ahora?",
+                                        "Apto Físico",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            // Abrir formulario de Apto Físico
+                            AbrirFormularioAptoFisico(nuevoSocio.numeroSocio);
+                        }
+                        return; // No continuar con el proceso actual
                     }
 
                     GuardarSocio(nuevoSocio);
@@ -289,9 +299,6 @@ namespace PrevioClubDeportivo
 
         private void btnCargarAptoFisico_Click(object sender, EventArgs e)
         {
-            /* Ocultamos el formulario Registrar Socio */
-            //this.Hide();
-
             /* Abrimos el formulario Apto Físico */
             frmAptoFisico aptoFisico = new frmAptoFisico();
             aptoFisico.Show();
@@ -326,6 +333,14 @@ namespace PrevioClubDeportivo
         {
             /* Colocamos el foco en el nombre*/
             txtNombre.Focus();
+        }
+
+        private void AbrirFormularioAptoFisico(int numeroSocio)
+        {
+            // Instanciamos el formulario de Apto Físico y pasamos el número de socio
+            frmAptoFisico aptoFisico = new frmAptoFisico();
+            aptoFisico.CargarDatosSocio(numeroSocio); // Método que debes crear para precargar datos
+            aptoFisico.ShowDialog();
         }
     }
 }

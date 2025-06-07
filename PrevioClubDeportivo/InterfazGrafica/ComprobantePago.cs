@@ -195,12 +195,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 this.Close();
             }
         }
-
-
-
-
     }
-
-
 }
 

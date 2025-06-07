@@ -58,7 +58,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-
             if (ValidarCampos())
             {
                 try
@@ -75,11 +74,8 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     LimpiarFormulario();
                     txtNroComprobante.Text = generadorNumeroComprobante.ObtenerProximoNumero().ToString();
 
-                    
-
                     // 1. Primero obtener el próximo número de comprobante
                     int numeroComprobante = generadorNumeroComprobante.ObtenerProximoNumero() - 1;
-
 
                     // Mostrar el comprobante con el número de comprobante
                     this.Hide(); // Ocultar el formulario actual
@@ -92,7 +88,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
         }
 
 

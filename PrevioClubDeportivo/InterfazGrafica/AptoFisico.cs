@@ -172,6 +172,8 @@ namespace PrevioClubDeportivo.InterfazGrafica
             aptoFisico.numeroSocio = int.Parse(txtNroSocio.Text);
             aptoFisico.esApto = lstEsApto.SelectedItem?.ToString();
             aptoFisico.vtoAptoFisico = dtpVencimiento.Value;
+            aptoFisico.nombreMedico = txtNroSocio.Text.Trim();
+            aptoFisico.matricula = txtNroSocio.Text.Trim();
 
             return aptoFisico;
         }
@@ -182,6 +184,13 @@ namespace PrevioClubDeportivo.InterfazGrafica
             {
                 MessageBox.Show("Por favor seleccione SI o NO para el campo 'Es Apto'.", "Validación",
                               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtNombreMedico.Text) ||
+                string.IsNullOrWhiteSpace(txtMatricula.Text))
+            {
+                MessageBox.Show("Por favor complete los campos obligatorios.", "Validación",
+                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -201,12 +210,14 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 {
                     // Insertamos el Apto Físico
                     string queryAptoFisico = @"INSERT INTO AptoFisico 
-                        (idAptoFisico, numeroSocio, esApto, vtoAptoFisico) 
+                        (idAptoFisico, nombreMedico, matricula, numeroSocio, esApto, vtoAptoFisico) 
                         VALUES 
-                        (@idAptoFisico, @numeroSocio, @esApto, @vtoAptoFisico)";
+                        (@idAptoFisico, @nombreMedico, @matricula, @numeroSocio, @esApto, @vtoAptoFisico)";
 
                     MySqlCommand cmdAptoFisico = new MySqlCommand(queryAptoFisico, connection, transaction);
                     cmdAptoFisico.Parameters.AddWithValue("@idAptoFisico", aptFisico.idAptoFisico);
+                    cmdAptoFisico.Parameters.AddWithValue("@nombreMedico", aptFisico.nombreMedico);
+                    cmdAptoFisico.Parameters.AddWithValue("@matricula", aptFisico.matricula);
                     cmdAptoFisico.Parameters.AddWithValue("@numeroSocio", aptFisico.numeroSocio);
                     cmdAptoFisico.Parameters.AddWithValue("@esApto", aptFisico.esApto);
                     cmdAptoFisico.Parameters.AddWithValue("@vtoAptoFisico", aptFisico.vtoAptoFisico);
@@ -225,6 +236,12 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     throw ex;
                 }
             }
+        }
+
+        public void CargarDatosSocio(int numeroSocio)
+        {
+            // Implementa la carga de datos del socio
+            txtNroSocio.Text = numeroSocio.ToString();
         }
     }
 }

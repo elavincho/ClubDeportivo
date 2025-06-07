@@ -154,7 +154,7 @@
             this.txtImporte.Location = new System.Drawing.Point(13, 22);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.ReadOnly = true;
-            this.txtImporte.Size = new System.Drawing.Size(128, 25);
+            this.txtImporte.Size = new System.Drawing.Size(135, 25);
             this.txtImporte.TabIndex = 19;
             // 
             // txtApellido
@@ -339,7 +339,7 @@
             this.txtCuotas.Location = new System.Drawing.Point(11, 141);
             this.txtCuotas.Name = "txtCuotas";
             this.txtCuotas.ReadOnly = true;
-            this.txtCuotas.Size = new System.Drawing.Size(126, 25);
+            this.txtCuotas.Size = new System.Drawing.Size(137, 25);
             this.txtCuotas.TabIndex = 20;
             // 
             // txtMetodoPago
@@ -348,7 +348,7 @@
             this.txtMetodoPago.Location = new System.Drawing.Point(13, 82);
             this.txtMetodoPago.Name = "txtMetodoPago";
             this.txtMetodoPago.ReadOnly = true;
-            this.txtMetodoPago.Size = new System.Drawing.Size(126, 25);
+            this.txtMetodoPago.Size = new System.Drawing.Size(135, 25);
             this.txtMetodoPago.TabIndex = 20;
             // 
             // lblMetodoPago
