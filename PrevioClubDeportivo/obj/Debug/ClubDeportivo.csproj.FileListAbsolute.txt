@@ -100,3 +100,4 @@ C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Deb
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\ClubDepo.31FF01E1.Up2Date
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.exe
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.pdb
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.InterfazGrafica.frmListaDeSocios.resources

@@ -483,26 +483,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                             {
                                 txtNombre.Text = reader["nombre"].ToString();
                                 txtApellido.Text = reader["apellido"].ToString();
-
-                                /*if (reader["esApto"] != DBNull.Value)
-                                {
-                                    string esApto = reader["esApto"].ToString();
-                                    DateTime vtoApto = Convert.ToDateTime(reader["vtoAptoFisico"]);
-                                    if (esApto == "Apto" && vtoApto >= DateTime.Now)
-                                    {
-                                        esAptoValido = true;
-                                    }
-                                    else
-                                    {
-                                        esAptoValido = false;
-                                        MessageBox.Show("El socio no está apto físicamente o el apto físico ha vencido.");
-                                    }
-                                }
-                                else
-                                {
-                                    esAptoValido = false;
-                                    MessageBox.Show("El socio no tiene un apto físico registrado.");
-                                }*/
                             }
                             else
                             {

@@ -129,6 +129,12 @@
     <Compile Include="InterfazGrafica\ComprobantePago.Designer.cs">
       <DependentUpon>ComprobantePago.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfazGrafica\ListaDeSocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazGrafica\ListaDeSocios.Designer.cs">
+      <DependentUpon>ListaDeSocios.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfazGrafica\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazGrafica\ComprobantePago.resx">
       <DependentUpon>ComprobantePago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazGrafica\ListaDeSocios.resx">
+      <DependentUpon>ListaDeSocios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazGrafica\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

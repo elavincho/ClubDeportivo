@@ -35,8 +35,6 @@
             this.btnRegistrarSocios = new System.Windows.Forms.Button();
             this.btnCobrarCuota = new System.Windows.Forms.Button();
             this.btnEntregarCarnet = new System.Windows.Forms.Button();
-            this.btnAltaActividad = new System.Windows.Forms.Button();
-            this.btnInscripcionActividad = new System.Windows.Forms.Button();
             this.btnVencimientoDelDia = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblBienvenido = new System.Windows.Forms.Label();
@@ -44,6 +42,7 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
             this.picImagenCentral = new System.Windows.Forms.PictureBox();
+            this.btnListaSocios = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenCentral)).BeginInit();
@@ -141,40 +140,6 @@
             this.btnEntregarCarnet.UseVisualStyleBackColor = false;
             this.btnEntregarCarnet.Click += new System.EventHandler(this.btnEntregarCarnet_Click);
             // 
-            // btnAltaActividad
-            // 
-            this.btnAltaActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.btnAltaActividad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAltaActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAltaActividad.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAltaActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
-            this.btnAltaActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnAltaActividad.Image")));
-            this.btnAltaActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAltaActividad.Location = new System.Drawing.Point(6, 363);
-            this.btnAltaActividad.Name = "btnAltaActividad";
-            this.btnAltaActividad.Size = new System.Drawing.Size(245, 50);
-            this.btnAltaActividad.TabIndex = 2;
-            this.btnAltaActividad.Text = "     ALTA ACTIVIDAD";
-            this.btnAltaActividad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAltaActividad.UseVisualStyleBackColor = false;
-            // 
-            // btnInscripcionActividad
-            // 
-            this.btnInscripcionActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.btnInscripcionActividad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInscripcionActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInscripcionActividad.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInscripcionActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
-            this.btnInscripcionActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnInscripcionActividad.Image")));
-            this.btnInscripcionActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInscripcionActividad.Location = new System.Drawing.Point(6, 414);
-            this.btnInscripcionActividad.Name = "btnInscripcionActividad";
-            this.btnInscripcionActividad.Size = new System.Drawing.Size(245, 50);
-            this.btnInscripcionActividad.TabIndex = 2;
-            this.btnInscripcionActividad.Text = "     INSCRIPCIÓN ACTIVIDAD";
-            this.btnInscripcionActividad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInscripcionActividad.UseVisualStyleBackColor = false;
-            // 
             // btnVencimientoDelDia
             // 
             this.btnVencimientoDelDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
@@ -184,7 +149,7 @@
             this.btnVencimientoDelDia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
             this.btnVencimientoDelDia.Image = ((System.Drawing.Image)(resources.GetObject("btnVencimientoDelDia.Image")));
             this.btnVencimientoDelDia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVencimientoDelDia.Location = new System.Drawing.Point(6, 465);
+            this.btnVencimientoDelDia.Location = new System.Drawing.Point(6, 414);
             this.btnVencimientoDelDia.Name = "btnVencimientoDelDia";
             this.btnVencimientoDelDia.Size = new System.Drawing.Size(245, 50);
             this.btnVencimientoDelDia.TabIndex = 2;
@@ -271,6 +236,24 @@
             this.picImagenCentral.TabIndex = 5;
             this.picImagenCentral.TabStop = false;
             // 
+            // btnListaSocios
+            // 
+            this.btnListaSocios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.btnListaSocios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListaSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaSocios.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaSocios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(153)))));
+            this.btnListaSocios.Image = ((System.Drawing.Image)(resources.GetObject("btnListaSocios.Image")));
+            this.btnListaSocios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaSocios.Location = new System.Drawing.Point(6, 363);
+            this.btnListaSocios.Name = "btnListaSocios";
+            this.btnListaSocios.Size = new System.Drawing.Size(245, 50);
+            this.btnListaSocios.TabIndex = 2;
+            this.btnListaSocios.Text = "     LISTA DE SOCIOS";
+            this.btnListaSocios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaSocios.UseVisualStyleBackColor = false;
+            this.btnListaSocios.Click += new System.EventHandler(this.btnListaSocios_Click);
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,8 +267,7 @@
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnVencimientoDelDia);
-            this.Controls.Add(this.btnInscripcionActividad);
-            this.Controls.Add(this.btnAltaActividad);
+            this.Controls.Add(this.btnListaSocios);
             this.Controls.Add(this.btnEntregarCarnet);
             this.Controls.Add(this.btnCobrarCuota);
             this.Controls.Add(this.btnRegistrarSocios);
@@ -318,8 +300,6 @@
         private System.Windows.Forms.Button btnRegistrarSocios;
         private System.Windows.Forms.Button btnCobrarCuota;
         private System.Windows.Forms.Button btnEntregarCarnet;
-        private System.Windows.Forms.Button btnAltaActividad;
-        private System.Windows.Forms.Button btnInscripcionActividad;
         private System.Windows.Forms.Button btnVencimientoDelDia;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblBienvenido;
@@ -327,5 +307,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.PictureBox picImagenCentral;
+        private System.Windows.Forms.Button btnListaSocios;
     }
 }

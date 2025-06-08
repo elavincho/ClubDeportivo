@@ -1,7 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using PrevioClubDeportivo.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,54 +20,9 @@ namespace PrevioClubDeportivo.InterfazGrafica
             InitializeComponent();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void frmVencimientosDelDia_Load(object sender, EventArgs e)
         {
-            /* Ocultar el formulario Vencimientos del día */
-            this.Hide();
-
-            /* Abrimos el formulario principal */
-            frmHome home = new frmHome();
-            home.Show();
-        }
-
-        private void btnRegistrarSocios_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Vencimientos del día */
-            this.Hide();
-
-            /* Abrimos el formulario Registrar Socios */
-            frmRegistrarSocio registrarSocio = new frmRegistrarSocio();
-            registrarSocio.Show();
-        }
-
-        private void btnCobrarCuota_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Vencimientos del día */
-            this.Hide();
-
-            /* Abrimos el formulario Cobrar Cuota */
-            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
-            cobrarCuota.Show();
-        }
-
-        private void btnEntregarCarnet_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Vencimientos del día */
-            this.Hide();
-
-            /* Abrimos el formulario Entregar Carnet */
-            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
-            frmCarnet carnet = new frmCarnet();
-            carnet.Show();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            if (ConfirmarSalida())
-            {
-                /* Cierra completamente la aplicación */
-                Application.Exit();
-            }
+            CargarSociosConCuotasVencidasHoy();
         }
 
         /* Función que pregunta si queres salir */
@@ -106,9 +64,159 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
         }
 
+        private void CargarSociosConCuotasVencidasHoy()
+        {
+            try
+            {
+                using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+                {
+                    connection.Open();
+
+                    // Consulta para obtener socios con cuotas que vencen hoy
+                    string query = @"SELECT 
+                    s.numeroSocio,
+                    s.tipoSocio,
+                    per.nombre,
+                    per.apellido,
+                    per.tipoDocumento,
+                    per.nroDocumento,
+                    p.vencimiento,
+                    IFNULL(DATEDIFF(p.vencimiento, CURDATE()), 0) AS diasVencimiento
+                    FROM Pagos p
+                    JOIN Socios s ON p.numeroSocio = s.numeroSocio
+                    JOIN Personas per ON s.idPersona = per.idPersona
+                    WHERE p.vencimiento = CURDATE()
+                    AND s.tipoSocio = 'Activo'
+                    ORDER BY p.vencimiento";
+
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
 
 
+                    // Configurar el DataGridView si hay datos
+                    dtgvVencimientos.DataSource = dt;
+                    ConfigurarColumnasDataGridView();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar socios con cuotas vencidas: {ex.Message}",
+                              "Error",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
+                dtgvVencimientos.DataSource = null;
+            }
+        }
 
+        private void ConfigurarColumnasDataGridView()
+        {
+            // Verificar si el DataGridView tiene datos (no crear un nuevo DataTable)
+            if (dtgvVencimientos.Rows.Count > 0 && dtgvVencimientos.DataSource != null)
+            {
+                // Mostrar todas las columnas primero
+                foreach (DataGridViewColumn col in dtgvVencimientos.Columns)
+                {
+                    col.Visible = true;
+                }
 
+                // Renombrar columnas
+                dtgvVencimientos.Columns["numeroSocio"].HeaderText = "N° Socio";
+                dtgvVencimientos.Columns["tipoSocio"].HeaderText = "Tipo Socio";
+                dtgvVencimientos.Columns["nombre"].HeaderText = "Nombre";
+                dtgvVencimientos.Columns["apellido"].HeaderText = "Apellido";
+                dtgvVencimientos.Columns["tipoDocumento"].HeaderText = "Tipo Doc.";
+                dtgvVencimientos.Columns["nroDocumento"].HeaderText = "N° Doc.";
+                dtgvVencimientos.Columns["vencimiento"].HeaderText = "Vencimiento";
+                dtgvVencimientos.Columns["diasVencimiento"].HeaderText = "Días Venc.";
+
+                // Configurar formato de columnas
+                dtgvVencimientos.Columns["vencimiento"].DefaultCellStyle.Format = "dd/MM/yyyy";
+
+                // Configurar ancho de columnas
+                dtgvVencimientos.Columns["numeroSocio"].Width = 100;
+                dtgvVencimientos.Columns["tipoSocio"].Width = 100;
+                dtgvVencimientos.Columns["nombre"].Width = 100;
+                dtgvVencimientos.Columns["apellido"].Width = 100;
+                dtgvVencimientos.Columns["vencimiento"].Width = 100;
+                dtgvVencimientos.Columns["diasVencimiento"].Width = 100;
+
+                // Formato condicional para resaltar vencimientos
+                dtgvVencimientos.CellFormatting += (sender, e) =>
+                {
+                    if (e.ColumnIndex == dtgvVencimientos.Columns["diasVencimiento"].Index && e.Value != null)
+                    {
+                        try
+                        {
+                            if (e.Value == DBNull.Value || string.IsNullOrWhiteSpace(e.Value.ToString()))
+                            {
+                                e.Value = "N/A";
+                                return;
+                            }
+
+                            if (int.TryParse(e.Value.ToString(), out int dias))
+                            {
+                                if (dias == 0)
+                                {
+                                    e.Value = $" {dias}";
+                                }
+                                else
+                                {
+                                    e.Value = dias.ToString();
+                                }
+                            }
+                            else
+                            {
+                                e.Value = "N/A";
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine($"Error al formatear celda: {ex.Message}");
+                            e.Value = "Error";
+                            e.CellStyle.BackColor = Color.LightGray;
+                        }
+                    }
+                };
+            }
+            else
+            {
+                // Limpiar el DataGridView completamente
+                dtgvVencimientos.DataSource = null;
+                dtgvVencimientos.Columns.Clear();
+
+                // Crear una columna para el mensaje
+                DataGridViewTextBoxColumn columnaMensaje = new DataGridViewTextBoxColumn();
+                columnaMensaje.Name = "mensaje";
+                columnaMensaje.HeaderText = "No existen vencimientos en el día";
+                dtgvVencimientos.Columns.Add(columnaMensaje);
+
+                // Agregar una fila vacía para que se vea el mensaje
+                dtgvVencimientos.Rows.Add();
+
+                // Configurar el estilo del encabezado
+                dtgvVencimientos.Columns["mensaje"].HeaderCell.Style.Font = new Font("Arial", 16, FontStyle.Italic);
+                dtgvVencimientos.Columns["mensaje"].HeaderCell.Style.ForeColor = Color.DarkBlue;
+                dtgvVencimientos.Columns["mensaje"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dtgvVencimientos.Columns["mensaje"].Width = 841;
+
+                // Ocultar encabezados de fila
+                dtgvVencimientos.RowHeadersVisible = false;
+            }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            if (ConfirmarSalida())
+            {
+                /* Regresa al formulario principal */
+                frmHome home = new frmHome();
+                home.Show();
+                /* Ocultamos el formulario Registrar Socio*/
+                this.Hide();
+            }
+            /* Si elige "No", no hace nada (se queda en el formulario actual) */
+        }
     }
 }

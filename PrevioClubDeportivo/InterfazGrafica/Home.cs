@@ -110,5 +110,15 @@ namespace PrevioClubDeportivo
             frmVencimientosDelDia vencimientos = new frmVencimientosDelDia();
             vencimientos.Show();
         }
+
+        private void btnListaSocios_Click(object sender, EventArgs e)
+        {
+            /* Ocultamos el formulario Home */
+            this.Hide();
+
+            /* Abrimos el formulario Lista de Socios*/
+            frmListaDeSocios listaDeSocios = new frmListaDeSocios();
+            listaDeSocios.Show();
+        }
     }
 }

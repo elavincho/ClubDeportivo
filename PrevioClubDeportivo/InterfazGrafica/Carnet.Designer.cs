@@ -48,6 +48,7 @@
             this.picBordeDos = new System.Windows.Forms.PictureBox();
             this.picBordeTres = new System.Windows.Forms.PictureBox();
             this.txtNroSocio = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordeUno)).BeginInit();
@@ -181,9 +182,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 147);
+            this.pictureBox1.Location = new System.Drawing.Point(49, 196);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(331, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
@@ -212,7 +213,7 @@
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(138, 36);
             this.btnCerrar.TabIndex = 36;
-            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.Text = "VOLVER";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -252,12 +253,24 @@
             this.txtNroSocio.TabIndex = 25;
             this.txtNroSocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroSocio_KeyPress);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblTitulo.Location = new System.Drawing.Point(42, 147);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(121, 39);
+            this.lblTitulo.TabIndex = 40;
+            this.lblTitulo.Text = "Carnet";
+            // 
             // frmCarnet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(816, 489);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.picBordeTres);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnCerrar);
@@ -318,5 +331,6 @@
         private System.Windows.Forms.PictureBox picBordeDos;
         private System.Windows.Forms.PictureBox picBordeTres;
         private System.Windows.Forms.TextBox txtNroSocio;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

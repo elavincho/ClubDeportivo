@@ -231,7 +231,7 @@
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(138, 36);
             this.btnCerrar.TabIndex = 23;
-            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.Text = "VOLVER";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
