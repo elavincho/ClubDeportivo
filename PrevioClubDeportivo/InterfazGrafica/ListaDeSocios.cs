@@ -75,8 +75,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 base.OnFormClosing(e);
             }
         }
-
-
+        
         private void CargarTodosLosSocios()
         {
             try
@@ -128,7 +127,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 dtgvListaSocios.DataSource = null;
             }
         }
-
 
         private void ConfigurarColumnasDataGridView()
         {
@@ -209,7 +207,5 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 dtgvListaSocios.RowHeadersVisible = false;
             }
         }
-
-        
     }
 }
