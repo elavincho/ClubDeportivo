@@ -488,15 +488,15 @@ namespace PrevioClubDeportivo.InterfazGrafica
                             {
                                 txtNombre.Text = "";
                                 txtApellido.Text = "";
-                                //esAptoValido = false;
-                                MessageBox.Show("Socio no encontrado.");
+                                //MessageBox.Show("Socio no encontrado.");
+                                MessageBox.Show("Socio no encontrado.",
+                              "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             reader.Close();
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show("Error: " + ex.Message);
-                            //esAptoValido = false;
                         }
                         finally
                         {
@@ -509,8 +509,9 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 {
                     txtNombre.Text = "";
                     txtApellido.Text = "";
-                    //esAptoValido = false;
-                    MessageBox.Show("Por favor, ingrese un número de socio.");
+                    //MessageBox.Show("Por favor, ingrese un número de socio.");
+                    MessageBox.Show("Por favor, ingrese un número de socio.",
+                              "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
