@@ -58,6 +58,8 @@ CREATE TABLE Socios (
 CREATE TABLE AptoFisico (
     idAptoFisico INT PRIMARY KEY AUTO_INCREMENT,
     numeroSocio INT NOT NULL,
+    nombreMedico VARCHAR(20) NOT NULL,
+    matricula VARCHAR(20) NOT NULL,
     esApto VARCHAR(20) NOT NULL,
     vtoAptoFisico DATE NOT NULL,
     CONSTRAINT UQ_AptoFisico_numeroSocio UNIQUE (numeroSocio)
@@ -65,14 +67,15 @@ CREATE TABLE AptoFisico (
 
 -- Tabla Pagos
 CREATE TABLE Pagos (
-    nro_comprobante INT PRIMARY KEY AUTO_INCREMENT,
-    numeroSocio INT,
+    idCuota INT PRIMARY KEY AUTO_INCREMENT,
+    nroComprobante INT NOT NULL,
+    numeroSocio INT NOT NULL,
     tipo VARCHAR(20),
     actividad VARCHAR(50),
     importe DECIMAL(10,2),
-    metodo_pago VARCHAR(20),
+    metodoPago VARCHAR(20),
     cuotas INT,
-    fecha DATE,
+    fechaPago DATE,
     vencimiento DATE,
     FOREIGN KEY (numeroSocio) REFERENCES socios(numeroSocio)
 );
