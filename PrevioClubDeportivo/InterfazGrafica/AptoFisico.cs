@@ -49,7 +49,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             lstEsApto.Items.Add("SI");
             lstEsApto.SelectedIndex = 0;
 
-
             /* Personalizamos el formato de la fecha*/
             dtpVencimiento.CustomFormat = "dd/MM/yyyy";
 
@@ -66,8 +65,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 MessageBox.Show($"Error al generar EL número: {ex.Message}");
             }
         }
-
-
+        
         public class generadorNumerosSocios
         {
             public static int ObtenerProximoNumero()
@@ -97,8 +95,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                 }
             }
         }
-
-
 
         /* Función que pregunta si queres salir */
         private bool ConfirmarSalida()
@@ -143,27 +139,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            /* Ocultar el formulario Apto Físico */
-            this.Hide();
-
-            /* Abrimos el formulario principal */
-            frmHome home = new frmHome();
-            home.Show();
-        }
-
-        private void btnCobrarCuota_Click(object sender, EventArgs e)
-        {
-            /* Ocultamos el formulario Registrar Socio */
-            this.Hide();
-
-            /* Abrimos el formulario Cobrar Cuota */
-            frmCobrarCuota cobrarCuota = new frmCobrarCuota();
-            cobrarCuota.Show();
-        }
-
-
         private AptFisico ObtenerAptoFisicoDesdeFormulario()
         {
             /* Creamos el Apto Físico */
@@ -197,8 +172,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             return true;
         }
 
-
-
         private void GuardarAptoFisico(AptFisico aptFisico)
         {
             using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
@@ -221,7 +194,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     cmdAptoFisico.Parameters.AddWithValue("@numeroSocio", aptFisico.numeroSocio);
                     cmdAptoFisico.Parameters.AddWithValue("@esApto", aptFisico.esApto);
                     cmdAptoFisico.Parameters.AddWithValue("@vtoAptoFisico", aptFisico.vtoAptoFisico);
-
 
                     cmdAptoFisico.ExecuteNonQuery();
 
