@@ -172,8 +172,8 @@ namespace PrevioClubDeportivo.InterfazGrafica
             aptoFisico.numeroSocio = int.Parse(txtNroSocio.Text);
             aptoFisico.esApto = lstEsApto.SelectedItem?.ToString();
             aptoFisico.vtoAptoFisico = dtpVencimiento.Value;
-            aptoFisico.nombreMedico = txtNroSocio.Text.Trim();
-            aptoFisico.matricula = txtNroSocio.Text.Trim();
+            aptoFisico.nombreMedico = txtNombreMedico.Text.Trim();
+            aptoFisico.matricula = txtMatricula.Text.Trim();
 
             return aptoFisico;
         }
