@@ -61,8 +61,10 @@
             this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
             this.lblEstadoPago = new System.Windows.Forms.Label();
             this.lstEstadoPago = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // picBanner
@@ -159,7 +161,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblNombre.Location = new System.Drawing.Point(143, 353);
+            this.lblNombre.Location = new System.Drawing.Point(40, 33);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(76, 16);
             this.lblNombre.TabIndex = 8;
@@ -168,7 +170,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(225, 348);
+            this.txtNombre.Location = new System.Drawing.Point(122, 28);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(224, 25);
             this.txtNombre.TabIndex = 9;
@@ -178,7 +180,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblApellido.Location = new System.Drawing.Point(689, 357);
+            this.lblApellido.Location = new System.Drawing.Point(499, 36);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(83, 16);
             this.lblApellido.TabIndex = 8;
@@ -187,7 +189,7 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(778, 351);
+            this.txtApellido.Location = new System.Drawing.Point(588, 30);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(224, 25);
             this.txtApellido.TabIndex = 9;
@@ -197,7 +199,7 @@
             this.lblTipoDoc.AutoSize = true;
             this.lblTipoDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoDoc.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTipoDoc.Location = new System.Drawing.Point(137, 395);
+            this.lblTipoDoc.Location = new System.Drawing.Point(34, 75);
             this.lblTipoDoc.Name = "lblTipoDoc";
             this.lblTipoDoc.Size = new System.Drawing.Size(82, 16);
             this.lblTipoDoc.TabIndex = 8;
@@ -206,7 +208,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(225, 470);
+            this.txtEmail.Location = new System.Drawing.Point(122, 150);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(224, 25);
             this.txtEmail.TabIndex = 9;
@@ -216,7 +218,7 @@
             this.lblFecNac.AutoSize = true;
             this.lblFecNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecNac.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblFecNac.Location = new System.Drawing.Point(140, 435);
+            this.lblFecNac.Location = new System.Drawing.Point(37, 115);
             this.lblFecNac.Name = "lblFecNac";
             this.lblFecNac.Size = new System.Drawing.Size(79, 16);
             this.lblFecNac.TabIndex = 8;
@@ -227,7 +229,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblEmail.Location = new System.Drawing.Point(164, 475);
+            this.lblEmail.Location = new System.Drawing.Point(61, 155);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(55, 16);
             this.lblEmail.TabIndex = 8;
@@ -236,7 +238,7 @@
             // txtNroDocumento
             // 
             this.txtNroDocumento.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNroDocumento.Location = new System.Drawing.Point(778, 394);
+            this.txtNroDocumento.Location = new System.Drawing.Point(588, 73);
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.Size = new System.Drawing.Size(224, 25);
             this.txtNroDocumento.TabIndex = 9;
@@ -244,7 +246,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(778, 437);
+            this.txtDireccion.Location = new System.Drawing.Point(588, 116);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(224, 25);
             this.txtDireccion.TabIndex = 9;
@@ -252,7 +254,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(778, 476);
+            this.txtTelefono.Location = new System.Drawing.Point(588, 155);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(224, 25);
             this.txtTelefono.TabIndex = 9;
@@ -262,7 +264,7 @@
             this.lblNroDocumento.AutoSize = true;
             this.lblNroDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNroDocumento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblNroDocumento.Location = new System.Drawing.Point(644, 400);
+            this.lblNroDocumento.Location = new System.Drawing.Point(454, 79);
             this.lblNroDocumento.Name = "lblNroDocumento";
             this.lblNroDocumento.Size = new System.Drawing.Size(128, 16);
             this.lblNroDocumento.TabIndex = 8;
@@ -273,7 +275,7 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblDireccion.Location = new System.Drawing.Point(679, 441);
+            this.lblDireccion.Location = new System.Drawing.Point(489, 120);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(93, 16);
             this.lblDireccion.TabIndex = 8;
@@ -284,7 +286,7 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTelefono.Location = new System.Drawing.Point(679, 481);
+            this.lblTelefono.Location = new System.Drawing.Point(491, 158);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(91, 16);
             this.lblTelefono.TabIndex = 8;
@@ -296,7 +298,7 @@
             this.lstTipoDoc.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lstTipoDoc.FormattingEnabled = true;
             this.lstTipoDoc.ItemHeight = 22;
-            this.lstTipoDoc.Location = new System.Drawing.Point(225, 389);
+            this.lstTipoDoc.Location = new System.Drawing.Point(122, 69);
             this.lstTipoDoc.Name = "lstTipoDoc";
             this.lstTipoDoc.Size = new System.Drawing.Size(224, 26);
             this.lstTipoDoc.TabIndex = 7;
@@ -305,7 +307,7 @@
             // 
             this.dtpFecNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecNac.Location = new System.Drawing.Point(225, 431);
+            this.dtpFecNac.Location = new System.Drawing.Point(122, 111);
             this.dtpFecNac.Name = "dtpFecNac";
             this.dtpFecNac.Size = new System.Drawing.Size(224, 24);
             this.dtpFecNac.TabIndex = 10;
@@ -400,32 +402,44 @@
             this.lstEstadoPago.Size = new System.Drawing.Size(154, 23);
             this.lstEstadoPago.TabIndex = 7;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtpFecNac);
+            this.groupBox1.Controls.Add(this.txtApellido);
+            this.groupBox1.Controls.Add(this.txtTelefono);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtDireccion);
+            this.groupBox1.Controls.Add(this.txtNroDocumento);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.lblTelefono);
+            this.groupBox1.Controls.Add(this.lblDireccion);
+            this.groupBox1.Controls.Add(this.lblNroDocumento);
+            this.groupBox1.Controls.Add(this.lblApellido);
+            this.groupBox1.Controls.Add(this.lblEmail);
+            this.groupBox1.Controls.Add(this.lblFecNac);
+            this.groupBox1.Controls.Add(this.lblTipoDoc);
+            this.groupBox1.Controls.Add(this.lblNombre);
+            this.groupBox1.Controls.Add(this.lstTipoDoc);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox1.Location = new System.Drawing.Point(150, 319);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(852, 202);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "DATOS DEL SOCIO";
+            // 
             // frmRegistrarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 591);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dtpFechaPago);
             this.Controls.Add(this.dtpFechaAlta);
-            this.Controls.Add(this.dtpFecNac);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtNroDocumento);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblTelefono);
-            this.Controls.Add(this.lblDireccion);
-            this.Controls.Add(this.lblNroDocumento);
-            this.Controls.Add(this.lblApellido);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblFecNac);
-            this.Controls.Add(this.lblTipoDoc);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lstTipoDoc);
             this.Controls.Add(this.lstEstadoPago);
             this.Controls.Add(this.lstTipoSocio);
             this.Controls.Add(this.lblEstadoPago);
@@ -445,11 +459,13 @@
             this.MinimumSize = new System.Drawing.Size(1050, 630);
             this.Name = "frmRegistrarSocio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Socio";
+            this.Text = "Registrar Socios";
             this.Load += new System.EventHandler(this.frmRegistrarSocio_Load);
             this.Shown += new System.EventHandler(this.frmRegistrarSocio_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoBoton)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,5 +505,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaPago;
         private System.Windows.Forms.Label lblEstadoPago;
         private System.Windows.Forms.ListBox lstEstadoPago;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
