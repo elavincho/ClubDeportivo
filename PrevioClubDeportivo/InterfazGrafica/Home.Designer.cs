@@ -51,7 +51,7 @@
             // picBanner
             // 
             this.picBanner.Image = ((System.Drawing.Image)(resources.GetObject("picBanner.Image")));
-            this.picBanner.Location = new System.Drawing.Point(-1, 0);
+            this.picBanner.Location = new System.Drawing.Point(-5, 0);
             this.picBanner.MaximumSize = new System.Drawing.Size(1035, 144);
             this.picBanner.MinimumSize = new System.Drawing.Size(1035, 144);
             this.picBanner.Name = "picBanner";

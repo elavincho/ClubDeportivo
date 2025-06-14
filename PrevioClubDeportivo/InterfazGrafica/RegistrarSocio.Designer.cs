@@ -70,9 +70,9 @@
             // picBanner
             // 
             this.picBanner.Image = ((System.Drawing.Image)(resources.GetObject("picBanner.Image")));
-            this.picBanner.Location = new System.Drawing.Point(-1, 0);
+            this.picBanner.Location = new System.Drawing.Point(-6, 0);
             this.picBanner.Name = "picBanner";
-            this.picBanner.Size = new System.Drawing.Size(1035, 144);
+            this.picBanner.Size = new System.Drawing.Size(1040, 144);
             this.picBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBanner.TabIndex = 0;
             this.picBanner.TabStop = false;
