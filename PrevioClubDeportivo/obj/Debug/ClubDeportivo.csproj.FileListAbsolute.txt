@@ -101,3 +101,7 @@ C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Deb
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.exe
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.pdb
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.InterfazGrafica.frmListaDeSocios.resources
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Debug\PrevioClubDeportivo.exe.manifest
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Debug\PrevioClubDeportivo.application
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.exe.manifest
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Debug\PrevioClubDeportivo.application
