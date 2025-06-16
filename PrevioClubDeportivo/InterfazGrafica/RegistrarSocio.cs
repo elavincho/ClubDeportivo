@@ -241,8 +241,8 @@ namespace PrevioClubDeportivo
 
             /* Configurar lstTipoSocio */
             lstTipoSocio.Items.Add("INACTIVO");
-            lstTipoSocio.Items.Add("ACTIVO");
-            lstTipoSocio.Items.Add("ADHERENTE");
+            lstTipoSocio.Items.Add("SOCIO");
+            lstTipoSocio.Items.Add("NO_SOCIO");
             lstTipoSocio.SelectedIndex = 0;
 
             /* Configurar lstEstadoPago */

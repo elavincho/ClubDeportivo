@@ -86,7 +86,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     JOIN Socios s ON p.numeroSocio = s.numeroSocio
                     JOIN Personas per ON s.idPersona = per.idPersona
                     WHERE p.vencimiento = CURDATE()
-                    AND s.tipoSocio = 'Activo'
+                    AND s.tipoSocio = 'SOCIO'
                     ORDER BY p.vencimiento";
 
                     MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -159,7 +159,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
                             {
                                 if (dias == 0)
                                 {
-                                    e.Value = $" {dias}";
+                                    e.Value = $" {dias} días - HOY";
                                 }
                                 else
                                 {

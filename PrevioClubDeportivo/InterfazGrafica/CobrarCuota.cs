@@ -254,7 +254,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
         }
 
-       
         private CobrarCuota ObtenerDatosDesdeFormulario()
         {
 
@@ -282,7 +281,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
             return cuota;
         }
-
 
         private bool ValidarCampos()
         {
@@ -356,7 +354,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
                     using (MySqlCommand updateCmd = new MySqlCommand(updateSocioQuery, connection, transaction))
                     {
-                        updateCmd.Parameters.AddWithValue("@tipoSocio", rbMensual.Checked ? "Activo" : "Adherente");
+                        updateCmd.Parameters.AddWithValue("@tipoSocio", rbMensual.Checked ? "SOCIO" : "NO_SOCIO");
                         updateCmd.Parameters.AddWithValue("@fechaPago", cuota.fechaPago);
                         updateCmd.Parameters.AddWithValue("@estadoCuota", "Al día");
                         updateCmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
@@ -365,7 +363,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
                     // Confirmar la transacción si todo salió bien
                     transaction.Commit();
-                    
+
                     MessageBox.Show("Pago registrado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return proximoNumero; // Esto debe devolver el número de comprobante
                 }
@@ -375,10 +373,8 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     MessageBox.Show($"Error al registrar el pago: {ex.Message}");
                     throw;
                 }
-                
-            }
-            
 
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -393,7 +389,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
             /* Si elige "No", no hace nada (se queda en el formulario actual) */
         }
-
 
         public class generadorNumeroComprobante
         {
@@ -434,7 +429,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             dtpFecha.Format = DateTimePickerFormat.Custom;
             dtpVencimiento.CustomFormat = "dd/MM/yy";
             dtpVencimiento.Format = DateTimePickerFormat.Custom;
-            
 
             try
             {
@@ -574,11 +568,51 @@ namespace PrevioClubDeportivo.InterfazGrafica
         {
             // Implementa la carga de datos del socio
             txtNroSocio.Text = numeroSocio.ToString();
+
+            using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+            {
+                try
+                {
+                    connection.Open();
+                    // Consulta corregida (agregado espacio después de p.apellido")
+                    string query = @"SELECT p.nombre, p.apellido 
+                          FROM Personas p 
+                          JOIN Socios s ON p.idPersona = s.idPersona 
+                          WHERE s.numeroSocio = @numeroSocio";
+
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@numeroSocio", numeroSocio);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtNombre.Text = reader["nombre"].ToString();
+                            txtApellido.Text = reader["apellido"].ToString();
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Socio no encontrado.",
+                                          "Error",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al cargar datos del socio: {ex.Message}",
+                                  "Error",
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void frmCobrarCuota_Shown(object sender, EventArgs e)
         {
-            /* Colocamos el Foco en el número de socio*/
+            /* Colocamos el Foco en el número de socio */
             txtNroSocio.Focus();
         }
     }
