@@ -1,4 +1,6 @@
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Release\PrevioClubDeportivo.exe.config
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Release\PrevioClubDeportivo.exe.manifest
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Release\PrevioClubDeportivo.application
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Release\PrevioClubDeportivo.exe
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Release\PrevioClubDeportivo.pdb
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Release\BouncyCastle.Cryptography.dll
@@ -46,11 +48,8 @@ C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Rel
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\PrevioClubDeportivo.frmRegistrarSocio.resources
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\ClubDeportivo.csproj.GenerateResource.cache
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\ClubDeportivo.csproj.CoreCompileInputs.cache
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\PrevioClubDeportivo.exe.manifest
+C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\PrevioClubDeportivo.application
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\ClubDepo.31FF01E1.Up2Date
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\PrevioClubDeportivo.exe
 C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\PrevioClubDeportivo.pdb
-C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Release\PrevioClubDeportivo.exe.manifest
-C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\bin\Release\PrevioClubDeportivo.application
-C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\PrevioClubDeportivo.exe.config
-C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\PrevioClubDeportivo.exe.manifest
-C:\Users\elavi\OneDrive\Escritorio\ClubDeportivo_1.1\PrevioClubDeportivo\obj\Release\PrevioClubDeportivo.application
