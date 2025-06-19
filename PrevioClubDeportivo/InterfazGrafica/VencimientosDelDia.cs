@@ -23,6 +23,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
         private void frmVencimientosDelDia_Load(object sender, EventArgs e)
         {
             CargarSociosConCuotasVencidasHoy();
+            ActualizarSociosMorosos();
         }
 
         /* Función que pregunta si queres salir */
@@ -203,6 +204,56 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
                 // Ocultar encabezados de fila
                 dtgvVencimientos.RowHeadersVisible = false;
+            }
+        }
+
+        private void ActualizarSociosMorosos()
+        {
+            try
+            {
+                using (MySqlConnection connection = Conexion.getInstancia().CrearConexion())
+                {
+                    connection.Open();
+
+                    // Consulta para actualizar socios y adherentes con cuotas vencidas hace más de 1 día
+                    string updateQuery = @"
+                        UPDATE Socios s
+                        JOIN (
+                            SELECT p.numeroSocio, MAX(p.vencimiento) as ultimoVencimiento
+                            FROM Pagos p
+                            GROUP BY p.numeroSocio
+                            ) ult ON s.numeroSocio = ult.numeroSocio
+                        SET s.tipoSocio = CASE
+                                    WHEN s.tipoSocio = 'SOCIO' THEN 'INACTIVO'
+                                    WHEN s.tipoSocio = 'NO_SOCIO' THEN 'INACTIVO'
+                                    END,
+                                    s.estadoCuota = 'VENCIDA'
+                        WHERE DATEDIFF(CURDATE(), ult.ultimoVencimiento) >= 1
+                        AND (s.tipoSocio = 'SOCIO' OR s.tipoSocio = 'NO_SOCIO')";
+
+                    
+
+                    MySqlCommand cmd = new MySqlCommand(updateQuery, connection);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show($"Se actualizaron {rowsAffected} Socios/No Socios a INACTIVOS.",
+                                      "Actualización exitosa",
+                                      MessageBoxButtons.OK,
+                                      MessageBoxIcon.Information);
+
+                        //Recargamos la lista de socios para reflejar los cambios
+                        CargarSociosConCuotasVencidasHoy();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar Socios/No Socios a INACTIVOS: {ex.Message}",
+                              "Error",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
             }
         }
 

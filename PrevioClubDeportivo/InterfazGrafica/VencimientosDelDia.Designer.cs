@@ -107,6 +107,9 @@
             this.Controls.Add(this.picFondoBoton);
             this.Controls.Add(this.picBanner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1050, 630);
+            this.MinimumSize = new System.Drawing.Size(1050, 630);
             this.Name = "frmVencimientosDelDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vencimientos del Día";

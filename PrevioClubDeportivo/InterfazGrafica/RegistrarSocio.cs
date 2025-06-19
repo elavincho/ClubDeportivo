@@ -241,14 +241,14 @@ namespace PrevioClubDeportivo
 
             /* Configurar lstTipoSocio */
             lstTipoSocio.Items.Add("INACTIVO");
-            lstTipoSocio.Items.Add("SOCIO");
-            lstTipoSocio.Items.Add("NO_SOCIO");
+            //lstTipoSocio.Items.Add("SOCIO");
+            //lstTipoSocio.Items.Add("NO_SOCIO");
             lstTipoSocio.SelectedIndex = 0;
 
             /* Configurar lstEstadoPago */
             lstEstadoPago.Items.Add("IMPAGO");
-            lstEstadoPago.Items.Add("AL DIA");
-            lstEstadoPago.Items.Add("VENCIDO");
+            //lstEstadoPago.Items.Add("AL DIA");
+            //lstEstadoPago.Items.Add("VENCIDO");
             lstEstadoPago.SelectedIndex = 0;
 
             /* Personalizamos el formato de la fecha*/
@@ -339,7 +339,7 @@ namespace PrevioClubDeportivo
         {
             // Instanciamos el formulario de Apto Físico y pasamos el número de socio
             frmAptoFisico aptoFisico = new frmAptoFisico();
-            aptoFisico.CargarDatosSocio(numeroSocio); // Método que debes crear para precargar datos
+            aptoFisico.CargarDatosSocio(numeroSocio); // Método para precargar datos
             aptoFisico.ShowDialog();
         }
     }
