@@ -169,7 +169,7 @@ namespace PrevioClubDeportivo.InterfazGrafica
                             }
                             else
                             {
-                                e.Value = "N/A";
+                                e.Value = "HOY";
                             }
                         }
                         catch (Exception ex)

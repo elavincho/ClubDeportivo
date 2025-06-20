@@ -90,10 +90,9 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
         }
 
-
         private bool ValidarPagoExistente(CobrarCuota cuota)
         {
-            // Validación básica de parámetros
+            // Validación básica de parámetros (se mantiene igual)
             if (cuota == null || cuota.numeroSocio <= 0)
             {
                 MessageBox.Show("Datos del socio no válidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -119,13 +118,13 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
                     if (cuota.tipo == "MENSUAL")
                     {
-                        // Verificar primero pagos mensuales
+                        // Verificar primero pagos mensuales en el mismo mes
                         query = @"SELECT tipo FROM Pagos 
-                        WHERE numeroSocio = @numeroSocio 
-                        AND tipo = 'MENSUAL'
-                        AND YEAR(fechaPago) = YEAR(@fechaPago)
-                        AND MONTH(fechaPago) = MONTH(@fechaPago)
-                        LIMIT 1";
+                WHERE numeroSocio = @numeroSocio 
+                AND tipo = 'MENSUAL'
+                AND YEAR(fechaPago) = YEAR(@fechaPago)
+                AND MONTH(fechaPago) = MONTH(@fechaPago)
+                LIMIT 1";
 
                         cmd = new MySqlCommand(query, connection);
                         cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
@@ -140,15 +139,14 @@ namespace PrevioClubDeportivo.InterfazGrafica
                             }
                         }
 
-                        // Si no hay mensual, verificar diarios
+                        // Si no hay mensual, verificar diarios VIGENTES (mismo día)
                         if (!existePago)
                         {
                             query = @"SELECT tipo FROM Pagos 
-                            WHERE numeroSocio = @numeroSocio 
-                            AND tipo = 'DIARIA'
-                            AND YEAR(fechaPago) = YEAR(@fechaPago)
-                            AND MONTH(fechaPago) = MONTH(@fechaPago)
-                            LIMIT 1";
+                    WHERE numeroSocio = @numeroSocio 
+                    AND tipo = 'DIARIA'
+                    AND DATE(fechaPago) = DATE(@fechaPago)
+                    LIMIT 1";
 
                             cmd = new MySqlCommand(query, connection);
                             cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
@@ -172,13 +170,13 @@ namespace PrevioClubDeportivo.InterfazGrafica
                             return true;
                         }
 
-                        // Verificar primero pagos diarios para la misma actividad
+                        // Verificar pagos diarios para la misma actividad en el mismo día
                         query = @"SELECT tipo FROM Pagos 
-                        WHERE numeroSocio = @numeroSocio 
-                        AND tipo = 'DIARIA'
-                        AND actividad = @actividad
-                        AND DATE(fechaPago) = DATE(@fechaPago)
-                        LIMIT 1";
+                WHERE numeroSocio = @numeroSocio 
+                AND tipo = 'DIARIA'
+                AND actividad = @actividad
+                AND DATE(fechaPago) = DATE(@fechaPago)
+                LIMIT 1";
 
                         cmd = new MySqlCommand(query, connection);
                         cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
@@ -194,15 +192,15 @@ namespace PrevioClubDeportivo.InterfazGrafica
                             }
                         }
 
-                        // Si no hay diario, verificar mensual
+                        // Si no hay diario, verificar mensual VIGENTE (mismo mes)
                         if (!existePago)
                         {
                             query = @"SELECT tipo FROM Pagos 
-                            WHERE numeroSocio = @numeroSocio 
-                            AND tipo = 'MENSUAL'
-                            AND YEAR(fechaPago) = YEAR(@fechaPago)
-                            AND MONTH(fechaPago) = MONTH(@fechaPago)
-                            LIMIT 1";
+                    WHERE numeroSocio = @numeroSocio 
+                    AND tipo = 'MENSUAL'
+                    AND YEAR(fechaPago) = YEAR(@fechaPago)
+                    AND MONTH(fechaPago) = MONTH(@fechaPago)
+                    LIMIT 1";
 
                             cmd = new MySqlCommand(query, connection);
                             cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
@@ -224,15 +222,15 @@ namespace PrevioClubDeportivo.InterfazGrafica
                         string mensaje;
                         if (tipoConflicto == "MENSUAL")
                         {
-                            mensaje = "El socio tiene un pago MENSUAL registrado.";
+                            mensaje = "El socio tiene un pago MENSUAL registrado para este mes.";
                         }
                         else if (tipoConflicto == "DIARIA" && cuota.tipo == "DIARIA")
                         {
-                            mensaje = "El socio tiene un pago DIARIO registrado.";
+                            mensaje = "El socio ya tiene un pago DIARIO registrado para hoy en esta actividad.";
                         }
                         else if (tipoConflicto == "DIARIA" && cuota.tipo == "MENSUAL")
                         {
-                            mensaje = "El socio tiene un pago DIARIO registrado.";
+                            mensaje = "El socio tiene un pago DIARIO registrado para hoy. No puede registrar un pago mensual el mismo día.";
                         }
                         else
                         {
