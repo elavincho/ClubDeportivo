@@ -183,11 +183,11 @@ namespace PrevioClubDeportivo.InterfazGrafica
             }
             else
             {
-                // Limpiar el DataGridView completamente
+                /* Limpiar el DataGridView completamente */
                 dtgvVencimientos.DataSource = null;
                 dtgvVencimientos.Columns.Clear();
 
-                // Crear una columna para el mensaje
+                /* Crear una columna para el mensaje */
                 DataGridViewTextBoxColumn columnaMensaje = new DataGridViewTextBoxColumn();
                 columnaMensaje.Name = "mensaje";
                 columnaMensaje.HeaderText = "No existen vencimientos en el día";
