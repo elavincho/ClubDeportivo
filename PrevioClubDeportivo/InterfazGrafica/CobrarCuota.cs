@@ -172,11 +172,11 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
                         // Verificar pagos diarios para la misma actividad en el mismo día
                         query = @"SELECT tipo FROM Pagos 
-                WHERE numeroSocio = @numeroSocio 
-                AND tipo = 'DIARIA'
-                AND actividad = @actividad
-                AND DATE(fechaPago) = DATE(@fechaPago)
-                LIMIT 1";
+                                WHERE numeroSocio = @numeroSocio 
+                                AND tipo = 'DIARIA'
+                                AND actividad = @actividad
+                                AND DATE(fechaPago) = DATE(@fechaPago)
+                                LIMIT 1";
 
                         cmd = new MySqlCommand(query, connection);
                         cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
@@ -196,11 +196,11 @@ namespace PrevioClubDeportivo.InterfazGrafica
                         if (!existePago)
                         {
                             query = @"SELECT tipo FROM Pagos 
-                    WHERE numeroSocio = @numeroSocio 
-                    AND tipo = 'MENSUAL'
-                    AND YEAR(fechaPago) = YEAR(@fechaPago)
-                    AND MONTH(fechaPago) = MONTH(@fechaPago)
-                    LIMIT 1";
+                                    WHERE numeroSocio = @numeroSocio 
+                                    AND tipo = 'MENSUAL'
+                                    AND YEAR(fechaPago) = YEAR(@fechaPago)
+                                    AND MONTH(fechaPago) = MONTH(@fechaPago)
+                                    LIMIT 1";
 
                             cmd = new MySqlCommand(query, connection);
                             cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
@@ -240,7 +240,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
                         MessageBox.Show(mensaje, "Pago duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return true;
                     }
-
                     return false;
                 }
             }
