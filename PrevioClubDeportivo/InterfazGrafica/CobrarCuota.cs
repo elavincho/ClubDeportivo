@@ -120,11 +120,11 @@ namespace PrevioClubDeportivo.InterfazGrafica
                     {
                         // Verificar primero pagos mensuales en el mismo mes
                         query = @"SELECT tipo FROM Pagos 
-                WHERE numeroSocio = @numeroSocio 
-                AND tipo = 'MENSUAL'
-                AND YEAR(fechaPago) = YEAR(@fechaPago)
-                AND MONTH(fechaPago) = MONTH(@fechaPago)
-                LIMIT 1";
+                            WHERE numeroSocio = @numeroSocio 
+                            AND tipo = 'MENSUAL'
+                            AND YEAR(fechaPago) = YEAR(@fechaPago)
+                            AND MONTH(fechaPago) = MONTH(@fechaPago)
+                            LIMIT 1";
 
                         cmd = new MySqlCommand(query, connection);
                         cmd.Parameters.AddWithValue("@numeroSocio", cuota.numeroSocio);
@@ -344,10 +344,10 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
                     // Actualizar la tabla Socios
                     string updateSocioQuery = @"UPDATE Socios 
-                SET tipoSocio = @tipoSocio, 
-                    fechaPago = @fechaPago, 
-                    estadoCuota = @estadoCuota 
-                WHERE numeroSocio = @numeroSocio";
+                        SET tipoSocio = @tipoSocio, 
+                        fechaPago = @fechaPago, 
+                        estadoCuota = @estadoCuota 
+                        WHERE numeroSocio = @numeroSocio";
 
                     using (MySqlCommand updateCmd = new MySqlCommand(updateSocioQuery, connection, transaction))
                     {
