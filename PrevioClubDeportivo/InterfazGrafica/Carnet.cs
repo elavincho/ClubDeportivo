@@ -213,12 +213,12 @@ namespace PrevioClubDeportivo.InterfazGrafica
                         string queryDatos = @"SELECT 
                                     per.nombre, per.apellido, s.numeroSocio, 
                                     s.tipoSocio, p.actividad, p.vencimiento
-                                FROM Socios s
-                                JOIN Personas per ON s.idPersona = per.idPersona
-                                LEFT JOIN Pagos p ON s.numeroSocio = p.numeroSocio
-                                WHERE s.numeroSocio = @numeroSocio
-                                ORDER BY p.fechaPago DESC
-                                LIMIT 1";
+                                    FROM Socios s
+                                    JOIN Personas per ON s.idPersona = per.idPersona
+                                    LEFT JOIN Pagos p ON s.numeroSocio = p.numeroSocio
+                                    WHERE s.numeroSocio = @numeroSocio
+                                    ORDER BY p.fechaPago DESC
+                                    LIMIT 1";
 
                         MySqlCommand cmdDatos = new MySqlCommand(queryDatos, connection);
                         cmdDatos.Parameters.AddWithValue("@numeroSocio", numeroSocio);
