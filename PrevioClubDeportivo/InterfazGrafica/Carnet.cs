@@ -276,7 +276,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
             dtpVencimiento.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
-
         private void AbrirFormularioPago(int numeroSocio)
         {
             // Instanciamos el formulario de pago y pasamos el número de socio

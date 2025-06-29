@@ -41,8 +41,6 @@ namespace PrevioClubDeportivo.InterfazGrafica
 
         private void frmAptoFisico_Load(object sender, EventArgs e)
         {
-            /* Configuración del ListBox*/
-
             /* Configuración lstTipoDoc */
             lstEsApto.Items.Add("SELECCIONE");
             lstEsApto.Items.Add("NO");
