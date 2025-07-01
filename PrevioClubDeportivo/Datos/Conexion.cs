@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace PrevioClubDeportivo.Datos
 {
+
     /* La clase debe ser pública */
     public class Conexion
     {
@@ -71,6 +72,7 @@ namespace PrevioClubDeportivo.Datos
             this.puerto = T_puerto;
             this.usuario = T_usuario;
             this.clave = T_clave;
+
         }
 
         /* Proceso de interacción*/
