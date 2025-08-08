@@ -85,6 +85,10 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
   - Vencimientos del día
   - Salir del programa
 
+## Tecnologías utilizadas
+- Aplicación de Windows Forms(.NET Framework) C#
+- MySQL
+
 ## Imagenes del Sistema
 
 <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_5.png" width="200" height="200" alt="img"/>
