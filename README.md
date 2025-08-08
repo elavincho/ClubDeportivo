@@ -1,79 +1,97 @@
-<img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_6.png" width="75" height="75" alt="img"/> 
+<img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/ifts29Logo.png" width="80" height="80" alt="img"/>
 
 # Proyecto Intregrador
 
 ### Desarrollo de Sistemas Orientados a Objetos & Modelado y Diseño de Software
 
-Este proyecto desarrollado para gestionar un ecommerce de forma completa, desde el login de usuarios y administradores, la posibilidad de realizar compras de forma online a través de usuarios registrados con un carrito de compras y un seguimiento de la entrega del producto por parte del cliente. En cuanto a la administración ofrece la capacidad de emitir facturas proforma, un CRUD de los productos y la ubicación de los mismos en la página principal, la administración de usuarios, datos de la empresa, creación de promociones y un seguimiento de las ventas y entrega de productos.
+Este proyecto del **Instituto de Formación Técnica Superior del GCBA** tiene como objetivo el desarrollo de un sistema para la administración de un **Club Deportivo**, teniendo en cuenta los requerimientos del cliente y realizando todo el análisis y documentación previa antes de empezar a programar. Además cuenta con un manual de usuario y casos de prueba debidamente documentados.
 
-## Tecnologías utilizadas
-- **Backend**:
-  - Java
-  - Spring Boot
-  - JPA
-  - MySQL
-  - Java Mail Sender
-- **Frontend**:
-  - HTML
-  - CSS
-  - JavaScript
-  - Bootstrap
-  - Thymeleaf
+## Fases del proyecto
+- Análisis preliminar
+- Análisis previo y funcional
+- Análisis orgánico
+- Conectar datos para programar
+- Programar
+- Prueba
+- Puesta a punto del sistema
+
+## Documentación
+- Diagrama de Clases
+- Bocetos
+- Diagrama de Casos de Uso
+- Plantilla de Casos de Uso
+- Diagrama de Secuencias
+- Diagrama de Actividades
+- Diagrama de Estados
+- Manual de Usuario
+- Solución de Problemas
+- Casos de Prueba
 
 ## Objetivo del Proyecto
 
-Este sistema tiene la finalidad de administrar un ecommerce de forma completa, tanto desde el lado del cliente como desde la administración. Teniendo las siguientes caracteristicas:
+Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamiento un sistema, cumpliendo todo el ciclo del desarrollo del software. Partiendo desde el análisis del requerimiento del cliente, identificando clases y atributos, realizando un Diagrama de Clases e identificando las relaciones entre las mismas, identificando los procesos de entrada y salida que necesitan para cumplir el objetivo, que son los siguientes:
 
-- Home sin necesidad del login
-- Home para clientes registrados
-- Home para el administrador
-
-El sistema también permite la recuperación de la contraseña via e-mail.
+- Registro de socios y no socios
+- Entrega de carnet
+- Cobro de cuota mensual y diaria
+- Listado diario de los socios que en la fecha les vence la cuota.
+- Carga de un apto físico
+- Emitir un comprobante de pago
+- Lista de socios registrados en el sistema
 
 ## Funcionalidades principales
 
-### Clientes
+### Sistema
+- Home
+- Registrar socios y no socios
+- Cargar apto físico
+- Cobrar cuota
+- Emitir comprobante de pago
+- Entregar carnet
+- Listar socios
+- Listar vencimientos del día
 
-- Registro
-- Login
-- Recuperación de la contraseña via e-mail
-- Home usuario
-- Editar perfil
-- Editar contraseña
-- Carrito de compras
-- Mis compras
-- Detalla de la compra
-- Estado de la entrega
-- Impresión del detalle de la compra
+### Documentación
 
-### Administración
+- Manual de Usuario
+  - Ingreso al sistema
+  - Pantalla principal
+  - Funciones del sistema
+    - Registrar socios
+    - Apto físico
+    - Cobrar cuota
+    - Comprobante de pago
+    - Entregar carnet
+    - Lista de socios
+    - Vencimientos del día
+  - Cerrar sesión
 
-- Registro
-- Login
-- Recuperacion de la contraseña via e-mail
-- Home administrador
-- Editar perfil
-- Editar contraseña
-- CRUD de promociones
-- CRUD de datos de la empresa
-- CRUD de productos
-- Gestión de Usuarios
-- Ordenes de compra
-- Entrega de compras
-- Emisión de factura proforma
-- Impresión de la factura proforma
+- Solución de Problemas
+  - General
+  - Ingreso al sistema
+  - Registrar socios
+  - Cargar apto físico
+  - Cobrar cuota
+  - Entregar carnet
 
-## Mejores Prácticas
-- Uso de **buenas prácticas UX/UI** para facilitar la experiencia del usuario.
-- Implementación de **técnicas de QA** necesarias para garantizar la calidad del producto.
+- Casos de Prueba
+  - Login
+  - Registrar socio
+  - Cargar apto físico
+  - Cobrar cuota
+  - Comprobante de pago
+  - Entregar carnet
+  - Lista de socios
+  - Vencimientos del día
+  - Salir del programa
 
 ## Imagenes del proyecto
 
-<img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_5.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_6.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_7.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_8.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_9.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_10.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_11.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/ecommerce/blob/master/images/Captura_de_pantalla_12.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_5.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_6.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_7.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_8.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_9.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_10.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_11.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_12.png" width="200" height="200" alt="img"/>
