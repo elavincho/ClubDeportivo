@@ -4,7 +4,7 @@
 
 ### Desarrollo de Sistemas Orientados a Objetos & Modelado y Diseño de Software
 
-Este proyecto del **Instituto de Formación Técnica Superior del GCBA** tiene como objetivo el desarrollo de un sistema para la administración de un **Club Deportivo**, teniendo en cuenta los requerimientos del cliente y realizando todo el análisis y documentación previa antes de empezar a programar. Además cuenta con un manual de usuario y casos de prueba debidamente documentados.
+Este proyecto de la **Técnicatura Superior en Desarrollo de Software** tiene como objetivo el desarrollar de un sistema para la administración de un **Club Deportivo**, teniendo en cuenta los requerimientos del cliente y realizando todo el análisis y documentación previa antes de empezar a programar. Además cuenta con un manual de usuario y casos de prueba debidamente documentados.
 
 ## Fases del proyecto
 - Análisis preliminar
@@ -113,3 +113,7 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
                           <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img11.png" width="200" height="200" alt="img"/>
                           <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img12.png" width="200" height="200" alt="img"/>
                            <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img13.png" width="200" height="200" alt="img"/>
+
+## Video del Proyecto
+
+[![Video tutorial](https://github.com/elavincho/PrevioClubDeportivo/blob/master/images/img_video.png)](https://youtu.be/LDbaad51ozY)
