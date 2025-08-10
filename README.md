@@ -116,4 +116,4 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 
 ## Video del Proyecto
 
-[![Video tutorial](https://github.com/elavincho/ClubDeportivo/blob/master/img/img_video.png)](https://youtu.be/LDbaad51ozY)
+[![Video tutorial](https://github.com/elavincho/ClubDeportivo/blob/master/img/img_video.png)](https://youtu.be/MSVyvnpWlgA)
