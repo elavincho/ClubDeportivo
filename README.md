@@ -89,19 +89,6 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 - Aplicación de Windows Forms(.NET Framework) C#
 - MySQL
 
-## Imagenes del Sistema
-
-<img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_5.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_6.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_7.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_8.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_9.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_10.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_11.png" width="200" height="200" alt="img"/>
-                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_12.png" width="200" height="200" alt="img"/>
-
-
-
 ## Imagenes de la Documentación
 
 <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img5.png" width="200" height="200" alt="img"/>
@@ -113,6 +100,19 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
                           <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img11.png" width="200" height="200" alt="img"/>
                           <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img12.png" width="200" height="200" alt="img"/>
                            <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img13.png" width="200" height="200" alt="img"/>
+
+
+## Imagenes del Sistema
+
+<img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_5.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_6.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_7.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_8.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_9.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_10.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_11.png" width="200" height="200" alt="img"/>
+                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_12.png" width="200" height="200" alt="img"/>
+
 
 ## Video del Proyecto
 
