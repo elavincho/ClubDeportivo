@@ -4,7 +4,7 @@
 
 ### Desarrollo de Sistemas Orientados a Objetos & Modelado y Diseño de Software
 
-Este proyecto de la **Técnicatura Superior en Desarrollo de Software** tiene como objetivo el desarrollar de un sistema para la administración de un **Club Deportivo**, teniendo en cuenta los requerimientos del cliente y realizando todo el análisis y documentación previa antes de empezar a programar. Además cuenta con un manual de usuario y casos de prueba debidamente documentados.
+Este proyecto de la **Tecnicatura Superior en Desarrollo de Software** tiene como objetivo el desarrollar de un sistema para la administración de un **Club Deportivo**, teniendo en cuenta los requerimientos del cliente y realizando todo el análisis y documentación previa antes de empezar a programar. Además, cuenta con un manual de usuario y casos de prueba debidamente documentados.
 
 ## Fases del proyecto
 - Análisis preliminar
@@ -89,7 +89,7 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 - Aplicación de Windows Forms(.NET Framework) C#
 - MySQL
 
-## Imagenes de la Documentación
+## Imágenes de la Documentación
 
 <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img5.png" width="200" height="200" alt="img"/>
                           <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img6.png" width="200" height="200" alt="img"/>
@@ -102,7 +102,7 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
                            <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img13.png" width="200" height="200" alt="img"/>
 
 
-## Imagenes del Sistema
+## Imágenes del Sistema
 
 <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_5.png" width="200" height="200" alt="img"/>
                           <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/Captura_de_pantalla_6.png" width="200" height="200" alt="img"/>
