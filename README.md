@@ -87,7 +87,7 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 
 ## Tecnologías utilizadas
 - Aplicación de Windows Forms(.NET Framework) C#
-- MySQL
+- MySQL (Tablas Normalizadas)
 
 ## Imágenes de la Documentación
 
