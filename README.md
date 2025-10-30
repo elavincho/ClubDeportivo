@@ -1,4 +1,5 @@
-<img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/ifts29Logo.png" width="80" height="80" alt="img"/>
+
+<!-- <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/ifts29Logo.png" width="80" height="80" alt="img"/> -->
 
 # Proyecto Integrador
 
@@ -88,7 +89,7 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 ## Tecnologías utilizadas
 - Aplicación de Windows Forms(.NET Framework) C#
 - MySQL (Tablas Normalizadas)
-
+<!--
 ## Imágenes de la Documentación
 
 <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img1.png" width="200" height="200" alt="img"/>                      <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img2.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img3.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img4.png" width="200" height="200" alt="img"/>                          <img src="https://github.com/elavincho/PrevioClubDeportivo/blob/master/img/img5.png" width="200" height="200" alt="img"/>
@@ -117,3 +118,6 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 ## Video del Proyecto
 
 [![Video tutorial](https://github.com/elavincho/ClubDeportivo/blob/master/img/img_video.png)](https://youtu.be/MSVyvnpWlgA)
+
+-->
+
