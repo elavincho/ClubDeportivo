@@ -92,7 +92,10 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 
 ## Imágenes de la Documentación
 
-<img src="https://i.ibb.co/mVDQN6QW/bocetos.png" width="200" height="200" alt="img"/>               <img src="https://i.ibb.co/Tx5fh0Pc/img13.png" width="200" height="200" alt="img"/>                 <img src="https://i.ibb.co/FbpNbZLS/img12.png" width="200" height="200" alt="img"/>                 <img src="https://i.ibb.co/W4Wm6sJb/img11.png" width="200" height="200" alt="img"/>                 
+<img src="https://i.ibb.co/mVDQN6QW/bocetos.png" width="200" height="200" alt="img"/>
+<img src="https://i.ibb.co/Tx5fh0Pc/img13.png" width="200" height="200" alt="img"/>
+<img src="https://i.ibb.co/FbpNbZLS/img12.png" width="200" height="200" alt="img"/>
+<img src="https://i.ibb.co/W4Wm6sJb/img11.png" width="200" height="200" alt="img"/>                 
 <img src="https://i.ibb.co/m5jKjT7C/img10.png" width="200" height="200" alt="img"/>
 <img src="https://i.ibb.co/LDbjpR8r/img7.png" width="200" height="200" alt="img"/>
 <img src="https://i.ibb.co/3y5XrQmp/img6.png" width="200" height="200" alt="img"/>
