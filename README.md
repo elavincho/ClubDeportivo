@@ -93,16 +93,16 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 ## Imágenes de la Documentación
 
 <img src="https://i.ibb.co/mVDQN6QW/bocetos.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/Tx5fh0Pc/img13.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/FbpNbZLS/img12.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/W4Wm6sJb/img11.png" width="200" height="200" alt="img"/>                 
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img13.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img12.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img11.png" width="200" height="200" alt="img"/>                 
 <img src="https://i.ibb.co/m5jKjT7C/img10.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/LDbjpR8r/img7.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/3y5XrQmp/img6.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/Fqn5wvkh/img5.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/s91vHt1r/img4.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/LhdCkVYx/img3.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/BK6hCb0J/img1.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img7.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img6.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img5.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img4.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img3.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/img1.png" width="200" height="200" alt="img"/>
 <img src="https://i.ibb.co/spsjrWx4/img2.png" width="200" height="200" alt="img"/>
 <img src="https://i.ibb.co/7JKr1G0D/img8.png" width="200" height="200" alt="img"/>
 
@@ -120,7 +120,7 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 <img src="https://i.ibb.co/60pQKF1d/Captura-de-pantalla-9.png" width="200" height="200" alt="img"/>
 <img src="https://i.ibb.co/d4PCWj8n/Captura-de-pantalla-10.png" width="200" height="200" alt="img"/>
 <img src="https://i.ibb.co/PZDj4nbY/Captura-de-pantalla-11.png" width="200" height="200" alt="img"/>
-<img src="https://i.ibb.co/Gf7VvLLX/Captura-de-pantalla-12.png" width="200" height="200" alt="img"/>
+<img src="https://github.com/elavincho/ClubDeportivo/blob/master/img/Captura_de_pantalla_12.png" width="200" height="200" alt="img"/>
 
 
 ## Video del Proyecto
