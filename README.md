@@ -1,4 +1,3 @@
-
 <img src="https://i.ibb.co/VYkx7wHV/ifts29-Logo.png" width="80" height="80" alt="img"/>
 
 # Proyecto Integrador
@@ -126,6 +125,5 @@ Este proyecto tiene la finalidad de Analizar, Desarrollar y poner en Funcionamie
 ## Video del Proyecto
 
 [![Video tutorial](https://i.ibb.co/7JwN7rN5/img-video.png)](https://youtu.be/MSVyvnpWlgA)
-
 
 
